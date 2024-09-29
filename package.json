@@ -4,9 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "prebuild": "npx prettier 'src/StyleClasses.tsx' --write",
+    "pretify": "npx prettier 'src/StyleClasses.tsx' --write",
+    "prebuild": "node prebuildSharedStyles.js",
     "prebuild-tw": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
-    "dev": "node prebuildSharedStyles.js | vite",
+    "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
