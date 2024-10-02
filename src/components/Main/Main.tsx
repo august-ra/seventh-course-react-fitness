@@ -1,9 +1,9 @@
-import Card from "./Card"
-import Climber from "./Climber/Climber"
-import Footer from "./Footer/Footer"
-import Header from "./Header"
+import Card from "../Card/Card"
+import Climber from "../Climber/Climber"
+import Footer from "../Footer/Footer"
+import Header from "../Header/Header"
 
-import { sharedStyles } from "../sharedStyles"
+import { sharedStyles } from "../../sharedStyles"
 
 
 export default function Main() {

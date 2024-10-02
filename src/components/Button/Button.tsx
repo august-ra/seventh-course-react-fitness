@@ -1,5 +1,6 @@
 import { ButtonHTMLAttributes } from "react"
-import { sharedStyles } from "../sharedStyles"
+
+import { sharedStyles } from "../../sharedStyles"
 import { twMerge } from "tailwind-merge"
 
 

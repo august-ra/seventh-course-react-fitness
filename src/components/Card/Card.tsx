@@ -1,8 +1,8 @@
-import Button from "./Button"
-import Progress from "./Progress"
-import Tablet from "./Tablet"
+import Button from "../Button/Button"
+import Progress from "../Progress/Progress"
+import Tablet from "../Tablet/Tablet"
 
-import { sharedStyles } from "../sharedStyles"
+import { sharedStyles } from "../../sharedStyles"
 import { twMerge } from "tailwind-merge"
 
 

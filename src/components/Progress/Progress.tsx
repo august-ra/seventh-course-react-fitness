@@ -1,4 +1,4 @@
-import { sharedStyles } from "../sharedStyles"
+import { sharedStyles } from "../../sharedStyles"
 
 
 export default function Progress() {

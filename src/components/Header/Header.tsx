@@ -1,6 +1,6 @@
-import Button from "./Button"
+import Button from "../Button/Button"
 
-import { sharedStyles } from "../sharedStyles"
+import { sharedStyles } from "../../sharedStyles"
 
 
 export default function Header() {
