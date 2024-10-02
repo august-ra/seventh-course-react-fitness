@@ -1,6 +1,6 @@
 import "./App.css"
 
-import Main from "./components/Main.tsx"
+import Main from "./components/Main"
 
 
 function App() {
