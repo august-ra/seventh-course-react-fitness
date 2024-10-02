@@ -32,9 +32,7 @@ export default function Main() {
             <div className="flex flex-wrap w-full justify-between gap-10 mt-[50px]">
               <div className="bg-white w-[360px] h-[501px] rounded-[30px] shadow-3xl">
                 <div className="w-[360px] h-[325px] relative overflow-hidden rounded-[30px]">
-                  <img
-                    className="absolute min-w-[834px] min-h-[557px] left-[-242px] top-[-119px] right-[232px] bottom-[113px]"
-                    src="/img/yoga.jpeg" alt="yoga" />
+                  <img className="absolute min-w-[834px] min-h-[557px] left-[-242px] top-[-119px] right-[232px] bottom-[113px]" src="/img/yoga.jpeg" alt="yoga" />
                   <img className="absolute w-[32px] h-[32px] top-[20px] right-[20px]" src="/img/plus.svg" alt="add" />
                 </div>
   
@@ -71,10 +69,7 @@ export default function Main() {
   
                     <div className="flex flex-col gap-[10px]">
                       <p className="text-[18px] leading-[20px]">Прогресс 40%</p>
-                      <div className="relative">
-                        <div className="absolute bg-light-bg rounded-[50px] w-full h-[6px]" />
-                        <div className="absolute bg-work rounded-[50px] w-[120px] h-[6px]" />
-                      </div>
+                      <Progress />
                     </div>
                   </div>
 
@@ -104,6 +99,10 @@ export default function Main() {
               </div>
             </div>
           </section>
+
+          <div className="flex justify-center mt-[34px]">
+            <Button primary={true} additionalClasses="w-[127px]">Наверх ↑</Button>
+          </div>
         </main>
       </div>
 

@@ -629,6 +629,10 @@ img{
   margin-top: 50px;
 }
 
+.mt-\[34px\]{
+  margin-top: 34px;
+}
+
 .flex{
   display: flex;
 }
@@ -723,6 +727,10 @@ img{
 
 .w-full{
   width: 100%;
+}
+
+.w-\[127px\]{
+  width: 127px;
 }
 
 .min-w-\[834px\]{
@@ -945,6 +953,12 @@ img{
 .outline-none{
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.hover\:scale-105:hover{
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .hover\:bg-light-bg:hover{
