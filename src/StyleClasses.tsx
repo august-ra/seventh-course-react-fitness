@@ -13,6 +13,7 @@ function StyleClasses() {
       <buttonCommon className="h-[52px] w-[103px] rounded-[46px] text-[18px]" />
       <buttonPrimary className="bg-good hover:bg-well active:bg-black active:text-white disabled:bg-light-bg disabled:text-light-tx" />
       <buttonSecondary className="border border-black bg-white hover:bg-light-bg active:bg-dark disabled:text-light-tx" />
+      <buttonWide className="mt-10 w-full" />
       {/* main */}
       <wrapper className="flex h-[100vh] flex-col justify-between" />
       <container className="m-auto w-[1260px] flex-1" />
@@ -42,10 +43,10 @@ function StyleClasses() {
       <cardTabletText className="text-nowrap text-[16px] leading-[18px]" />
       <cardProgress className="flex flex-col gap-[10px]" />
       <cardProgressText className="text-[18px] leading-[20px]" />
-      {/* progress */}
-      <progress className="relative" />
-      <progressBack className="absolute h-[6px] w-full rounded-[50px] bg-light-bg" />
-      <progressFront className="absolute h-[6px] w-[120px] rounded-[50px] bg-work" />
+      {/* progress bar */}
+      <progressBar className="relative" />
+      <progressBarBack className="absolute h-[6px] w-full rounded-[50px] bg-light-bg" />
+      <progressBarFront className="absolute h-[6px] w-[120px] rounded-[50px] bg-work" />
       {/* footer */}
       <climber className="mt-[34px] flex justify-center" />
       <footer className="flex flex-none justify-center pb-[60px] pt-[50px] text-[18px]" />

@@ -1,5 +1,5 @@
 import Button from "../Button/Button"
-import Progress from "../Progress/Progress"
+import ProgressBar from "../ProgressBar/ProgressBar.tsx"
 import Tablet from "../Tablet/Tablet"
 
 import { sharedStyles } from "../../sharedStyles"
@@ -32,9 +32,9 @@ export default function Card({ hasUser, difficulty }: Props) {
           {
             hasUser
               && (
-                <div className="flex flex-col gap-[10px]">
-                  <p className="text-[18px] leading-[20px]">Прогресс 40%</p>
-                  <Progress />
+                <div className={sharedStyles.cardProgress}>
+                  <p className={sharedStyles.cardProgressText}>Прогресс 40%</p>
+                  <ProgressBar />
                 </div>
               )
           }

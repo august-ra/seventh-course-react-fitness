@@ -2,6 +2,8 @@ import { ButtonHTMLAttributes } from "react"
 
 import TabletDifficulty from "./TabletDifficulty"
 
+import { sharedStyles } from "../../sharedStyles"
+
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   imgName:     "calendar" | "time" | "difficulty"
@@ -10,7 +12,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export default function Tablet({ ...props }: Props) {
   return (
-    <div className="h-[38px] flex gap-[6px] p-[10px] bg-light-bg rounded-[50px]">
+    <div className={sharedStyles.cardTablet}>
       {
         props.imgName === "calendar"
           ? (
@@ -25,7 +27,7 @@ export default function Tablet({ ...props }: Props) {
           )
       }
 
-      <p className="text-[16px] leading-[18px] text-nowrap">
+      <p className={sharedStyles.cardTabletText}>
         {props.imgName === "difficulty" ? "Сложность" : props.children}
       </p>
     </div>
