@@ -1,8 +1,8 @@
-import { ButtonHTMLAttributes } from "react"
+import { sharedStyles } from "../../sharedStyles"
 
 import TabletDifficulty from "./TabletDifficulty"
 
-import { sharedStyles } from "../../sharedStyles"
+import { ButtonHTMLAttributes } from "react"
 
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {

@@ -1,7 +1,7 @@
-import { ButtonHTMLAttributes } from "react"
-
 import { sharedStyles } from "../../sharedStyles"
 import { twMerge } from "tailwind-merge"
+
+import { ButtonHTMLAttributes } from "react"
 
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {

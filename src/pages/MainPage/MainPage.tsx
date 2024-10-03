@@ -1,12 +1,12 @@
-import Card from "../Card/Card"
-import Climber from "../Climber/Climber"
-import Footer from "../Footer/Footer"
-import Header from "../Header/Header"
-
 import { sharedStyles } from "../../sharedStyles"
 
+import Card from "../../components/Card/Card"
+import Climber from "../../components/Climber/Climber"
+import Footer from "../../components/Footer/Footer"
+import Header from "../../components/Header/Header"
 
-export default function Main() {
+
+export default function MainPage() {
   return (
     <div className={sharedStyles.wrapper}>
       <div className={sharedStyles.container}>

@@ -10,6 +10,7 @@ export const sharedStyles = {
   buttonCommon: "h-[52px] w-[103px] rounded-[46px] text-[18px]",
   buttonPrimary: "bg-good hover:bg-well active:bg-black active:text-white disabled:bg-light-bg disabled:text-light-tx",
   buttonSecondary: "border border-black bg-white hover:bg-light-bg active:bg-dark disabled:text-light-tx",
+  buttonWide: "mt-10 w-full",
 
   /* main */
 
@@ -48,11 +49,11 @@ export const sharedStyles = {
   cardProgress: "flex flex-col gap-[10px]",
   cardProgressText: "text-[18px] leading-[20px]",
 
-  /* progress */
+  /* progress bar */
 
-  progress: "relative",
-  progressBack: "absolute h-[6px] w-full rounded-[50px] bg-light-bg",
-  progressFront: "absolute h-[6px] w-[120px] rounded-[50px] bg-work",
+  progressBar: "relative",
+  progressBarBack: "absolute h-[6px] w-full rounded-[50px] bg-light-bg",
+  progressBarFront: "absolute h-[6px] w-[120px] rounded-[50px] bg-work",
 
   /* footer */
 

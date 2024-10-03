@@ -1,9 +1,9 @@
+import { sharedStyles } from "../../sharedStyles"
+import { twMerge } from "tailwind-merge"
+
 import Button from "../Button/Button"
 import ProgressBar from "../ProgressBar/ProgressBar.tsx"
 import Tablet from "../Tablet/Tablet"
-
-import { sharedStyles } from "../../sharedStyles"
-import { twMerge } from "tailwind-merge"
 
 
 interface Props {
@@ -43,7 +43,7 @@ export default function Card({ hasUser, difficulty }: Props) {
         {
           hasUser
             && (
-              <Button additionalClasses="w-full mt-10" primary={true}>Продолжить</Button>
+              <Button additionalClasses={sharedStyles.buttonWide} primary={true}>Продолжить</Button>
             )
         }
       </div>
