@@ -2,7 +2,7 @@ import { sharedStyles } from "../../sharedStyles"
 import { twMerge } from "tailwind-merge"
 
 import Button from "../Button/Button"
-import ProgressBar from "../ProgressBar/ProgressBar.tsx"
+import ProgressBar from "../ProgressBar/ProgressBar"
 import Tablet from "../Tablet/Tablet"
 
 
