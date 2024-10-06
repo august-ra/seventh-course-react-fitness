@@ -17,6 +17,11 @@ export default {
       "dark":     "#e9eced",
       "light-tx": "#999999",
       "black":    "#000000",
+      "yoga":       "#ffc700",
+      "stretching": "#2491d2",
+      "zumba":      "#f7a012",
+      "aerobics":   "#ff7e65",
+      "body-flex":  "#7d458c",
     },
     fontFamily: {
       "sans": ['"Roboto"', "sans-serif"],
@@ -24,6 +29,9 @@ export default {
     extend: {
       boxShadow: {
         "3xl": "0 0 67px -12px rgba(0, 0, 0, 0.13)",
+      },
+      scale: {
+        "102": "1.02",
       },
     },
   },
