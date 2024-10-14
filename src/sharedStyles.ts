@@ -8,11 +8,6 @@ export const sharedStyles = {
   /* courses */
 
   colors: "bg-aerobics bg-body-flex bg-stretching bg-yoga bg-zumba",
-  yoga: "right-[-295px] top-[-175px] w-[80%]",
-  stretching: "right-[-10px] top-0 w-[30%]",
-  zumba: "right-[-271px] top-[-37px] w-[78%]",
-  aerobics: "right-0 top-[-315px] w-[40%]",
-  "body-flex": "right-[-200px] top-[-155px] w-[70%]",
 
   /* button */
 
@@ -46,14 +41,24 @@ export const sharedStyles = {
   banner: "relative mb-[60px] h-[310px] max-h-[310px] min-h-[310px] w-[1160px] overflow-hidden rounded-[30px] p-10 text-white",
   bannerText: "relative z-10 h-[66px] text-[60px] font-medium leading-[66px]",
   bannerPicture: "absolute",
+  "banner-yoga": "right-[-295px] top-[-175px] w-[80%]",
+  "banner-stretching": "right-[-10px] top-0 w-[30%]",
+  "banner-zumba": "right-[-271px] top-[-37px] w-[78%]",
+  "banner-aerobics": "right-0 top-[-315px] w-[40%]",
+  "banner-body-flex": "right-[-200px] top-[-155px] w-[70%]",
 
   /* card */
 
-  cards: "mt-[50px] flex w-full flex-wrap justify-between gap-10",
+  cards: "mt-[50px] flex w-full flex-wrap justify-start gap-10",
   card: "h-[501px] w-[360px] rounded-[30px] bg-white",
   cardFull: "h-[649px]",
   cardPicture: "relative h-[325px] w-[360px] overflow-hidden rounded-[30px]",
-  cardInner: "absolute bottom-[-113px] left-[-242px] right-[-232px] top-[-119px] min-h-[557px] min-w-[834px]",
+  cardInner: "absolute",
+  "card-yoga": "right-[-232px] top-[-119px] min-h-[557px] min-w-[834px]",
+  "card-stretching": "right-0 top-0 min-h-[540px] min-w-[360px]",
+  "card-zumba": "right-[-398px] top-[-32px] min-h-[767px] min-w-[1150px]",
+  "card-aerobics": "right-[-82px] top-[-715px] min-h-[1081px] min-w-[721px]",
+  "card-body-flex": "right-[-182px] top-[-168px] min-h-[514px] min-w-[771px]",
   cardAddBtn: "absolute right-[20px] top-[20px] h-[32px] w-[32px]",
   cardBlock: "px-[30px] pt-6",
   cardContent: "flex flex-col gap-5",

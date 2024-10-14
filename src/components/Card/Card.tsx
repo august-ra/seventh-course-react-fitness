@@ -5,17 +5,20 @@ import Button from "../Button/Button"
 import ProgressBar from "../ProgressBar/ProgressBar"
 import Tablet from "../Tablet/Tablet"
 
+import type { KeysType } from "../../types/types"
+
 
 interface Props {
+  name:       string
   hasUser:    boolean
   difficulty: number
 }
 
-export default function Card({ hasUser, difficulty }: Props) {
+export default function Card({ name, hasUser, difficulty }: Props) {
   return (
     <div className={twMerge(sharedStyles.card, sharedStyles.shadowedBlock, hasUser && sharedStyles.cardFull)}>
       <div className={sharedStyles.cardPicture}>
-        <img className={sharedStyles.cardInner} src="/img/yoga.jpeg" alt="yoga" />
+        <img className={twMerge(sharedStyles.cardInner, sharedStyles[(`card-${name}`) as KeysType])} src={`/img/${name}.jpeg`} alt={name} />
         <img className={sharedStyles.cardAddBtn} src="/img/plus.svg" alt="add" />
       </div>
 

@@ -13,7 +13,7 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 export default function Banner({ skillData, ...props }: Props) {
   const classNames = twMerge(
     sharedStyles.bannerPicture,
-    sharedStyles[skillData.name as KeysType],
+    sharedStyles[(`banner-${skillData.name}`) as KeysType],
   )
 
   return (

@@ -11,11 +11,6 @@ function StyleClasses() {
       <shadowedBlock className="shadow-3xl duration-300 hover:scale-102" />
       {/* courses */}
       <colors className="bg-aerobics bg-body-flex bg-stretching bg-yoga bg-zumba" />
-      <yoga className="right-[-295px] top-[-175px] w-[80%]" />
-      <stretching className="right-[-10px] top-0 w-[30%]" />
-      <zumba className="right-[-271px] top-[-37px] w-[78%]" />
-      <aerobics className="right-0 top-[-315px] w-[40%]" />
-      <body-flex className="right-[-200px] top-[-155px] w-[70%]" />
       {/* button */}
       <buttonCommon className="h-[52px] w-[103px] rounded-[46px] text-[18px]" />
       <buttonPrimary className="bg-good hover:bg-well active:bg-black active:text-white disabled:bg-light-bg disabled:text-light-tx" />
@@ -39,12 +34,22 @@ function StyleClasses() {
       <banner className="relative mb-[60px] h-[310px] max-h-[310px] min-h-[310px] w-[1160px] overflow-hidden rounded-[30px] p-10 text-white" />
       <bannerText className="relative z-10 h-[66px] text-[60px] font-medium leading-[66px]" />
       <bannerPicture className="absolute" />
+      <banner-yoga className="right-[-295px] top-[-175px] w-[80%]" />
+      <banner-stretching className="right-[-10px] top-0 w-[30%]" />
+      <banner-zumba className="right-[-271px] top-[-37px] w-[78%]" />
+      <banner-aerobics className="right-0 top-[-315px] w-[40%]" />
+      <banner-body-flex className="right-[-200px] top-[-155px] w-[70%]" />
       {/* card */}
-      <cards className="mt-[50px] flex w-full flex-wrap justify-between gap-10" />
+      <cards className="mt-[50px] flex w-full flex-wrap justify-start gap-10" />
       <card className="h-[501px] w-[360px] rounded-[30px] bg-white" />
       <cardFull className="h-[649px]" />
       <cardPicture className="relative h-[325px] w-[360px] overflow-hidden rounded-[30px]" />
-      <cardInner className="absolute bottom-[-113px] left-[-242px] right-[-232px] top-[-119px] min-h-[557px] min-w-[834px]" />
+      <cardInner className="absolute" />
+      <card-yoga className="right-[-232px] top-[-119px] min-h-[557px] min-w-[834px]" />
+      <card-stretching className="right-0 top-0 min-h-[540px] min-w-[360px]" />
+      <card-zumba className="right-[-398px] top-[-32px] min-h-[767px] min-w-[1150px]" />
+      <card-aerobics className="right-[-82px] top-[-715px] min-h-[1081px] min-w-[721px]" />
+      <card-body-flex className="right-[-182px] top-[-168px] min-h-[514px] min-w-[771px]" />
       <cardAddBtn className="absolute right-[20px] top-[20px] h-[32px] w-[32px]" />
       <cardBlock className="px-[30px] pt-6" />
       <cardContent className="flex flex-col gap-5" />
