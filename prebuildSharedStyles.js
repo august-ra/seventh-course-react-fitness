@@ -17,9 +17,9 @@ function makeSharedStyles() {
 
     if (match) {
       if (match[1].match(regex2)) // text with "non-word" characters
-        return result.push(`  "${match[1]}": "${match[2]}",`)
+        return result.push(`  "${match[1]}": "${match[1]} ${match[2]}",`)
       else
-        return result.push(`  ${match[1]}: "${match[2]}",`)
+        return result.push(`  ${match[1]}: "${match[1]} ${match[2]}",`)
     }
 
     match = line.match(regex3) // text as comment: /*{ comment }*/
