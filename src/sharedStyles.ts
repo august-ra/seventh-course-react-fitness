@@ -51,7 +51,7 @@ export const sharedStyles = {
   /* card */
 
   cards: "cards mt-[50px] flex w-full flex-wrap justify-start gap-10",
-  card: "card h-[501px] w-[360px] rounded-[30px] bg-white",
+  card: "card relative h-[501px] w-[360px] rounded-[30px] bg-white hover:z-50",
   cardFull: "cardFull h-[649px]",
   cardPicture: "cardPicture relative h-[325px] w-[360px] overflow-hidden rounded-[30px]",
   cardInner: "cardInner absolute",
@@ -60,7 +60,9 @@ export const sharedStyles = {
   "card-zumba": "card-zumba right-[-398px] top-[-32px] min-h-[767px] min-w-[1150px]",
   "card-aerobics": "card-aerobics right-[-82px] top-[-715px] min-h-[1081px] min-w-[721px]",
   "card-body-flex": "card-body-flex right-[-182px] top-[-168px] min-h-[514px] min-w-[771px]",
-  cardAddBtn: "cardAddBtn absolute right-[20px] top-[20px] h-[32px] w-[32px] cursor-arrow duration-300 hover:scale-110",
+  cardAction: "cardAction group/card absolute h-[32px] w-[32px]",
+  cardAddBtn: "cardAddBtn absolute left-[308px] top-[-305px] h-[32px] w-[32px] cursor-arrow duration-300 hover:scale-110",
+  cardActionTooltip: "cardActionTooltip absolute left-[352px] top-[-262px] hidden h-[27px] w-max items-center justify-center rounded-[5px] border border-black bg-white p-1.5 text-sm group-hover/card:flex",
   cardBlock: "cardBlock px-[30px] pt-6",
   cardContent: "cardContent flex flex-col gap-5",
   cardTitle: "cardTitle text-[32px] font-medium leading-9",

@@ -2,6 +2,7 @@ import { sharedStyles } from "../../sharedStyles"
 import { twMerge } from "tailwind-merge"
 
 import Button from "../Button/Button"
+import CardAction from "../CardAction/CardAction"
 import ProgressBar from "../ProgressBar/ProgressBar"
 import Tablet from "../Tablet/Tablet"
 
@@ -19,8 +20,9 @@ export default function Card({ name, hasUser, difficulty }: Props) {
     <div className={twMerge(sharedStyles.card, sharedStyles.shadowedBlock, hasUser && sharedStyles.cardFull)}>
       <div className={sharedStyles.cardPicture}>
         <img className={twMerge(sharedStyles.cardInner, sharedStyles[(`card-${name}`) as KeysType])} src={`/img/${name}.jpeg`} alt={name} />
-        <img className={sharedStyles.cardAddBtn} src="/img/plus.svg" alt="add" />
       </div>
+
+      <CardAction action={Math.floor(Math.random() * 2) - 1 ? "add" : "remove"} />
 
       <div className={sharedStyles.cardBlock}>
         <div className={sharedStyles.cardContent}>
