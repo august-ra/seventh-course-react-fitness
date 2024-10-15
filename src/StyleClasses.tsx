@@ -2,7 +2,7 @@
 // there is system file to build sharedStyles.ts
 // you can use `npm run prebuild` + `npm run dev`
 
-import { sharedStyles } from "./sharedStyles.ts"
+import { sharedStyles } from "./sharedStyles"
 
 function StyleClasses() {
   return (
@@ -12,7 +12,7 @@ function StyleClasses() {
       {/* courses */}
       <colors className="bg-aerobics bg-body-flex bg-stretching bg-yoga bg-zumba" />
       {/* button */}
-      <buttonCommon className="h-13 w-[103px] rounded-[46px] text-[18px]" />
+      <buttonCommon className="h-13 w-[103px] rounded-[46px] text-[18px] duration-300" />
       <buttonPrimary className="bg-good hover:bg-well active:bg-black active:text-white disabled:bg-light-bg disabled:text-light-tx" />
       <buttonSecondary className="border border-black bg-white hover:bg-light-bg active:bg-dark disabled:text-light-tx" />
       <buttonWide className="w-full" />
@@ -51,7 +51,7 @@ function StyleClasses() {
       <card-zumba className="right-[-398px] top-[-32px] min-h-[767px] min-w-[1150px]" />
       <card-aerobics className="right-[-82px] top-[-715px] min-h-[1081px] min-w-[721px]" />
       <card-body-flex className="right-[-182px] top-[-168px] min-h-[514px] min-w-[771px]" />
-      <cardAddBtn className="absolute right-[20px] top-[20px] h-[32px] w-[32px]" />
+      <cardAddBtn className="absolute right-[20px] top-[20px] h-[32px] w-[32px] cursor-arrow duration-300 hover:scale-110" />
       <cardBlock className="px-[30px] pt-6" />
       <cardContent className="flex flex-col gap-5" />
       <cardTitle className="text-[32px] font-medium leading-9" />

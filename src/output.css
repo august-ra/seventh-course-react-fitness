@@ -794,10 +794,6 @@ img{
   height: 141px;
 }
 
-.h-\[26px\]{
-  height: 26px;
-}
-
 .h-\[310px\]{
   height: 310px;
 }
@@ -822,16 +818,8 @@ img{
   height: 38px;
 }
 
-.h-\[425px\]{
-  height: 425px;
-}
-
 .h-\[501px\]{
   height: 501px;
-}
-
-.h-\[52px\]{
-  height: 52px;
 }
 
 .h-\[530px\]{
@@ -892,10 +880,6 @@ img{
 
 .min-h-\[767px\]{
   min-height: 767px;
-}
-
-.min-h-\[425px\]{
-  min-height: 425px;
 }
 
 .w-1\/2{
@@ -1020,6 +1004,10 @@ img{
 
 .flex-none{
   flex: none;
+}
+
+.cursor-arrow{
+  cursor: url(/img/arrow.svg), pointer;
 }
 
 .list-inside{
@@ -1343,6 +1331,11 @@ img{
   line-height: 1;
 }
 
+.text-bad{
+  --tw-text-opacity: 1;
+  color: rgb(219 0 48 / var(--tw-text-opacity));
+}
+
 .text-good{
   --tw-text-opacity: 1;
   color: rgb(188 236 48 / var(--tw-text-opacity));
@@ -1351,11 +1344,6 @@ img{
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-bad{
-  --tw-text-opacity: 1;
-  color: rgb(219 0 48 / var(--tw-text-opacity));
 }
 
 .underline{
@@ -1379,6 +1367,12 @@ img{
 .hover\:scale-102:hover{
   --tw-scale-x: 1.02;
   --tw-scale-y: 1.02;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:scale-110:hover{
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 

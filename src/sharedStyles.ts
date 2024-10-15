@@ -11,7 +11,7 @@ export const sharedStyles = {
 
   /* button */
 
-  buttonCommon: "buttonCommon h-13 w-[103px] rounded-[46px] text-[18px]",
+  buttonCommon: "buttonCommon h-13 w-[103px] rounded-[46px] text-[18px] duration-300",
   buttonPrimary: "buttonPrimary bg-good hover:bg-well active:bg-black active:text-white disabled:bg-light-bg disabled:text-light-tx",
   buttonSecondary: "buttonSecondary border border-black bg-white hover:bg-light-bg active:bg-dark disabled:text-light-tx",
   buttonWide: "buttonWide w-full",
@@ -60,7 +60,7 @@ export const sharedStyles = {
   "card-zumba": "card-zumba right-[-398px] top-[-32px] min-h-[767px] min-w-[1150px]",
   "card-aerobics": "card-aerobics right-[-82px] top-[-715px] min-h-[1081px] min-w-[721px]",
   "card-body-flex": "card-body-flex right-[-182px] top-[-168px] min-h-[514px] min-w-[771px]",
-  cardAddBtn: "cardAddBtn absolute right-[20px] top-[20px] h-[32px] w-[32px]",
+  cardAddBtn: "cardAddBtn absolute right-[20px] top-[20px] h-[32px] w-[32px] cursor-arrow duration-300 hover:scale-110",
   cardBlock: "cardBlock px-[30px] pt-6",
   cardContent: "cardContent flex flex-col gap-5",
   cardTitle: "cardTitle text-[32px] font-medium leading-9",

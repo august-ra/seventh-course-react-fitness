@@ -32,6 +32,9 @@ export default {
       boxShadow: {
         "3xl": "0 0 67px -12px rgba(0, 0, 0, 0.13)",
       },
+      cursor: {
+        "arrow": "url(/img/arrow.svg), pointer",
+      },
       height: {
         "13/2": "26px",
         "13": "52px",
