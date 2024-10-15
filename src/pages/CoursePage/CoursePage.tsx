@@ -77,7 +77,7 @@ export default function CoursePage() {
                   <li className={sharedStyles.presentationNewLifeLeftItem}>заряд бодрости</li>
                   <li className={sharedStyles.presentationNewLifeLeftItem}>помощь в противостоянии стрессам</li>
                 </ul>
-                <Button additionalClasses={sharedStyles.buttonWide} primary={true}>Войдите, чтобы добавить курс</Button>
+                <Button additionalClasses={sharedStyles.buttonWideWithMargin} primary={true}>Войдите, чтобы добавить курс</Button>
               </div>
 
               <div className={sharedStyles.presentationNewLifeRight}>

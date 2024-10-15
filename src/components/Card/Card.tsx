@@ -46,7 +46,7 @@ export default function Card({ name, hasUser, difficulty }: Props) {
         {
           hasUser
             && (
-              <Button additionalClasses={sharedStyles.buttonWide} primary={true}>Продолжить</Button>
+              <Button additionalClasses={sharedStyles.buttonWideWithMargin} primary={true}>Продолжить</Button>
             )
         }
       </div>

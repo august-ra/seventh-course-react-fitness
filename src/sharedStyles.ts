@@ -11,10 +11,11 @@ export const sharedStyles = {
 
   /* button */
 
-  buttonCommon: "buttonCommon h-[52px] w-[103px] rounded-[46px] text-[18px]",
+  buttonCommon: "buttonCommon h-13 w-[103px] rounded-[46px] text-[18px]",
   buttonPrimary: "buttonPrimary bg-good hover:bg-well active:bg-black active:text-white disabled:bg-light-bg disabled:text-light-tx",
   buttonSecondary: "buttonSecondary border border-black bg-white hover:bg-light-bg active:bg-dark disabled:text-light-tx",
-  buttonWide: "buttonWide mt-10 w-full",
+  buttonWide: "buttonWide w-full",
+  buttonWideWithMargin: "buttonWideWithMargin mt-10 w-full",
 
   /* main */
 
@@ -78,8 +79,8 @@ export const sharedStyles = {
   presentationNumber: "presentationNumber text-[75px] font-medium leading-[102px] text-good",
   presentationText: "presentationText text-[24px] leading-[30px] text-white",
   presentationGoals: "presentationGoals flex flex-wrap gap-x-[124px] gap-y-[34px] rounded-[28px] bg-good p-[30px] text-[24px] leading-[26px]",
-  presentationGoal: "presentationGoal flex h-[26px] w-[284px] items-center gap-2",
-  presentationGoalStar: "presentationGoalStar h-[26px] w-[26px]",
+  presentationGoal: "presentationGoal flex h-13/2 w-[284px] items-center gap-2",
+  presentationGoalStar: "presentationGoalStar h-13/2 w-[26px]",
   presentationNewLife: "presentationNewLife relative mb-[50px] mt-[100px] rounded-[30px] bg-white p-10",
   presentationNewLifeTitle: "presentationNewLifeTitle mb-10 text-[60px] font-medium leading-[60px]",
   presentationNewLifeLeft: "presentationNewLifeLeft w-[448px] list-inside",
@@ -99,4 +100,14 @@ export const sharedStyles = {
 
   climber: "climber mt-[34px] flex justify-center",
   footer: "footer flex flex-none justify-center pb-[60px] pt-[50px] text-[18px]",
+
+  /* signing */
+
+  modalWrapper: "modalWrapper fixed left-0 top-0 flex h-screen w-screen items-center justify-center bg-blocked",
+  modalForm: "modalForm m-auto flex w-[360px] flex-col items-center gap-12 rounded-[30px] bg-white p-10",
+  modalFormInner: "modalFormInner flex w-full flex-col items-center gap-[34px]",
+  modalFormSubgroup: "modalFormSubgroup flex w-full flex-col items-center gap-[10px]",
+  modalFormInput: "modalFormInput h-13 w-full rounded-[8px] border border-neutral bg-white px-4.5 py-4",
+  modalFormError: "modalFormError text-center text-sm text-bad",
+  modalFormErrorLink: "modalFormErrorLink text-center text-sm font-medium text-bad underline",
 }

@@ -12,10 +12,11 @@ function StyleClasses() {
       {/* courses */}
       <colors className="bg-aerobics bg-body-flex bg-stretching bg-yoga bg-zumba" />
       {/* button */}
-      <buttonCommon className="h-[52px] w-[103px] rounded-[46px] text-[18px]" />
+      <buttonCommon className="h-13 w-[103px] rounded-[46px] text-[18px]" />
       <buttonPrimary className="bg-good hover:bg-well active:bg-black active:text-white disabled:bg-light-bg disabled:text-light-tx" />
       <buttonSecondary className="border border-black bg-white hover:bg-light-bg active:bg-dark disabled:text-light-tx" />
-      <buttonWide className="mt-10 w-full" />
+      <buttonWide className="w-full" />
+      <buttonWideWithMargin className="mt-10 w-full" />
       {/* main */}
       <wrapper className="flex h-[100vh] flex-col justify-between" />
       <container className="m-auto w-[1160px] flex-1" />
@@ -67,8 +68,8 @@ function StyleClasses() {
       <presentationNumber className="text-[75px] font-medium leading-[102px] text-good" />
       <presentationText className="text-[24px] leading-[30px] text-white" />
       <presentationGoals className="flex flex-wrap gap-x-[124px] gap-y-[34px] rounded-[28px] bg-good p-[30px] text-[24px] leading-[26px]" />
-      <presentationGoal className="flex h-[26px] w-[284px] items-center gap-2" />
-      <presentationGoalStar className="h-[26px] w-[26px]" />
+      <presentationGoal className="flex h-13/2 w-[284px] items-center gap-2" />
+      <presentationGoalStar className="h-13/2 w-[26px]" />
       <presentationNewLife className="relative mb-[50px] mt-[100px] rounded-[30px] bg-white p-10" />
       <presentationNewLifeTitle className="mb-10 text-[60px] font-medium leading-[60px]" />
       <presentationNewLifeLeft className="w-[448px] list-inside" />
@@ -84,6 +85,14 @@ function StyleClasses() {
       {/* footer */}
       <climber className="mt-[34px] flex justify-center" />
       <footer className="flex flex-none justify-center pb-[60px] pt-[50px] text-[18px]" />
+      {/* signing */}
+      <modalWrapper className="fixed left-0 top-0 flex h-screen w-screen items-center justify-center bg-blocked" />
+      <modalForm className="m-auto flex w-[360px] flex-col items-center gap-12 rounded-[30px] bg-white p-10" />
+      <modalFormInner className="flex w-full flex-col items-center gap-[34px]" />
+      <modalFormSubgroup className="flex w-full flex-col items-center gap-[10px]" />
+      <modalFormInput className="h-13 w-full rounded-[8px] border border-neutral bg-white px-4.5 py-4" />
+      <modalFormError className="text-center text-sm text-bad" />
+      <modalFormErrorLink className="text-center text-sm font-medium text-bad underline" />
     </>
   )
 }

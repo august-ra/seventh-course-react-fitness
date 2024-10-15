@@ -577,6 +577,10 @@ img{
   position: static;
 }
 
+.fixed{
+  position: fixed;
+}
+
 .absolute{
   position: absolute;
 }
@@ -605,8 +609,8 @@ img{
   bottom: 9px;
 }
 
-.left-\[-242px\]{
-  left: -242px;
+.left-0{
+  left: 0px;
 }
 
 .left-\[368px\]{
@@ -623,6 +627,10 @@ img{
 
 .right-\[-16px\]{
   right: -16px;
+}
+
+.right-\[-182px\]{
+  right: -182px;
 }
 
 .right-\[-200px\]{
@@ -643,6 +651,14 @@ img{
 
 .right-\[-295px\]{
   right: -295px;
+}
+
+.right-\[-398px\]{
+  right: -398px;
+}
+
+.right-\[-82px\]{
+  right: -82px;
 }
 
 .right-\[140px\]{
@@ -673,6 +689,10 @@ img{
   top: -155px;
 }
 
+.top-\[-168px\]{
+  top: -168px;
+}
+
 .top-\[-175px\]{
   top: -175px;
 }
@@ -685,8 +705,16 @@ img{
   top: -315px;
 }
 
+.top-\[-32px\]{
+  top: -32px;
+}
+
 .top-\[-37px\]{
   top: -37px;
+}
+
+.top-\[-715px\]{
+  top: -715px;
 }
 
 .top-\[20px\]{
@@ -695,38 +723,6 @@ img{
 
 .top-\[85px\]{
   top: 85px;
-}
-
-.right-\[398px\]{
-  right: 398px;
-}
-
-.top-\[32px\]{
-  top: 32px;
-}
-
-.right-\[-398px\]{
-  right: -398px;
-}
-
-.top-\[-32px\]{
-  top: -32px;
-}
-
-.right-\[-82px\]{
-  right: -82px;
-}
-
-.top-\[-715px\]{
-  top: -715px;
-}
-
-.right-\[-182px\]{
-  right: -182px;
-}
-
-.top-\[-168px\]{
-  top: -168px;
 }
 
 .z-10{
@@ -778,6 +774,14 @@ img{
   display: flex;
 }
 
+.h-13{
+  height: 52px;
+}
+
+.h-13\/2{
+  height: 26px;
+}
+
 .h-\[100vh\]{
   height: 100vh;
 }
@@ -818,6 +822,10 @@ img{
   height: 38px;
 }
 
+.h-\[425px\]{
+  height: 425px;
+}
+
 .h-\[501px\]{
   height: 501px;
 }
@@ -854,36 +862,40 @@ img{
   height: 100%;
 }
 
-.h-\[557px\]{
-  height: 557px;
+.h-screen{
+  height: 100vh;
 }
 
 .max-h-\[310px\]{
   max-height: 310px;
 }
 
+.min-h-\[1081px\]{
+  min-height: 1081px;
+}
+
 .min-h-\[310px\]{
   min-height: 310px;
 }
 
-.min-h-\[557px\]{
-  min-height: 557px;
+.min-h-\[514px\]{
+  min-height: 514px;
 }
 
 .min-h-\[540px\]{
   min-height: 540px;
 }
 
+.min-h-\[557px\]{
+  min-height: 557px;
+}
+
 .min-h-\[767px\]{
   min-height: 767px;
 }
 
-.min-h-\[1081px\]{
-  min-height: 1081px;
-}
-
-.min-h-\[514px\]{
-  min-height: 514px;
+.min-h-\[425px\]{
+  min-height: 425px;
 }
 
 .w-1\/2{
@@ -974,32 +986,28 @@ img{
   width: 100%;
 }
 
-.w-\[834px\]{
-  width: 834px;
-}
-
-.min-w-\[834px\]{
-  min-width: 834px;
-}
-
-.min-w-\[360px\]{
-  min-width: 360px;
+.w-screen{
+  width: 100vw;
 }
 
 .min-w-\[1150px\]{
   min-width: 1150px;
 }
 
-.min-w-\[531px\]{
-  min-width: 531px;
+.min-w-\[360px\]{
+  min-width: 360px;
+}
+
+.min-w-\[721px\]{
+  min-width: 721px;
 }
 
 .min-w-\[771px\]{
   min-width: 771px;
 }
 
-.min-w-\[721px\]{
-  min-width: 721px;
+.min-w-\[834px\]{
+  min-width: 834px;
 }
 
 .max-w-\[864px\]{
@@ -1050,6 +1058,10 @@ img{
   gap: 2.5rem;
 }
 
+.gap-12{
+  gap: 3rem;
+}
+
 .gap-2{
   gap: 0.5rem;
 }
@@ -1068,6 +1080,10 @@ img{
 
 .gap-\[25px\]{
   gap: 25px;
+}
+
+.gap-\[34px\]{
+  gap: 34px;
 }
 
 .gap-\[6px\]{
@@ -1111,6 +1127,10 @@ img{
   border-radius: 5px;
 }
 
+.rounded-\[8px\]{
+  border-radius: 8px;
+}
+
 .border{
   border-width: 1px;
 }
@@ -1118,6 +1138,11 @@ img{
 .border-black{
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.border-neutral{
+  --tw-border-opacity: 1;
+  border-color: rgb(208 206 206 / var(--tw-border-opacity));
 }
 
 .bg-aerobics{
@@ -1128,6 +1153,10 @@ img{
 .bg-black{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-blocked{
+  background-color: rgba(0,0,0,0.2);
 }
 
 .bg-body-flex{
@@ -1182,6 +1211,11 @@ img{
   padding: 30px;
 }
 
+.px-4\.5{
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
 .px-5{
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -1195,6 +1229,11 @@ img{
 .px-\[30px\]{
   padding-left: 30px;
   padding-right: 30px;
+}
+
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .py-\[16px\]{
@@ -1216,6 +1255,10 @@ img{
 
 .text-left{
   text-align: left;
+}
+
+.text-center{
+  text-align: center;
 }
 
 .text-2xl{
@@ -1249,6 +1292,11 @@ img{
 
 .text-\[75px\]{
   font-size: 75px;
+}
+
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .font-medium{
@@ -1303,6 +1351,15 @@ img{
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-bad{
+  --tw-text-opacity: 1;
+  color: rgb(219 0 48 / var(--tw-text-opacity));
+}
+
+.underline{
+  text-decoration-line: underline;
 }
 
 .opacity-60{

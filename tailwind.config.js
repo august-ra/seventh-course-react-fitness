@@ -10,6 +10,7 @@ export default {
       "good":     "#bcec30",
       "well":     "#c6ff00",
       "work":     "#00c1ff",
+      "neutral":  "#d0cece",
       "bad":      "#db0030",
       "white":    "#ffffff",
       "back":     "#fafafa",
@@ -22,6 +23,7 @@ export default {
       "zumba":      "#f7a012",
       "aerobics":   "#ff7e65",
       "body-flex":  "#7d458c",
+      "blocked": "rgba(0,0,0,0.2)",
     },
     fontFamily: {
       "sans": ['"Roboto"', "sans-serif"],
@@ -29,6 +31,13 @@ export default {
     extend: {
       boxShadow: {
         "3xl": "0 0 67px -12px rgba(0, 0, 0, 0.13)",
+      },
+      height: {
+        "13/2": "26px",
+        "13": "52px",
+      },
+      padding: {
+        "4.5": "18px",
       },
       scale: {
         "102": "1.02",
