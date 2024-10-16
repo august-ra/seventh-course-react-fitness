@@ -2,7 +2,6 @@ import { sharedStyles } from "../../sharedStyles"
 import { twMerge } from "tailwind-merge"
 
 import Button from "../../components/Button/Button"
-import MainPage from "../MainPage/MainPage"
 
 import { useState } from "react"
 
@@ -27,7 +26,7 @@ interface ExtendedProps extends Props {
   setError: (value: ExtendedProps["error"]) => void
 }
 
-export default function SigningPage({ mode }: Props) {
+export default function SigningModal({ mode }: Props) {
   const [error, setError] = useState<ExtendedProps["error"]>({
     showing: true,
     message: "",
@@ -43,8 +42,6 @@ export default function SigningPage({ mode }: Props) {
 
   return (
     <>
-      <MainPage />
-
       <div className={sharedStyles.modalWrapper}>
         <form className={sharedStyles.modalForm}>
           <img className={sharedStyles.headerLogo} src="/img/logo.svg" alt="logo" />
