@@ -112,4 +112,12 @@ export const sharedStyles = {
   modalFormInput: "modalFormInput h-13 w-full rounded-[8px] border border-neutral bg-white px-4.5 py-4",
   modalFormError: "modalFormError text-center text-sm text-bad",
   modalFormErrorLink: "modalFormErrorLink text-center text-sm font-medium text-bad underline",
+
+  /* page 404 */
+
+  page404Container: "page404Container relative flex h-screen justify-center bg-white",
+  page404Image: "page404Image h-[800px] w-[1200px]",
+  page404TextBlock: "page404TextBlock absolute top-[400px] flex w-[700px] flex-col gap-4",
+  page404Title: "page404Title text-[28px] text-[#175AB2]",
+  page404Description: "page404Description w-[360px] leading-6",
 }

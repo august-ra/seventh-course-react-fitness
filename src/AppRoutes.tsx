@@ -1,5 +1,6 @@
 import App from "./App"
 import CoursePage from "./pages/CoursePage/CoursePage"
+import Page404 from "./pages/Page404/Page404"
 import SigningModal from "./pages/SigningModal/SigningModal"
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
         children: signingRouterData,
       },
     ],
+  },
+  {
+    path: Pages.NOT_FOUND,
+    element: <Page404 />,
   },
 ])
 

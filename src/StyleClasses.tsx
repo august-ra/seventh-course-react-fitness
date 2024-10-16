@@ -95,6 +95,12 @@ function StyleClasses() {
       <modalFormInput className="h-13 w-full rounded-[8px] border border-neutral bg-white px-4.5 py-4" />
       <modalFormError className="text-center text-sm text-bad" />
       <modalFormErrorLink className="text-center text-sm font-medium text-bad underline" />
+      {/* page 404 */}
+      <page404Container className="relative flex h-screen justify-center bg-white" />
+      <page404Image className="h-[800px] w-[1200px]" />
+      <page404TextBlock className="absolute top-[400px] flex w-[700px] flex-col gap-4" />
+      <page404Title className="text-[28px] text-[#175AB2]" />
+      <page404Description className="w-[360px] leading-6" />
     </>
   )
 }
