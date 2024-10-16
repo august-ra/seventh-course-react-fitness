@@ -1,8 +1,12 @@
-import "./App.css";
+import "./App.css"
+
+import MainPage from "./pages/MainPage/MainPage"
 
 
 function App() {
-  return <h1 className="font-bold text-3xl underline">Hello world!</h1>;
+  return (
+    <MainPage />
+  )
 }
 
-export default App;
+export default App
