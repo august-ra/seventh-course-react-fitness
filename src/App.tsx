@@ -2,11 +2,15 @@ import "./App.css"
 
 import MainPage from "./pages/MainPage/MainPage"
 
+import { Outlet } from "react-router-dom"
 
-function App() {
+
+export default function App() {
   return (
-    <MainPage />
+    <>
+      <MainPage />
+
+      <Outlet />
+    </>
   )
 }
-
-export default App

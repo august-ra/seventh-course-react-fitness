@@ -3,7 +3,8 @@ import { twMerge } from "tailwind-merge"
 
 import Button from "../../components/Button/Button"
 
-import { useState } from "react"
+import React, { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 
 interface Props {
@@ -27,6 +28,8 @@ interface ExtendedProps extends Props {
 }
 
 export default function SigningModal({ mode }: Props) {
+  const navigate = useNavigate()
+
   const [error, setError] = useState<ExtendedProps["error"]>({
     showing: true,
     message: "",
@@ -40,9 +43,14 @@ export default function SigningModal({ mode }: Props) {
     repeat:   "",
   })
 
+  function handleClose(e: React.MouseEvent<HTMLOrSVGElement>) {
+    if (e.target.dataset.id === "modal-outside")
+      navigate(-1)
+  }
+
   return (
     <>
-      <div className={sharedStyles.modalWrapper}>
+      <div className={sharedStyles.modalWrapper} data-id="modal-outside" onClick={handleClose}>
         <form className={sharedStyles.modalForm}>
           <img className={sharedStyles.headerLogo} src="/img/logo.svg" alt="logo" />
 

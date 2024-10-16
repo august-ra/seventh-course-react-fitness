@@ -1,0 +1,13 @@
+
+const Pages = {
+  MAIN:      "/",
+  COURSES:   "courses/",
+  COURSE:    ":id/",
+  SIGNING:   "signing/",
+  SIGN_IN:   "signing/in/",
+  SIGN_UP:   "signing/up/",
+  SIGN_OUT:  "signing/out/",
+  NOT_FOUND: "/*",
+}
+
+export default Pages

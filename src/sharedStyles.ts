@@ -35,7 +35,7 @@ export const sharedStyles = {
   captionText: "captionText max-w-[864px] text-[60px] font-medium leading-none",
   captionBalloon: "captionBalloon relative",
   captionBalloonTail: "captionBalloonTail absolute right-[140px] top-[85px] h-[36px] w-[30px]",
-  captionBalloonFace: "captionBalloonFace relative z-20 h-[102px] w-[288px] rounded-[5px] bg-good px-[20px] py-[16px] text-[32px] leading-9",
+  captionBalloonFace: "captionBalloonFace relative z-10 h-[102px] w-[288px] rounded-[5px] bg-good px-[20px] py-[16px] text-[32px] leading-9",
 
   /* banner */
 
@@ -105,7 +105,7 @@ export const sharedStyles = {
 
   /* signing */
 
-  modalWrapper: "modalWrapper fixed left-0 top-0 flex h-screen w-screen items-center justify-center bg-blocked",
+  modalWrapper: "modalWrapper fixed left-0 top-0 z-10 flex h-screen w-screen items-center justify-center bg-blocked",
   modalForm: "modalForm m-auto flex w-[360px] flex-col items-center gap-12 rounded-[30px] bg-white p-10",
   modalFormInner: "modalFormInner flex w-full flex-col items-center gap-[34px]",
   modalFormSubgroup: "modalFormSubgroup flex w-full flex-col items-center gap-[10px]",

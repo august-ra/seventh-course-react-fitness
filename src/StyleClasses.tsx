@@ -1,5 +1,5 @@
 // @ts-nocheck
-// there is system file to build sharedStyles.ts
+// there is special file to get sharedStyles.ts
 // you can use `npm run prebuild` + `npm run dev`
 
 import { sharedStyles } from "./sharedStyles"
@@ -30,7 +30,7 @@ function StyleClasses() {
       <captionText className="max-w-[864px] text-[60px] font-medium leading-none" />
       <captionBalloon className="relative" />
       <captionBalloonTail className="absolute right-[140px] top-[85px] h-[36px] w-[30px]" />
-      <captionBalloonFace className="relative z-20 h-[102px] w-[288px] rounded-[5px] bg-good px-[20px] py-[16px] text-[32px] leading-9" />
+      <captionBalloonFace className="relative z-10 h-[102px] w-[288px] rounded-[5px] bg-good px-[20px] py-[16px] text-[32px] leading-9" />
       {/* banner */}
       <banner className="relative mb-[60px] h-[310px] max-h-[310px] min-h-[310px] w-[1160px] overflow-hidden rounded-[30px] p-10 text-white" />
       <bannerText className="relative z-10 h-[66px] text-[60px] font-medium leading-[66px]" />
@@ -88,7 +88,7 @@ function StyleClasses() {
       <climber className="mt-[34px] flex justify-center" />
       <footer className="flex flex-none justify-center pb-[60px] pt-[50px] text-[18px]" />
       {/* signing */}
-      <modalWrapper className="fixed left-0 top-0 flex h-screen w-screen items-center justify-center bg-blocked" />
+      <modalWrapper className="fixed left-0 top-0 z-10 flex h-screen w-screen items-center justify-center bg-blocked" />
       <modalForm className="m-auto flex w-[360px] flex-col items-center gap-12 rounded-[30px] bg-white p-10" />
       <modalFormInner className="flex w-full flex-col items-center gap-[34px]" />
       <modalFormSubgroup className="flex w-full flex-col items-center gap-[10px]" />
