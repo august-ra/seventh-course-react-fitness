@@ -1,5 +1,5 @@
-import App from "./App"
 import CoursePage from "./pages/CoursePage/CoursePage"
+import MainPage from "./pages/MainPage/MainPage"
 import Page404 from "./pages/Page404/Page404"
 import SigningModal from "./pages/SigningModal/SigningModal"
 
@@ -31,20 +31,18 @@ const signingRouterData = [
 const router = createBrowserRouter([
   {
     path: Pages.MAIN,
-    element: <App />,
+    element: <MainPage />,
     children: signingRouterData,
   },
   {
     path: Pages.COURSES,
-    element: <App />,
-    children: [
-      ...signingRouterData,
-      {
-        path: Pages.COURSE,
-        element: <CoursePage />,
-        children: signingRouterData,
-      },
-    ],
+    element: <MainPage />,
+    children: signingRouterData,
+  },
+  {
+    path: Pages.COURSE,
+    element: <CoursePage />,
+    children: signingRouterData,
   },
   {
     path: Pages.NOT_FOUND,
