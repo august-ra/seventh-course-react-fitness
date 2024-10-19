@@ -44,7 +44,7 @@ function StyleClasses() {
       <cards className="mt-[50px] flex w-full flex-wrap justify-start gap-10" />
       <card className="relative h-[501px] w-[360px] rounded-[30px] bg-white hover:z-50" />
       <cardFull className="h-[649px]" />
-      <cardPicture className="relative h-[325px] w-[360px] overflow-hidden rounded-[30px]" />
+      <cardPicture className="relative h-[325px] w-[360px] cursor-pointer overflow-hidden rounded-[30px]" />
       <cardInner className="absolute" />
       <card-yoga className="right-[-232px] top-[-119px] min-h-[557px] min-w-[834px]" />
       <card-stretching className="right-0 top-0 min-h-[540px] min-w-[360px]" />
@@ -56,7 +56,7 @@ function StyleClasses() {
       <cardActionTooltip className="absolute left-[352px] top-[-262px] hidden h-[27px] w-max items-center justify-center rounded-[5px] border border-black bg-white p-1.5 text-sm group-hover/card:flex" />
       <cardBlock className="px-[30px] pt-6" />
       <cardContent className="flex flex-col gap-5" />
-      <cardTitle className="text-[32px] font-medium leading-9" />
+      <cardTitle className="cursor-pointer text-[32px] font-medium leading-9" />
       <cardTablets className="flex flex-wrap gap-[6px]" />
       <cardTablet className="flex h-[38px] gap-[6px] rounded-[50px] bg-light-bg p-[10px]" />
       <cardTabletText className="text-nowrap text-[16px] leading-[18px]" />
@@ -99,7 +99,7 @@ function StyleClasses() {
       <page404Container className="relative flex h-screen justify-center bg-white" />
       <page404Image className="h-[800px] w-[1200px]" />
       <page404TextBlock className="absolute top-[400px] flex w-[700px] flex-col gap-4" />
-      <page404Title className="text-[28px] text-[#175AB2]" />
+      <page404Title className="text-[28px] text-404" />
       <page404Description className="w-[360px] leading-6" />
     </>
   )

@@ -23,6 +23,7 @@ export default {
       "zumba":      "#f7a012",
       "aerobics":   "#ff7e65",
       "body-flex":  "#7d458c",
+      "404":        "#175AB2",
       "blocked": "rgba(0,0,0,0.2)",
     },
     fontFamily: {
