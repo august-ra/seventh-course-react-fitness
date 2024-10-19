@@ -43,8 +43,8 @@ export default function SigningModal({ mode }: Props) {
     repeat:   "",
   })
 
-  function handleClose(e: React.MouseEvent<HTMLOrSVGElement>) {
-    if (e.target.dataset.id === "modal-outside")
+  function handleClose(e: React.MouseEvent<HTMLDivElement>) {
+    if ((e.target as HTMLDivElement).dataset.id === "modal-outside")
       navigate(-1)
   }
 

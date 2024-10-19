@@ -1,6 +1,6 @@
 
 export interface SkillType {
-  _id:     number
+  _id:     string
   name:    string
   title:   string
   picture: string
@@ -8,31 +8,31 @@ export interface SkillType {
 
 export const skills: SkillType[] = [
   {
-    _id:     1,
+    _id:     "ab1c3f",
     name:    "yoga",
     title:   "Йога",
     picture: "/img/yoga.jpeg",
   },
   {
-    _id:     2,
+    _id:     "kfpq8e",
     name:    "stretching",
     title:   "Стретчинг",
     picture: "/img/stretching.jpeg",
   },
   {
-    _id:     3,
+    _id:     "ypox9r",
     name:    "zumba",
     title:   "Зумба",
     picture: "/img/zumba.jpeg",
   },
   {
-    _id:     4,
+    _id:     "6i67sm",
     name:    "aerobics",
     title:   "Степ-аэробика",
     picture: "/img/aerobics.jpeg",
   },
   {
-    _id:     5,
+    _id:     "q02a6i",
     name:    "body-flex",
     title:   "Бодифлекс",
     picture: "/img/body-flex.jpeg",
