@@ -18,7 +18,7 @@ export default function Banner({ skillData, ...props }: Props) {
 
   return (
     <div className={twMerge(sharedStyles.banner, `bg-${skillData.name}`)}>
-      <img className={classNames} src={skillData.picture} alt={skillData.name} />
+      <img className={classNames} src={`/img/${skillData.name}.jpeg`} alt={skillData.name} />
       {
         props.title
           && (

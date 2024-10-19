@@ -1,5 +1,5 @@
 
-const Pages = {
+const pages = {
   MAIN:      "/",
   COURSES:   "/courses/",
   COURSE:    "/courses/:id/",
@@ -10,4 +10,4 @@ const Pages = {
   NOT_FOUND: "/*",
 }
 
-export default Pages
+export default pages

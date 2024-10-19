@@ -1,7 +1,7 @@
 import { sharedStyles } from "../../sharedStyles"
 
 import { Link } from "react-router-dom"
-import Pages from "../../data/pages"
+import pages from "../../data/pages"
 
 
 export default function Page404() {
@@ -14,7 +14,7 @@ export default function Page404() {
         <p className={sharedStyles.page404Description}>
           Страница, на которую Вы перешли, не найдена. Возможно, Вы ввели неправильный адрес, или страница была перемещена.
         </p>
-        <Link to={Pages.MAIN}>Перейти на главную</Link>
+        <Link to={pages.MAIN}>Перейти на главную</Link>
       </div>
     </div>
   )

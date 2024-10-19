@@ -3,14 +3,14 @@ import { sharedStyles } from "../../sharedStyles"
 import Button from "../Button/Button"
 
 import { useNavigateFaraway } from "../../hooks/useNavigateFaraway"
-import Pages from "../../data/pages"
+import pages from "../../data/pages"
 
 
 export default function Header() {
   const navigate = useNavigateFaraway()
 
   function doAuth() {
-    navigate(Pages.SIGN_IN)
+    navigate(pages.SIGN_IN)
   }
 
   return (

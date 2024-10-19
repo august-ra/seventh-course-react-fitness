@@ -6,21 +6,28 @@ import CardAction from "../CardAction/CardAction"
 import ProgressBar from "../ProgressBar/ProgressBar"
 import Tablet from "../Tablet/Tablet"
 
+import { Link } from "react-router-dom"
+import type { SkillType } from "../../data/skills"
 import type { KeysType } from "../../types/types"
 
 
 interface Props {
-  name:       string
+  skillData:  SkillType
   hasUser:    boolean
   difficulty: number
 }
 
-export default function Card({ name, hasUser, difficulty }: Props) {
+export default function Card({ skillData, hasUser, difficulty }: Props) {
+  const name = skillData.name
+  const link = `/courses/${skillData._id}`
+
   return (
     <div className={twMerge(sharedStyles.card, sharedStyles.shadowedBlock, hasUser && sharedStyles.cardFull)}>
-      <div className={sharedStyles.cardPicture}>
-        <img className={twMerge(sharedStyles.cardInner, sharedStyles[(`card-${name}`) as KeysType])} src={`/img/${name}.jpeg`} alt={name} />
-      </div>
+      <Link to={link}>
+        <div className={sharedStyles.cardPicture}>
+          <img className={twMerge(sharedStyles.cardInner, sharedStyles[(`card-${name}`) as KeysType])} src={`/img/${name}.jpeg`} alt={name} />
+        </div>
+      </Link>
 
       <CardAction action={Math.floor(Math.random() * 2) - 1 ? "add" : "remove"} />
 
