@@ -5,16 +5,23 @@ import Climber from "../../components/Climber/Climber"
 import Footer from "../../components/Footer/Footer"
 import Header from "../../components/Header/Header"
 
+import { useRef } from "react"
 import { Outlet, useLoaderData } from "react-router-dom"
 import { skills } from "../../data/skills"
 
 
 export default function MainPage() {
+  const topRef = useRef<HTMLDivElement>(null)
   const data = useLoaderData()
   console.log("data", data)
 
+  function handleGettingTop() {
+    if (topRef.current)
+      topRef.current.scrollIntoView({ behavior: "smooth" })
+  }
+
   return (
-    <div className={sharedStyles.wrapper}>
+    <div className={sharedStyles.wrapper} ref={topRef}>
       <div className={sharedStyles.container}>
         <Header />
 
@@ -38,7 +45,7 @@ export default function MainPage() {
             </div>
           </section>
 
-          <Climber />
+          <Climber onGettingTop={handleGettingTop} />
         </main>
       </div>
 
