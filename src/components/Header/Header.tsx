@@ -2,8 +2,17 @@ import { sharedStyles } from "../../sharedStyles"
 
 import Button from "../Button/Button"
 
+import { useNavigateFaraway } from "../../hooks/useNavigateFaraway"
+import Pages from "../../data/pages"
+
 
 export default function Header() {
+  const navigate = useNavigateFaraway()
+
+  function doAuth() {
+    navigate(Pages.SIGN_IN)
+  }
+
   return (
     <header className={sharedStyles.header}>
       <div className={sharedStyles.headerContainer}>
@@ -11,7 +20,7 @@ export default function Header() {
         <p className={sharedStyles.headerSlogan}>Онлайн-тренировки для занятий дома</p>
       </div>
 
-      <Button primary={true} onClick={() => console.log("test test")}>Войти</Button>
+      <Button primary={true} onClick={doAuth}>Войти</Button>
     </header>
   )
 }

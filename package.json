@@ -1,5 +1,5 @@
 {
-  "name": "seventh-cource-react-fitness",
+  "name": "seventh-course-react-fitness",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -15,11 +15,13 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
     "tailwind-merge": "^2.5.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
     "@stylistic/eslint-plugin-js": "^2.0.0",
+    "@types/node": "^22.7.5",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@typescript-eslint/eslint-plugin": "^7.2.0",

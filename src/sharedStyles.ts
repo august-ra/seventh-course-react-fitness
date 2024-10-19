@@ -35,7 +35,7 @@ export const sharedStyles = {
   captionText: "captionText max-w-[864px] text-[60px] font-medium leading-none",
   captionBalloon: "captionBalloon relative",
   captionBalloonTail: "captionBalloonTail absolute right-[140px] top-[85px] h-[36px] w-[30px]",
-  captionBalloonFace: "captionBalloonFace relative z-20 h-[102px] w-[288px] rounded-[5px] bg-good px-[20px] py-[16px] text-[32px] leading-9",
+  captionBalloonFace: "captionBalloonFace relative z-10 h-[102px] w-[288px] rounded-[5px] bg-good px-[20px] py-[16px] text-[32px] leading-9",
 
   /* banner */
 
@@ -53,7 +53,7 @@ export const sharedStyles = {
   cards: "cards mt-[50px] flex w-full flex-wrap justify-start gap-10",
   card: "card relative h-[501px] w-[360px] rounded-[30px] bg-white hover:z-50",
   cardFull: "cardFull h-[649px]",
-  cardPicture: "cardPicture relative h-[325px] w-[360px] overflow-hidden rounded-[30px]",
+  cardPicture: "cardPicture relative h-[325px] w-[360px] cursor-pointer overflow-hidden rounded-[30px]",
   cardInner: "cardInner absolute",
   "card-yoga": "card-yoga right-[-232px] top-[-119px] min-h-[557px] min-w-[834px]",
   "card-stretching": "card-stretching right-0 top-0 min-h-[540px] min-w-[360px]",
@@ -65,7 +65,7 @@ export const sharedStyles = {
   cardActionTooltip: "cardActionTooltip absolute left-[352px] top-[-262px] hidden h-[27px] w-max items-center justify-center rounded-[5px] border border-black bg-white p-1.5 text-sm group-hover/card:flex",
   cardBlock: "cardBlock px-[30px] pt-6",
   cardContent: "cardContent flex flex-col gap-5",
-  cardTitle: "cardTitle text-[32px] font-medium leading-9",
+  cardTitle: "cardTitle cursor-pointer text-[32px] font-medium leading-9",
   cardTablets: "cardTablets flex flex-wrap gap-[6px]",
   cardTablet: "cardTablet flex h-[38px] gap-[6px] rounded-[50px] bg-light-bg p-[10px]",
   cardTabletText: "cardTabletText text-nowrap text-[16px] leading-[18px]",
@@ -105,11 +105,19 @@ export const sharedStyles = {
 
   /* signing */
 
-  modalWrapper: "modalWrapper fixed left-0 top-0 flex h-screen w-screen items-center justify-center bg-blocked",
+  modalWrapper: "modalWrapper fixed left-0 top-0 z-10 flex h-screen w-screen items-center justify-center bg-blocked",
   modalForm: "modalForm m-auto flex w-[360px] flex-col items-center gap-12 rounded-[30px] bg-white p-10",
   modalFormInner: "modalFormInner flex w-full flex-col items-center gap-[34px]",
   modalFormSubgroup: "modalFormSubgroup flex w-full flex-col items-center gap-[10px]",
   modalFormInput: "modalFormInput h-13 w-full rounded-[8px] border border-neutral bg-white px-4.5 py-4",
   modalFormError: "modalFormError text-center text-sm text-bad",
   modalFormErrorLink: "modalFormErrorLink text-center text-sm font-medium text-bad underline",
+
+  /* page 404 */
+
+  page404Container: "page404Container relative flex h-screen justify-center bg-white",
+  page404Image: "page404Image h-[800px] w-[1200px]",
+  page404TextBlock: "page404TextBlock absolute top-[400px] flex w-[700px] flex-col gap-4",
+  page404Title: "page404Title text-[28px] text-404",
+  page404Description: "page404Description w-[360px] leading-6",
 }

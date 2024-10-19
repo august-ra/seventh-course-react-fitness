@@ -1,5 +1,5 @@
 // @ts-nocheck
-// there is system file to build sharedStyles.ts
+// there is special file to get sharedStyles.ts
 // you can use `npm run prebuild` + `npm run dev`
 
 import { sharedStyles } from "./sharedStyles"
@@ -30,7 +30,7 @@ function StyleClasses() {
       <captionText className="max-w-[864px] text-[60px] font-medium leading-none" />
       <captionBalloon className="relative" />
       <captionBalloonTail className="absolute right-[140px] top-[85px] h-[36px] w-[30px]" />
-      <captionBalloonFace className="relative z-20 h-[102px] w-[288px] rounded-[5px] bg-good px-[20px] py-[16px] text-[32px] leading-9" />
+      <captionBalloonFace className="relative z-10 h-[102px] w-[288px] rounded-[5px] bg-good px-[20px] py-[16px] text-[32px] leading-9" />
       {/* banner */}
       <banner className="relative mb-[60px] h-[310px] max-h-[310px] min-h-[310px] w-[1160px] overflow-hidden rounded-[30px] p-10 text-white" />
       <bannerText className="relative z-10 h-[66px] text-[60px] font-medium leading-[66px]" />
@@ -44,7 +44,7 @@ function StyleClasses() {
       <cards className="mt-[50px] flex w-full flex-wrap justify-start gap-10" />
       <card className="relative h-[501px] w-[360px] rounded-[30px] bg-white hover:z-50" />
       <cardFull className="h-[649px]" />
-      <cardPicture className="relative h-[325px] w-[360px] overflow-hidden rounded-[30px]" />
+      <cardPicture className="relative h-[325px] w-[360px] cursor-pointer overflow-hidden rounded-[30px]" />
       <cardInner className="absolute" />
       <card-yoga className="right-[-232px] top-[-119px] min-h-[557px] min-w-[834px]" />
       <card-stretching className="right-0 top-0 min-h-[540px] min-w-[360px]" />
@@ -56,7 +56,7 @@ function StyleClasses() {
       <cardActionTooltip className="absolute left-[352px] top-[-262px] hidden h-[27px] w-max items-center justify-center rounded-[5px] border border-black bg-white p-1.5 text-sm group-hover/card:flex" />
       <cardBlock className="px-[30px] pt-6" />
       <cardContent className="flex flex-col gap-5" />
-      <cardTitle className="text-[32px] font-medium leading-9" />
+      <cardTitle className="cursor-pointer text-[32px] font-medium leading-9" />
       <cardTablets className="flex flex-wrap gap-[6px]" />
       <cardTablet className="flex h-[38px] gap-[6px] rounded-[50px] bg-light-bg p-[10px]" />
       <cardTabletText className="text-nowrap text-[16px] leading-[18px]" />
@@ -88,13 +88,19 @@ function StyleClasses() {
       <climber className="mt-[34px] flex justify-center" />
       <footer className="flex flex-none justify-center pb-[60px] pt-[50px] text-[18px]" />
       {/* signing */}
-      <modalWrapper className="fixed left-0 top-0 flex h-screen w-screen items-center justify-center bg-blocked" />
+      <modalWrapper className="fixed left-0 top-0 z-10 flex h-screen w-screen items-center justify-center bg-blocked" />
       <modalForm className="m-auto flex w-[360px] flex-col items-center gap-12 rounded-[30px] bg-white p-10" />
       <modalFormInner className="flex w-full flex-col items-center gap-[34px]" />
       <modalFormSubgroup className="flex w-full flex-col items-center gap-[10px]" />
       <modalFormInput className="h-13 w-full rounded-[8px] border border-neutral bg-white px-4.5 py-4" />
       <modalFormError className="text-center text-sm text-bad" />
       <modalFormErrorLink className="text-center text-sm font-medium text-bad underline" />
+      {/* page 404 */}
+      <page404Container className="relative flex h-screen justify-center bg-white" />
+      <page404Image className="h-[800px] w-[1200px]" />
+      <page404TextBlock className="absolute top-[400px] flex w-[700px] flex-col gap-4" />
+      <page404Title className="text-[28px] text-404" />
+      <page404Description className="w-[360px] leading-6" />
     </>
   )
 }

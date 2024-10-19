@@ -1,12 +1,10 @@
 import "./App.css"
 
-import MainPage from "./pages/MainPage/MainPage"
+import AppRoutes from "./AppRoutes"
 
 
-function App() {
+export default function App() {
   return (
-    <MainPage />
+    <AppRoutes />
   )
 }
-
-export default App
