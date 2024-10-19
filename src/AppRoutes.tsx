@@ -6,6 +6,8 @@ import SigningModal from "./pages/SigningModal/SigningModal"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Pages from "./data/pages"
 
+import { coursesAPI } from "./api/courses"
+
 
 const signingRouterData = [
   {
@@ -32,11 +34,13 @@ const router = createBrowserRouter([
   {
     path: Pages.MAIN,
     element: <MainPage />,
+    loader: coursesAPI.getCourses,
     children: signingRouterData,
   },
   {
     path: Pages.COURSES,
     element: <MainPage />,
+    loader: coursesAPI.getCourses,
     children: signingRouterData,
   },
   {
