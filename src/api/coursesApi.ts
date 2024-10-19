@@ -10,10 +10,13 @@ export const coursesAPI = {
       const path     = "courses"
       const snapshot = await get(ref(db, path))
 
-      if (snapshot.exists())
-        return Object.values(snapshot.val())
+      if (!snapshot.exists())
+        return []
 
-      return []
+      const data: CoursesType = Object.values(snapshot.val())
+      data.sort((lhs, rhs) => lhs.order - rhs.order)
+
+      return data
     } catch (error) {
       console.log(error)
       return []

@@ -4,13 +4,13 @@ import { getDatabase } from "firebase/database"
 
 
 const firebaseConfig = {
-  apiKey:            "AIzaSyAyFflDKb1UUhfVGHOAiPyPg_q-Wup6iRQ",
-  authDomain:        "backforcourseweb.firebaseapp.com",
-  databaseURL:       "https://backforcourseweb-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId:         "backforcourseweb",
-  storageBucket:     "backforcourseweb.appspot.com",
-  messagingSenderId: "925556395917",
-  appId:             "1:925556395917:web:72a3a71f4f8c28712137c4",
+  apiKey:            "AIzaSyDYt8647SlbOs3iCMLlQF4KYuTe-2AqW4w",
+  authDomain:        "fitness-744b9.firebaseapp.com",
+  databaseURL:       "https://fitness-744b9-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId:         "fitness-744b9",
+  storageBucket:     "fitness-744b9.appspot.com",
+  messagingSenderId: "637483290086",
+  appId:             "1:637483290086:web:0a38de7ef488ef45eada27",
 }
 
 const app  = initializeApp(firebaseConfig)
