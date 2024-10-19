@@ -6,7 +6,7 @@ import SigningModal from "./pages/SigningModal/SigningModal"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Pages from "./data/pages"
 
-import { coursesAPI } from "./api/courses"
+import { coursesAPI } from "./api/coursesApi"
 
 
 const signingRouterData = [
