@@ -1,30 +1,25 @@
 import { sharedStyles } from "../../sharedStyles"
 import { twMerge } from "tailwind-merge"
 
-import { HTMLAttributes } from "react"
-import type { SkillType } from "../../data/skills"
-import type { KeysType } from "../../types/types"
+import type { KeysType, CourseType } from "../../types/types"
 
 
-interface Props extends HTMLAttributes<HTMLDivElement> {
-  skillData: SkillType
+interface Props {
+  courseData: CourseType
 }
 
-export default function Banner({ skillData, ...props }: Props) {
+export default function Banner({ courseData }: Props) {
+  const { name, title } = courseData
+
   const classNames = twMerge(
     sharedStyles.bannerPicture,
-    sharedStyles[(`banner-${skillData.name}`) as KeysType],
+    sharedStyles[(`banner-${name}`) as KeysType],
   )
 
   return (
-    <div className={twMerge(sharedStyles.banner, `bg-${skillData.name}`)}>
-      <img className={classNames} src={`/img/${skillData.name}.jpeg`} alt={skillData.name} />
-      {
-        props.title
-          && (
-            <p className={sharedStyles.bannerText}>{skillData.title}</p>
-          )
-      }
+    <div className={twMerge(sharedStyles.banner, `bg-${name}`)}>
+      <img className={classNames} src={`/img/${name}.jpeg`} alt={name} />
+      <p className={sharedStyles.bannerText}>{title}</p>
     </div>
   )
 }

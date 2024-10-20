@@ -7,14 +7,13 @@ import Header from "../../components/Header/Header"
 
 import { useRef } from "react"
 import { Outlet, useLoaderData } from "react-router-dom"
-import { skills } from "../../data/skills"
 import { CoursesType } from "../../types/types"
 
 
 export default function MainPage() {
   const topRef = useRef<HTMLDivElement>(null)
-  const data = useLoaderData() as CoursesType
-  console.log("data", data)
+  const coursesData = useLoaderData() as CoursesType
+  console.log("data", coursesData)
 
   function handleGettingTop() {
     if (topRef.current)
@@ -39,8 +38,8 @@ export default function MainPage() {
 
             <div className={sharedStyles.cards}>
               {
-                skills.map((skill, index) => (
-                  <Card key={index} skillData={skill} hasUser={false} difficulty={3} />
+                coursesData.map((course, index) => (
+                  <Card key={index} courseData={course} hasUser={false} />
                 ))
               }
             </div>

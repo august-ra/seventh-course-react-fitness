@@ -46,6 +46,12 @@ const router = createBrowserRouter([
   {
     path: pages.COURSE,
     element: <CoursePage />,
+    async loader({ params }) {
+      if (params.id)
+        return coursesAPI.getCourse(params.id)
+      else
+        return null
+    },
     children: signingRouterData,
   },
   {

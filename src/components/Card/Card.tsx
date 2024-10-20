@@ -7,19 +7,17 @@ import ProgressBar from "../ProgressBar/ProgressBar"
 import Tablet from "../Tablet/Tablet"
 
 import { Link } from "react-router-dom"
-import type { SkillType } from "../../data/skills"
-import type { KeysType } from "../../types/types"
+import type { CourseType, KeysType } from "../../types/types"
 
 
 interface Props {
-  skillData:  SkillType
+  courseData: CourseType
   hasUser:    boolean
-  difficulty: number
 }
 
-export default function Card({ skillData, hasUser, difficulty }: Props) {
-  const name = skillData.name
-  const link = `/courses/${skillData._id}`
+export default function Card({ courseData, hasUser }: Props) {
+  const name = courseData.name
+  const link = `/courses/${courseData._id}`
 
   return (
     <div className={twMerge(sharedStyles.card, sharedStyles.shadowedBlock, hasUser && sharedStyles.cardFull)}>
@@ -33,12 +31,12 @@ export default function Card({ skillData, hasUser, difficulty }: Props) {
 
       <div className={sharedStyles.cardBlock}>
         <div className={sharedStyles.cardContent}>
-          <p className={sharedStyles.cardTitle}>Йога</p>
+          <Link className={sharedStyles.cardTitle} to={link}>{courseData.title}</Link>
 
           <div className={sharedStyles.cardTablets}>
             <Tablet imgName="calendar">25 дней</Tablet>
             <Tablet imgName="time">20-50 мин/день</Tablet>
-            <Tablet imgName="difficulty" difficulty={difficulty} />
+            <Tablet imgName="difficulty" difficulty={courseData.difficulty} />
           </div>
 
           {

@@ -42,7 +42,7 @@ function StyleClasses() {
       <banner-body-flex className="right-[-200px] top-[-155px] w-[70%]" />
       {/* card */}
       <cards className="mt-[50px] flex w-full flex-wrap justify-start gap-10" />
-      <card className="relative h-[501px] w-[360px] rounded-[30px] bg-white hover:z-50" />
+      <card className="relative w-[360px] rounded-[30px] bg-white hover:z-50" />
       <cardFull className="h-[649px]" />
       <cardPicture className="relative h-[325px] w-[360px] overflow-hidden rounded-[30px]" />
       <cardInner className="absolute" />
@@ -54,7 +54,7 @@ function StyleClasses() {
       <cardAction className="group/card absolute h-[32px] w-[32px]" />
       <cardAddBtn className="absolute left-[308px] top-[-305px] h-[32px] w-[32px] cursor-arrow duration-300 hover:scale-110" />
       <cardActionTooltip className="absolute left-[352px] top-[-262px] hidden h-[27px] w-max items-center justify-center rounded-[5px] border border-black bg-white p-1.5 text-sm group-hover/card:flex" />
-      <cardBlock className="px-[30px] pt-6" />
+      <cardBlock className="px-[30px] pb-[15px] pt-6" />
       <cardContent className="flex flex-col gap-5" />
       <cardTitle className="text-[32px] font-medium leading-9" />
       <cardTablets className="flex flex-wrap gap-[6px]" />

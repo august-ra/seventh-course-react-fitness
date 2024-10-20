@@ -834,10 +834,6 @@ img{
   height: 38px;
 }
 
-.h-\[501px\]{
-  height: 501px;
-}
-
 .h-\[530px\]{
   height: 530px;
 }
@@ -1041,10 +1037,6 @@ img{
 
 .cursor-arrow{
   cursor: url(/img/arrow.svg), pointer;
-}
-
-.cursor-pointer{
-  cursor: pointer;
 }
 
 .list-inside{
@@ -1272,6 +1264,10 @@ img{
 .py-\[16px\]{
   padding-top: 16px;
   padding-bottom: 16px;
+}
+
+.pb-\[15px\]{
+  padding-bottom: 15px;
 }
 
 .pb-\[60px\]{

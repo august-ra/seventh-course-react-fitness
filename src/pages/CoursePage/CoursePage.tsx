@@ -6,36 +6,14 @@ import Button from "../../components/Button/Button"
 import Footer from "../../components/Footer/Footer"
 import Header from "../../components/Header/Header"
 
-import { useEffect, useState } from "react"
-import { Outlet, useLoaderData, useParams } from "react-router-dom"
-import { getEmptySkill, skills } from "../../data/skills"
-import { CoursesType, CourseType } from "../../types/types"
+import { Outlet, useLoaderData } from "react-router-dom"
+import { CourseType } from "../../types/types"
 
 
 export default function CoursePage() {
-  const { id } = useParams()
-  const [skill, setSkill] = useState(getEmptySkill())
-  const coursesData = useLoaderData() as CoursesType
-  const [course, setCourse] = useState<CourseType | null>(null)
+  const courseData = useLoaderData() as CourseType
 
-  useEffect(() => {
-    const skill = skills.find((skill) => skill._id === id)
-
-    if (skill)
-      setSkill(skill)
-  }, [id])
-
-  useEffect(() => {
-    if (!skill)
-      return
-
-    const course = coursesData.find((course) => course._id === id)
-
-    if (course)
-      setCourse(course)
-  }, [skill])
-
-  if (!skill || !course)
+  if (!courseData)
     return "There is an error!"
 
   return (
@@ -44,14 +22,14 @@ export default function CoursePage() {
         <Header />
 
         <main className="">
-          <Banner key={skill._id} skillData={skill} />
+          <Banner key={courseData._id} courseData={courseData} />
 
           <section className="">
             <div className={sharedStyles.presentation}>
               <h3 className={sharedStyles.presentationTitle}>Подойдет для вас, если:</h3>
               <div className={sharedStyles.presentationContent}>
                 {
-                  course.fitting.map((item, index) => (
+                  courseData.fitting.map((item, index) => (
                     <div key={index} className={sharedStyles.presentationBlock}>
                       <p className={sharedStyles.presentationNumber}>{index + 1}</p>
                       <p className={sharedStyles.presentationText}>{item}</p>
@@ -65,7 +43,7 @@ export default function CoursePage() {
               <h3 className={sharedStyles.presentationTitle}>Направления</h3>
               <ul className={sharedStyles.presentationGoals}>
                 {
-                  course.directions.map((item, index) => (
+                  courseData.directions.map((item, index) => (
                     <li key={index} className={sharedStyles.presentationGoal}>
                       <img className={sharedStyles.presentationGoalStar} src="/img/star.svg" alt="star"/>
                       <p>{item}</p>

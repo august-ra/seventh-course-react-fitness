@@ -9,8 +9,8 @@ export type CourseType = {
   directions:  string[]
   difficulty:  number
   fitting:     string[]
-  nameEN:      string
-  nameRU:      string
+  name:        string
+  title:       string
   order:       number
   workouts:    string[]
 }
