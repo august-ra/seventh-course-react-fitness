@@ -11,19 +11,19 @@ import { coursesAPI } from "./api/coursesApi"
 
 const signingRouterData = [
   {
-    path: pages.SIGNING,
+    path:    pages.SIGNING,
     element: <SigningModal  mode="signIn" />,
     children: [
       {
-        path: "in",
+        path:    "in",
         element: <SigningModal  mode="signIn" />,
       },
       {
-        path: "up",
+        path:    "up",
         element: <SigningModal  mode="signUp" />,
       },
       {
-        path: "out",
+        path:    "out",
         element: <SigningModal  mode="signOut" />,
       },
     ],
@@ -32,19 +32,19 @@ const signingRouterData = [
 
 const router = createBrowserRouter([
   {
-    path: pages.MAIN,
-    element: <MainPage />,
-    loader: coursesAPI.getCourses,
+    path:     pages.MAIN,
+    element:  <MainPage />,
+    loader:   coursesAPI.getCourses,
     children: signingRouterData,
   },
   {
-    path: pages.COURSES,
-    element: <MainPage />,
-    loader: coursesAPI.getCourses,
+    path:     pages.COURSES,
+    element:  <MainPage />,
+    loader:   coursesAPI.getCourses,
     children: signingRouterData,
   },
   {
-    path: pages.COURSE,
+    path:    pages.COURSE,
     element: <CoursePage />,
     async loader({ params }) {
       if (params.id)
@@ -55,7 +55,7 @@ const router = createBrowserRouter([
     children: signingRouterData,
   },
   {
-    path: pages.NOT_FOUND,
+    path:    pages.NOT_FOUND,
     element: <Page404 />,
   },
 ])
