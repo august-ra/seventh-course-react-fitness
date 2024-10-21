@@ -5,10 +5,15 @@ import Button from "../../components/Button/Button"
 
 import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { useReplacementLastPath } from "../../hooks/useReplacementLastPath"
+import pages from "../../data/pages"
+import { ModalKindType } from "../../types/types"
+
+import { usersApi } from "../../api/usersApi"
 
 
 interface Props {
-  mode: "signIn" | "signUp" | "signOut" | "resetStart" | "resetEnd"
+  mode: ModalKindType
 }
 
 interface ExtendedProps extends Props {
@@ -19,19 +24,27 @@ interface ExtendedProps extends Props {
     repeat:   string
   }
   setFormData: (value: ExtendedProps["formData"]) => void
-  error: {
+  errorState: {
     showing: boolean
     message: string
     reset:   boolean
   }
-  setError: (value: ExtendedProps["error"]) => void
+  setErrorState: (value: ExtendedProps["errorState"]) => void
+  onSwitch:      React.MouseEventHandler<HTMLAnchorElement | HTMLButtonElement>
+}
+
+interface ErrorBlockProps {
+  errorState: ExtendedProps["errorState"]
+  onSwitch:   React.MouseEventHandler<HTMLAnchorElement | HTMLButtonElement>
 }
 
 export default function SigningModal({ mode }: Props) {
+  const [modalMode, setModalMode] = useState<ModalKindType>(mode)
   const navigate = useNavigate()
+  const navigateReplaced = useReplacementLastPath()
 
-  const [error, setError] = useState<ExtendedProps["error"]>({
-    showing: true,
+  const [errorState, setErrorState] = useState<ExtendedProps["errorState"]>({
+    showing: false,
     message: "",
     reset:   false,
   })
@@ -42,6 +55,22 @@ export default function SigningModal({ mode }: Props) {
     password: "",
     repeat:   "",
   })
+
+  function handleGoAnother(e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) {
+    e.preventDefault()
+
+    setErrorState({ showing: false, message: "", reset: false })
+
+    if (modalMode === "signIn") {
+      navigateReplaced("up", true)
+      setModalMode("signUp")
+    } else if (modalMode === "signUp") {
+      navigateReplaced("in", true)
+      setModalMode("signIn")
+    } else {
+      throw new Error("Unknown modal state")
+    }
+  }
 
   function handleClose(e: React.MouseEvent<HTMLDivElement>) {
     if ((e.target as HTMLDivElement).dataset.id === "modal-outside")
@@ -60,7 +89,8 @@ export default function SigningModal({ mode }: Props) {
                 <p>Ссылка для восстановления пароля отправлена на {formData.email}</p>
               )
               : (
-                <ModalContent mode={mode} formData={formData} setFormData={setFormData} error={error} setError={setError} />
+                <ModalContent mode={modalMode} formData={formData} setFormData={setFormData}
+                              errorState={errorState} setErrorState={setErrorState} onSwitch={handleGoAnother} />
               )
           }
         </form>
@@ -69,14 +99,14 @@ export default function SigningModal({ mode }: Props) {
   )
 }
 
-function ModalContent({ mode, formData, setFormData, error, setError }: ExtendedProps) {
+function ModalContent({ mode, formData, setFormData, errorState, setErrorState, onSwitch }: ExtendedProps) {
   return (
     <div className={sharedStyles.modalFormInner}>
       <div className={sharedStyles.modalFormSubgroup}>
         {
           (mode === "signIn" || mode === "signUp")
             && (
-              <input className={sharedStyles.modalFormInput} type="text" placeholder="Логин" />
+              <input className={sharedStyles.modalFormInput} type="email" name="email" placeholder="Электронная почта" />
             )
         }
         <input className={sharedStyles.modalFormInput} type="password" placeholder="Пароль" />
@@ -88,37 +118,46 @@ function ModalContent({ mode, formData, setFormData, error, setError }: Extended
         }
       </div>
 
-      {
-        error.showing
-          && (
-            <p className={sharedStyles.modalFormError}>
-              Пароль введен неверно, попробуйте<br />еще раз.&nbsp;
-              <a className={sharedStyles.modalFormErrorLink} href="#">Восстановить пароль?</a>
-            </p>
-          )
-      }
+      <ErrorBlock errorState={errorState} onSwitch={onSwitch} />
 
       <div className={sharedStyles.modalFormSubgroup}>
         {
           mode === "signIn"
             ? (
               <>
-                <Button primary={true} additionalClasses={sharedStyles.buttonWide}>Войти</Button>
-                <Button primary={false} additionalClasses={sharedStyles.buttonWide}>Зарегистрироваться</Button>
+                <Button primary={true} type="submit" additionalClasses={sharedStyles.buttonWide}>Войти</Button>
+                <Button primary={false} additionalClasses={sharedStyles.buttonWide} onClick={onSwitch}>Зарегистрироваться</Button>
               </>
             )
           : mode === "signUp"
             ? (
               <>
-                <Button primary={true} additionalClasses={sharedStyles.buttonWide}>Зарегистрироваться</Button>
-                <Button primary={false} additionalClasses={sharedStyles.buttonWide}>Войти</Button>
+                <Button primary={true} type="submit" additionalClasses={sharedStyles.buttonWide}>Зарегистрироваться</Button>
+                <Button primary={false} additionalClasses={sharedStyles.buttonWide} onClick={onSwitch}>Войти</Button>
               </>
             )
             : (
-              <Button primary={true} additionalClasses={sharedStyles.buttonWide}>Подтвердить</Button>
+              <Button primary={true} type="submit" additionalClasses={sharedStyles.buttonWide}>Подтвердить</Button>
             )
         }
       </div>
     </div>
   )
+}
+
+function ErrorBlock({ errorState, onSwitch }: ErrorBlockProps) {
+  if (!errorState.showing)
+    return null
+
+  switch (errorState.message) {
+    case "Firebase: Error (auth/invalid-email).":
+      return (
+        <p className={sharedStyles.modalFormError}>
+          Указанный адрес электронной почты не идентифицирован. Проверьте ввод.<br />
+          <a className={sharedStyles.modalFormSuggestionLink} href="#" onClick={onSwitch}>Зарегистрируйтесь, если впервые здесь.</a>
+        </p>
+      )
+    default:
+      throw new Error("Unknown error")
+  }
 }

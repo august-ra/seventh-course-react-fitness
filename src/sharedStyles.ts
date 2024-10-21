@@ -111,6 +111,7 @@ export const sharedStyles = {
   modalFormSubgroup: "modalFormSubgroup flex w-full flex-col items-center gap-[10px]",
   modalFormInput: "modalFormInput h-13 w-full rounded-[8px] border border-neutral bg-white px-4.5 py-4",
   modalFormError: "modalFormError text-center text-sm text-bad",
+  modalFormSuggestionLink: "modalFormSuggestionLink text-center text-sm font-medium text-404 underline",
   modalFormErrorLink: "modalFormErrorLink text-center text-sm font-medium text-bad underline",
 
   /* page 404 */

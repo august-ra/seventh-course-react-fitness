@@ -94,6 +94,7 @@ function StyleClasses() {
       <modalFormSubgroup className="flex w-full flex-col items-center gap-[10px]" />
       <modalFormInput className="h-13 w-full rounded-[8px] border border-neutral bg-white px-4.5 py-4" />
       <modalFormError className="text-center text-sm text-bad" />
+      <modalFormSuggestionLink className="text-center text-sm font-medium text-404 underline" />
       <modalFormErrorLink className="text-center text-sm font-medium text-bad underline" />
       {/* page 404 */}
       <page404Container className="relative flex h-screen justify-center bg-white" />

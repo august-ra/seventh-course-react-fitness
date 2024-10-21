@@ -11,22 +11,32 @@ import { coursesAPI } from "./api/coursesApi"
 
 const signingRouterData = [
   {
+    path:    pages.SIGN_IN,
+    element: <SigningModal mode="signIn" />,
+    async loader() {
+      console.log("SigningModal: in")
+      return true
+    },
+  },
+  {
+    path:    pages.SIGN_UP,
+    element: <SigningModal mode="signUp" />,
+    async loader() {
+      console.log("SigningModal: up")
+      return true
+    },
+  },
+  {
+    path:    pages.SIGN_OUT,
+    element: <SigningModal mode="signOut" />,
+  },
+  {
     path:    pages.SIGNING,
-    element: <SigningModal  mode="signIn" />,
-    children: [
-      {
-        path:    "in",
-        element: <SigningModal  mode="signIn" />,
-      },
-      {
-        path:    "up",
-        element: <SigningModal  mode="signUp" />,
-      },
-      {
-        path:    "out",
-        element: <SigningModal  mode="signOut" />,
-      },
-    ],
+    element: <SigningModal mode="signIn" />,
+    async loader() {
+      console.log("SigningModal: root")
+      return true
+    },
   },
 ]
 
