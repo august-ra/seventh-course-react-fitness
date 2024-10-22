@@ -17,15 +17,22 @@ function StyleClasses() {
       <buttonPrimary className="bg-good hover:bg-well active:bg-black active:text-white disabled:bg-light-bg disabled:text-light-tx" />
       <buttonSecondary className="border border-black bg-white hover:bg-light-bg active:bg-dark disabled:text-light-tx" />
       <buttonWide className="w-full" />
+      <buttonWideWithFields className="w-full text-nowrap px-11" />
       <buttonWideWithMargin className="mt-10 w-full" />
       {/* main */}
       <wrapper className="flex h-[100vh] flex-col justify-between" />
       <container className="m-auto w-[1160px] flex-1" />
       {/* header */}
       <header className="flex w-full justify-between pb-[60px] pt-[50px]" />
-      <headerContainer className="flex w-1/2 flex-col justify-start text-left" />
+      <headerContainer className="flex w-1/2 flex-col justify-start gap-[15px] text-left" />
       <headerLogo className="h-[35px] w-[220px]" />
       <headerSlogan className="text-[18px]" />
+      <headerUserGroup className="relative flex h-[50px] items-center gap-4" />
+      <headerProfileBlock className="group/profile flex items-center gap-3" />
+      <headerProfileLogo className="h-[50px] w-[50px]" />
+      <headerProfileName className="text-[24px] leading-[26px] hover:underline group-hover/profile:text-404" />
+      <headerProfileNameBtn className="mr-px h-2 w-2 rotate-45 border-b-2 border-r-2 group-hover/profile:border-404" />
+      <headerProfileNameBtnReversed className="rotate-225" />
       {/* caption */}
       <caption className="flex justify-between text-left" />
       <captionText className="max-w-[864px] text-[60px] font-medium leading-none" />
@@ -81,6 +88,10 @@ function StyleClasses() {
       <presentationNewLifeRight className="absolute bottom-0 right-0 h-full w-full overflow-hidden" />
       <presentationNewLifeLines className="absolute bottom-[-58px] right-[30px] h-[530px] w-[635px]" />
       <presentationNewLifeMan className="absolute bottom-[9px] right-[9px] h-[570px] w-[550px]" />
+      {/* user menu */}
+      <userMenu className="absolute right-0 top-[74px] z-20 flex flex-col justify-center gap-[34px] rounded-[30px] bg-white p-[30px]" />
+      <userMenuEmail className="text-center text-lg" />
+      <userMenuButtons className="flex w-full flex-col gap-2.5" />
       {/* progress bar */}
       <progressBar className="relative" />
       <progressBarBack className="absolute h-[6px] w-full rounded-[50px] bg-light-bg" />

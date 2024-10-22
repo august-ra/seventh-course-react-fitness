@@ -16,6 +16,7 @@ export const sharedStyles = {
   buttonPrimary: "buttonPrimary bg-good hover:bg-well active:bg-black active:text-white disabled:bg-light-bg disabled:text-light-tx",
   buttonSecondary: "buttonSecondary border border-black bg-white hover:bg-light-bg active:bg-dark disabled:text-light-tx",
   buttonWide: "buttonWide w-full",
+  buttonWideWithFields: "buttonWideWithFields w-full text-nowrap px-11",
   buttonWideWithMargin: "buttonWideWithMargin mt-10 w-full",
 
   /* main */
@@ -26,9 +27,15 @@ export const sharedStyles = {
   /* header */
 
   header: "header flex w-full justify-between pb-[60px] pt-[50px]",
-  headerContainer: "headerContainer flex w-1/2 flex-col justify-start text-left",
+  headerContainer: "headerContainer flex w-1/2 flex-col justify-start gap-[15px] text-left",
   headerLogo: "headerLogo h-[35px] w-[220px]",
   headerSlogan: "headerSlogan text-[18px]",
+  headerUserGroup: "headerUserGroup relative flex h-[50px] items-center gap-4",
+  headerProfileBlock: "headerProfileBlock group/profile flex items-center gap-3",
+  headerProfileLogo: "headerProfileLogo h-[50px] w-[50px]",
+  headerProfileName: "headerProfileName text-[24px] leading-[26px] hover:underline group-hover/profile:text-404",
+  headerProfileNameBtn: "headerProfileNameBtn mr-px h-2 w-2 rotate-45 border-b-2 border-r-2 group-hover/profile:border-404",
+  headerProfileNameBtnReversed: "headerProfileNameBtnReversed rotate-225",
 
   /* caption */
 
@@ -92,6 +99,12 @@ export const sharedStyles = {
   presentationNewLifeRight: "presentationNewLifeRight absolute bottom-0 right-0 h-full w-full overflow-hidden",
   presentationNewLifeLines: "presentationNewLifeLines absolute bottom-[-58px] right-[30px] h-[530px] w-[635px]",
   presentationNewLifeMan: "presentationNewLifeMan absolute bottom-[9px] right-[9px] h-[570px] w-[550px]",
+
+  /* user menu */
+
+  userMenu: "userMenu absolute right-0 top-[74px] z-20 flex flex-col justify-center gap-[34px] rounded-[30px] bg-white p-[30px]",
+  userMenuEmail: "userMenuEmail text-center text-lg",
+  userMenuButtons: "userMenuButtons flex w-full flex-col gap-2.5",
 
   /* progress bar */
 

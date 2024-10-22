@@ -733,12 +733,20 @@ img{
   top: 400px;
 }
 
+.top-\[74px\]{
+  top: 74px;
+}
+
 .top-\[85px\]{
   top: 85px;
 }
 
 .z-10{
   z-index: 10;
+}
+
+.z-20{
+  z-index: 20;
 }
 
 .m-auto{
@@ -760,6 +768,10 @@ img{
 
 .mb-\[60px\]{
   margin-bottom: 60px;
+}
+
+.mr-px{
+  margin-right: 1px;
 }
 
 .mt-10{
@@ -792,6 +804,10 @@ img{
 
 .h-13\/2{
   height: 26px;
+}
+
+.h-2{
+  height: 0.5rem;
 }
 
 .h-\[100vh\]{
@@ -832,6 +848,10 @@ img{
 
 .h-\[38px\]{
   height: 38px;
+}
+
+.h-\[50px\]{
+  height: 50px;
 }
 
 .h-\[530px\]{
@@ -902,6 +922,10 @@ img{
   width: 50%;
 }
 
+.w-2{
+  width: 0.5rem;
+}
+
 .w-\[103px\]{
   width: 103px;
 }
@@ -960,6 +984,10 @@ img{
 
 .w-\[448px\]{
   width: 448px;
+}
+
+.w-\[50px\]{
+  width: 50px;
 }
 
 .w-\[550px\]{
@@ -1035,6 +1063,16 @@ img{
   flex: none;
 }
 
+.rotate-225{
+  --tw-rotate: 225deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-45{
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .cursor-arrow{
   cursor: url(/img/arrow.svg), pointer;
 }
@@ -1083,6 +1121,14 @@ img{
   gap: 0.5rem;
 }
 
+.gap-2\.5{
+  gap: 0.625rem;
+}
+
+.gap-3{
+  gap: 0.75rem;
+}
+
 .gap-4{
   gap: 1rem;
 }
@@ -1093,6 +1139,10 @@ img{
 
 .gap-\[10px\]{
   gap: 10px;
+}
+
+.gap-\[15px\]{
+  gap: 15px;
 }
 
 .gap-\[17px\]{
@@ -1154,6 +1204,14 @@ img{
 
 .border{
   border-width: 1px;
+}
+
+.border-b-2{
+  border-bottom-width: 2px;
+}
+
+.border-r-2{
+  border-right-width: 2px;
 }
 
 .border-black{
@@ -1234,6 +1292,11 @@ img{
 
 .p-\[30px\]{
   padding: 30px;
+}
+
+.px-11{
+  padding-left: 2.75rem;
+  padding-right: 2.75rem;
 }
 
 .px-4\.5{
@@ -1325,6 +1388,11 @@ img{
 
 .text-\[75px\]{
   font-size: 75px;
+}
+
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-sm{
@@ -1444,6 +1512,10 @@ img{
   background-color: rgb(198 255 0 / var(--tw-bg-opacity));
 }
 
+.hover\:underline:hover{
+  text-decoration-line: underline;
+}
+
 .active\:bg-black:active{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -1471,4 +1543,14 @@ img{
 
 .group\/card:hover .group-hover\/card\:flex{
   display: flex;
+}
+
+.group\/profile:hover .group-hover\/profile\:border-404{
+  --tw-border-opacity: 1;
+  border-color: rgb(23 90 178 / var(--tw-border-opacity));
+}
+
+.group\/profile:hover .group-hover\/profile\:text-404{
+  --tw-text-opacity: 1;
+  color: rgb(23 90 178 / var(--tw-text-opacity));
 }

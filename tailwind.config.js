@@ -38,13 +38,19 @@ export default {
       },
       height: {
         "13/2": "26px",
-        "13": "52px",
+        "13":   "52px",
       },
       padding: {
         "4.5": "18px",
       },
+      rotate: {
+        '225': '225deg',
+      },
       scale: {
         "102": "1.02",
+      },
+      spacing: {
+        "31": "124px",
       },
     },
   },
