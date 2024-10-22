@@ -32,6 +32,7 @@ interface ExtendedProps extends Props {
   }
   setErrorState: (value: ExtendedProps["errorState"]) => void
   onSwitch:      React.MouseEventHandler<HTMLAnchorElement | HTMLButtonElement>
+  onChange:      React.ChangeEventHandler<HTMLInputElement>
 }
 
 interface ErrorBlockProps {
@@ -57,6 +58,12 @@ export default function SigningModal({ mode }: Props) {
     password: "",
     repeat:   "",
   })
+
+  function handleChangeFormData(e: React.ChangeEvent<HTMLInputElement>) {
+    const { name, value } = e.target
+
+    setFormData({ ...formData, [name]: value })
+  }
 
   function handleGoAnother(e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) {
     e.preventDefault()
@@ -92,7 +99,8 @@ export default function SigningModal({ mode }: Props) {
               )
               : (
                 <ModalContent mode={modalMode} formData={formData} setFormData={setFormData}
-                              errorState={errorState} setErrorState={setErrorState} onSwitch={handleGoAnother} />
+                              errorState={errorState} setErrorState={setErrorState}
+                              onSwitch={handleGoAnother} onChange={handleChangeFormData} />
               )
           }
         </form>
@@ -101,21 +109,24 @@ export default function SigningModal({ mode }: Props) {
   )
 }
 
-function ModalContent({ mode, formData, setFormData, errorState, setErrorState, onSwitch }: ExtendedProps) {
+function ModalContent({ mode, formData, setFormData, errorState, setErrorState, onSwitch, onChange }: ExtendedProps) {
   return (
     <div className={sharedStyles.modalFormInner}>
       <div className={sharedStyles.modalFormSubgroup}>
         {
           (mode === "signIn" || mode === "signUp")
             && (
-              <input className={sharedStyles.modalFormInput} type="email" name="email" placeholder="Электронная почта" />
+              <input className={sharedStyles.modalFormInput} type="email" name="email"
+                     value={formData.email} onChange={onChange} placeholder="Электронная почта" />
             )
         }
-        <input className={sharedStyles.modalFormInput} type="password" placeholder="Пароль" />
+        <input className={sharedStyles.modalFormInput} type="password" name="password"
+               value={formData.password} onChange={onChange} placeholder="Пароль" required={true} />
         {
           (mode === "signUp" || mode === "resetEnd")
             && (
-              <input className={sharedStyles.modalFormInput} type="password" placeholder="Повтор пароля" />
+              <input className={sharedStyles.modalFormInput} type="password" name="repeat"
+                     value={formData.repeat} onChange={onChange} placeholder="Повтор пароля" required={true} />
             )
         }
       </div>
