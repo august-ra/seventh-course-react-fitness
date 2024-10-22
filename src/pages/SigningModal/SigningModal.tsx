@@ -86,10 +86,40 @@ export default function SigningModal({ mode }: Props) {
       navigate(-1)
   }
 
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+
+    debugger
+    if (modalMode === "signIn") {
+      try {
+        const user = await usersApi.auth(formData.email, formData.password)
+
+        userContext.save(user)
+
+        navigate(pages.MAIN)
+      } catch (error) {
+        if (error instanceof Error)
+          setErrorState({ showing: true, message: error.message, reset: false })
+      }
+    } else if (modalMode === "signUp") {
+      try {
+        const user = await usersApi.create(formData.email, formData.password, formData.email)
+
+        navigateReplaced("in", true)
+        setModalMode("signIn")
+      } catch (error) {
+        if (error instanceof Error)
+          setErrorState({ showing: true, message: error.message, reset: false })
+      }
+    } else {
+      throw new Error("Unknown modal state")
+    }
+  }
+
   return (
     <>
       <div className={sharedStyles.modalWrapper} data-id="modal-outside" onClick={handleClose}>
-        <form className={sharedStyles.modalForm}>
+        <form className={sharedStyles.modalForm} onSubmit={handleSubmit}>
           <img className={sharedStyles.headerLogo} src="/img/logo.svg" alt="logo" />
 
           {
@@ -163,11 +193,24 @@ function ErrorBlock({ errorState, onSwitch }: ErrorBlockProps) {
     return null
 
   switch (errorState.message) {
-    case "Firebase: Error (auth/invalid-email).":
+    case "Firebase: Error (auth/configuration-not-found).": // нет пользователя
+      return (
+        <p className={sharedStyles.modalFormError}>
+          Что-то или всё пошло не так.<br />Проверьте введённые данные.
+        </p>
+      )
+    case "Firebase: Error (auth/invalid-email).": // неправильный e-mail
       return (
         <p className={sharedStyles.modalFormError}>
           Указанный адрес электронной почты не идентифицирован. Проверьте ввод.<br />
           <a className={sharedStyles.modalFormSuggestionLink} href="#" onClick={onSwitch}>Зарегистрируйтесь, если впервые здесь.</a>
+        </p>
+      )
+    case "Firebase: Error (auth/invalid-credential).": // неправильный пароль
+      return (
+        <p className={sharedStyles.modalFormError}>
+          Пароль введён неверно, попробуйте<br/>ещё раз.&nbsp;
+          <a className={sharedStyles.modalFormErrorLink} href="#">Восстановить пароль?</a>
         </p>
       )
     default:
