@@ -5,6 +5,7 @@ import Button from "../../components/Button/Button"
 
 import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { useUserContext } from "../../context/UserContext/UserContext"
 import { useReplacementLastPath } from "../../hooks/useReplacementLastPath"
 import pages from "../../data/pages"
 import { ModalKindType } from "../../types/types"
@@ -41,6 +42,7 @@ interface ErrorBlockProps {
 export default function SigningModal({ mode }: Props) {
   const [modalMode, setModalMode] = useState<ModalKindType>(mode)
   const navigate = useNavigate()
+  const userContext = useUserContext()
   const navigateReplaced = useReplacementLastPath()
 
   const [errorState, setErrorState] = useState<ExtendedProps["errorState"]>({
