@@ -8,7 +8,8 @@ function StyleClasses() {
   return (
     <>
       {/* common */}
-      <shadowedBlock className="shadow-3xl duration-300 hover:scale-102" />
+      <shadowedBlock className="shadow-3xl" />
+      <scaledBlock className="duration-300 hover:scale-102" />
       {/* courses */}
       <colors className="bg-aerobics bg-body-flex bg-stretching bg-yoga bg-zumba" />
       {/* button */}

@@ -20,7 +20,7 @@ export default function Card({ courseData, hasUser }: Props) {
   const link = `/courses/${courseData._id}`
 
   return (
-    <div className={twMerge(sharedStyles.card, sharedStyles.shadowedBlock, hasUser && sharedStyles.cardFull)}>
+    <div className={twMerge(sharedStyles.card, sharedStyles.shadowedBlock, sharedStyles.scaledBlock, hasUser && sharedStyles.cardFull)}>
       <Link to={link}>
         <div className={sharedStyles.cardPicture}>
           <img className={twMerge(sharedStyles.cardInner, sharedStyles[(`card-${name}`) as KeysType])} src={`/img/${name}.jpeg`} alt={name} />

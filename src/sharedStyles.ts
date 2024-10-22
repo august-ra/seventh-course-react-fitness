@@ -3,7 +3,8 @@ export const sharedStyles = {
 
   /* common */
 
-  shadowedBlock: "shadowedBlock shadow-3xl duration-300 hover:scale-102",
+  shadowedBlock: "shadowedBlock shadow-3xl",
+  scaledBlock: "scaledBlock duration-300 hover:scale-102",
 
   /* courses */
 

@@ -53,7 +53,7 @@ export default function CoursePage() {
               </ul>
             </div>
 
-            <div className={twMerge(sharedStyles.presentationNewLife, sharedStyles.shadowedBlock)}>
+            <div className={twMerge(sharedStyles.presentationNewLife, sharedStyles.shadowedBlock, sharedStyles.scaledBlock)}>
               <div className={sharedStyles.presentationNewLifeLeft}>
                 <h2 className={sharedStyles.presentationNewLifeTitle}>Начните путь<br/>к новому телу</h2>
                 <ul className={sharedStyles.presentationNewLifeLeft}>

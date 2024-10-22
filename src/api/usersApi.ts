@@ -5,7 +5,6 @@ import { auth } from "./firebaseConfig"
 
 export const usersApi = {
   async create(email: string, password: string, name: string) {
-    debugger
     const signUp = await createUserWithEmailAndPassword(auth, email, password)
     const user   = signUp.user
 

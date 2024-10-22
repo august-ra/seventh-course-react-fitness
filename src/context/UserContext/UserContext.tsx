@@ -30,7 +30,6 @@ const UserContext = createContext<UserContextValue | undefined>(undefined)
 /* static methods */
 
 function read() {
-  debugger
   let data: User | string | null = localStorage.getItem("userInfo")
 
   if (data)
