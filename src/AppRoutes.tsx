@@ -66,8 +66,8 @@ const router = createBrowserRouter([
     children: signingRouterData,
   },
   {
-    path:     pages.PROFILE,
-    element:  <ProfilePage />,
+    path:    pages.PROFILE,
+    element: <ProfilePage />,
   },
   {
     path:    pages.NOT_FOUND,
