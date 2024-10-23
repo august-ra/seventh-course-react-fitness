@@ -1,6 +1,7 @@
 import CoursePage from "./pages/CoursePage/CoursePage"
 import MainPage from "./pages/MainPage/MainPage"
 import Page404 from "./pages/Page404/Page404"
+import ProfilePage from "./pages/ProfilePage/ProfilePage"
 import SigningModal from "./pages/SigningModal/SigningModal"
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
         return null
     },
     children: signingRouterData,
+  },
+  {
+    path:     pages.PROFILE,
+    element:  <ProfilePage />,
   },
   {
     path:    pages.NOT_FOUND,

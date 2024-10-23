@@ -106,6 +106,17 @@ export const sharedStyles = {
   userMenuEmail: "userMenuEmail text-center text-lg",
   userMenuButtons: "userMenuButtons flex w-full flex-col gap-2.5",
 
+  /* user profile */
+
+  userProfile: "userProfile mt-10 flex gap-[33px] rounded-[30px] bg-white p-[30px]",
+  userProfileSection: "userProfileSection mt-[60px]",
+  userProfileLogo: "userProfileLogo h-[197px] w-[197px] rounded-[20px]",
+  userProfileRight: "userProfileRight flex flex-col gap-[30px]",
+  userProfileName: "userProfileName text-[32px] leading-[36px]",
+  userProfileEmail: "userProfileEmail text-lg",
+  userProfileButtons: "userProfileButtons flex w-full gap-2.5",
+  userProfileButton: "userProfileButton w-[192px]",
+
   /* progress bar */
 
   progressBar: "progressBar relative",

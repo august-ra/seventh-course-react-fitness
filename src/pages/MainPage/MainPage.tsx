@@ -28,7 +28,7 @@ export default function MainPage() {
         <main className="">
           <section className="">
             <div className={sharedStyles.caption}>
-              <h1 className={sharedStyles.captionText}>Начните заниматься спортом и улучшите качество жизни</h1>
+              <h2 className={sharedStyles.captionText}>Начните заниматься спортом и улучшите качество жизни</h2>
 
               <div className={sharedStyles.captionBalloon}>
                 <img className={sharedStyles.captionBalloonTail} src="/img/tail.svg" alt="tail" />

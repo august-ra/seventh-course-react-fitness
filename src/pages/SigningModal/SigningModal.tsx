@@ -209,7 +209,7 @@ function ErrorBlock({ errorState, onSwitch }: ErrorBlockProps) {
     case "Firebase: Error (auth/invalid-credential).": // неправильный пароль
       return (
         <p className={sharedStyles.modalFormError}>
-          Пароль введён неверно, попробуйте<br/>ещё раз.&nbsp;
+          Пароль введён неверно, попробуйте<br />ещё раз.&nbsp;
           <a className={sharedStyles.modalFormErrorLink} href="#">Восстановить пароль?</a>
         </p>
       )

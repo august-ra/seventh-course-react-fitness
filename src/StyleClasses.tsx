@@ -92,6 +92,15 @@ function StyleClasses() {
       <userMenu className="absolute right-0 top-[74px] z-20 flex flex-col justify-center gap-[34px] rounded-[30px] bg-white p-[30px]" />
       <userMenuEmail className="text-center text-lg" />
       <userMenuButtons className="flex w-full flex-col gap-2.5" />
+      {/* user profile */}
+      <userProfile className="mt-10 flex gap-[33px] rounded-[30px] bg-white p-[30px]" />
+      <userProfileSection className="mt-[60px]" />
+      <userProfileLogo className="h-[197px] w-[197px] rounded-[20px]" />
+      <userProfileRight className="flex flex-col gap-[30px]" />
+      <userProfileName className="text-[32px] leading-[36px]" />
+      <userProfileEmail className="text-lg" />
+      <userProfileButtons className="flex w-full gap-2.5" />
+      <userProfileButton className="w-[192px]" />
       {/* progress bar */}
       <progressBar className="relative" />
       <progressBarBack className="absolute h-[6px] w-full rounded-[50px] bg-light-bg" />

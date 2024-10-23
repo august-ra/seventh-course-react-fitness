@@ -45,7 +45,7 @@ export default function CoursePage() {
                 {
                   courseData.directions.map((item, index) => (
                     <li key={index} className={sharedStyles.presentationGoal}>
-                      <img className={sharedStyles.presentationGoalStar} src="/img/star.svg" alt="star"/>
+                      <img className={sharedStyles.presentationGoalStar} src="/img/star.svg" alt="star" />
                       <p>{item}</p>
                     </li>
                   ))
@@ -55,7 +55,7 @@ export default function CoursePage() {
 
             <div className={twMerge(sharedStyles.presentationNewLife, sharedStyles.shadowedBlock, sharedStyles.scaledBlock)}>
               <div className={sharedStyles.presentationNewLifeLeft}>
-                <h2 className={sharedStyles.presentationNewLifeTitle}>Начните путь<br/>к новому телу</h2>
+                <h2 className={sharedStyles.presentationNewLifeTitle}>Начните путь<br />к новому телу</h2>
                 <ul className={sharedStyles.presentationNewLifeLeft}>
                   <li className={sharedStyles.presentationNewLifeLeftItem}>проработка всех групп мышц</li>
                   <li className={sharedStyles.presentationNewLifeLeftItem}>тренировка суставов</li>
@@ -76,7 +76,7 @@ export default function CoursePage() {
         </main>
       </div>
 
-      <Footer/>
+      <Footer />
 
       <Outlet />
     </div>
