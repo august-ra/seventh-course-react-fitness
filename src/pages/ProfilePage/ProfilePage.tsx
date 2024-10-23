@@ -21,11 +21,11 @@ export default function ProfilePage() {
           <section className="">
             <h2 className={sharedStyles.captionText}>Профиль</h2>
 
-            <div className={sharedStyles.userProfile}>
+            <div className={twMerge(sharedStyles.userProfile, sharedStyles.shadowedBlock)}>
               <img className={sharedStyles.userProfileLogo} src="/img/person-huge.svg" alt="person" />
               <form className={sharedStyles.userProfileRight}>
                 <p className={sharedStyles.userProfileName}>{userContext.email}</p>
-                <p className={sharedStyles.userProfileEmail}>E-mail: {userContext.email}</p>
+                <p className={sharedStyles.userProfileEmail}>E-mail: <span>{userContext.email}</span></p>
                 <div className={sharedStyles.userProfileButtons}>
                   <Button primary={true} type="submit" additionalClasses={sharedStyles.userProfileButton}>
                     Изменить пароль

@@ -113,7 +113,7 @@ export const sharedStyles = {
   userProfileLogo: "userProfileLogo h-[197px] w-[197px] rounded-[20px]",
   userProfileRight: "userProfileRight flex flex-col gap-[30px]",
   userProfileName: "userProfileName text-[32px] leading-[36px]",
-  userProfileEmail: "userProfileEmail text-lg",
+  userProfileEmail: "userProfileEmail text-lg [&>span]:font-medium",
   userProfileButtons: "userProfileButtons flex w-full gap-2.5",
   userProfileButton: "userProfileButton w-[192px]",
 

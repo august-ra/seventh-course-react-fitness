@@ -98,7 +98,7 @@ function StyleClasses() {
       <userProfileLogo className="h-[197px] w-[197px] rounded-[20px]" />
       <userProfileRight className="flex flex-col gap-[30px]" />
       <userProfileName className="text-[32px] leading-[36px]" />
-      <userProfileEmail className="text-lg" />
+      <userProfileEmail className="text-lg [&>span]:font-medium" />
       <userProfileButtons className="flex w-full gap-2.5" />
       <userProfileButton className="w-[192px]" />
       {/* progress bar */}

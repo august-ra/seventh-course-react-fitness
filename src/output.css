@@ -1586,3 +1586,7 @@ img{
   --tw-text-opacity: 1;
   color: rgb(23 90 178 / var(--tw-text-opacity));
 }
+
+.\[\&\>span\]\:font-medium>span{
+  font-weight: 500;
+}
