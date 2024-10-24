@@ -18,15 +18,37 @@ export const coursesAPI = {
       data.sort((lhs, rhs) => lhs.order - rhs.order)
 
       if (userId) {
+        const workoutsData = await coursesAPI.getWorkouts()
+
         const path     = `/users/${userId}/courses`
         const snapshot = await get(ref(db, path))
 
         if (snapshot.exists()) {
-          const userData = snapshot.val()
+          const userData: UserDataType = snapshot.val()
 
           data.forEach((course) => {
-            course.isAdded  = typeof userData[course._id] === "object"
-            course.progress = 0
+            const isAdded = typeof userData[course._id] === "object"
+
+            let progress = 0
+            let max      = 0
+
+            for (const workoutId of course.workouts) {
+              for (const workout of workoutsData) {
+                if (workout._id !== workoutId)
+                  continue
+
+                if (workout.exercises)
+                  for (const exercise of workout.exercises)
+                    max += exercise.quantity
+
+                if (isAdded)
+                  progress += getProgressInsideUserData(userData, course._id, workoutId)
+              }
+            }
+
+            course.isAdded  = isAdded
+            course.progress = progress
+            course.max      = Math.max(max, 1)
           })
         }
       }
@@ -50,6 +72,21 @@ export const coursesAPI = {
     } catch (error) {
       console.log(error)
       return null
+    }
+  },
+
+  async getWorkouts(): Promise<WorkoutsType> {
+    try {
+      const path     = "workouts"
+      const snapshot = await get(ref(db, path))
+
+      if (!snapshot.exists())
+        return []
+
+      return Object.values(snapshot.val())
+    } catch (error) {
+      console.log(error)
+      return []
     }
   },
 }

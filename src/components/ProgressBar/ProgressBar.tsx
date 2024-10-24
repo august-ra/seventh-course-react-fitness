@@ -1,11 +1,15 @@
 import { sharedStyles } from "../../sharedStyles"
 
 
-export default function ProgressBar() {
+interface Props {
+  progress: number
+}
+
+export default function ProgressBar({ progress }: Props) {
   return (
     <div className={sharedStyles.progressBar}>
       <div className={sharedStyles.progressBarBack} />
-      <div className={sharedStyles.progressBarFront} />
+      <div className={sharedStyles.progressBarFront} style={{ width: `${progress}%` }} />
     </div>
   )
 }

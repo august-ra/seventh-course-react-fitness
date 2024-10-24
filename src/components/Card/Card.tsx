@@ -45,7 +45,7 @@ export default function Card({ courseData, fullSize }: Props) {
               && (
                 <div className={sharedStyles.cardProgress}>
                   <p className={sharedStyles.cardProgressText}>Прогресс {courseData.progress}%</p>
-                  <ProgressBar progress={courseData.progress} />
+                  <ProgressBar progress={Math.max(1, Math.ceil(100 * courseData.progress / courseData.max))} />
                 </div>
               )
           }

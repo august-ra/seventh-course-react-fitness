@@ -26,3 +26,21 @@ export interface CourseType {
 }
 
 export type CoursesType = CourseType[]
+
+/* back-end data's type: write */
+
+export interface UserDataType {
+  [key: string]: {
+    _id: string
+    workouts: {
+      [key: string]: {
+        _id: string
+        exercises: {
+          index: number
+          quantity: number
+          progress: number
+        }[]
+      }
+    }
+  }
+}
