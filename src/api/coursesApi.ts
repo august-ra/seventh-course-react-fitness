@@ -1,12 +1,13 @@
 import { get, ref } from "firebase/database"
 import { db } from "./firebaseConfig"
 
-import type { CoursesType, CourseType } from "../types/types"
+import type { CoursesType, CourseType, WorkoutsType } from "../types/types"
+import type { UserDataType } from "../types/types"
+import { getProgressInsideUserData } from "../utils/progress"
 
 
 export const coursesAPI = {
   async getCourses(userId: string): Promise<CoursesType> {
-    debugger
     try {
       const path     = "courses"
       const snapshot = await get(ref(db, path))

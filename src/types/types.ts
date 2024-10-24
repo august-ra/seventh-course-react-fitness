@@ -27,6 +27,22 @@ export interface CourseType {
 
 export type CoursesType = CourseType[]
 
+export interface WorkoutType {
+  _id:       string
+  name:      string
+  video:     string
+  exercises: ExerciseType[]
+}
+
+export type WorkoutsType = WorkoutType[]
+
+export interface ExerciseType {
+  name:     string
+  quantity: number
+}
+
+export type ExercisesType = ExerciseType[]
+
 /* back-end data's type: write */
 
 export interface UserDataType {
