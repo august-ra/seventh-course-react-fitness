@@ -51,7 +51,6 @@ function StyleClasses() {
       {/* card */}
       <cards className="mt-[50px] flex w-full flex-wrap justify-start gap-10" />
       <card className="relative w-[360px] rounded-[30px] bg-white hover:z-50" />
-      <cardFull className="h-[649px]" />
       <cardPicture className="relative h-[325px] w-[360px] overflow-hidden rounded-[30px]" />
       <cardInner className="absolute" />
       <card-yoga className="right-[-232px] top-[-119px] min-h-[557px] min-w-[834px]" />

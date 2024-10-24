@@ -7,12 +7,14 @@ import Header from "../../components/Header/Header"
 
 import { useRef } from "react"
 import { Outlet, useLoaderData } from "react-router-dom"
+import { useUserContext } from "../../context/UserContext/UserContext"
 import { CoursesType } from "../../types/types"
 
 
 export default function MainPage() {
   const coursesData = useLoaderData() as CoursesType
   const topRef = useRef<HTMLDivElement>(null)
+  const userContext = useUserContext()
 
   function handleGettingTop() {
     if (topRef.current)
@@ -38,7 +40,7 @@ export default function MainPage() {
             <div className={sharedStyles.cards}>
               {
                 coursesData.map((course, index) => (
-                  <Card key={index} courseData={course} hasUser={false} />
+                  <Card key={index} courseData={course} fullSize={userContext.isAuthenticated()} />
                 ))
               }
             </div>

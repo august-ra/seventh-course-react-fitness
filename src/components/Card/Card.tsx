@@ -8,26 +8,27 @@ import Tablet from "../Tablet/Tablet"
 
 import { Link } from "react-router-dom"
 import type { CourseType, KeysType } from "../../types/types"
+import { getActionFromProgress } from "../../utils/progress"
 
 
 interface Props {
   courseData: CourseType
-  hasUser:    boolean
+  fullSize:   boolean
 }
 
-export default function Card({ courseData, hasUser }: Props) {
+export default function Card({ courseData, fullSize }: Props) {
   const name = courseData.name
   const link = `/courses/${courseData._id}`
 
   return (
-    <div className={twMerge(sharedStyles.card, sharedStyles.shadowedBlock, sharedStyles.scaledBlock, hasUser && sharedStyles.cardFull)}>
+    <div className={twMerge(sharedStyles.card, sharedStyles.shadowedBlock, sharedStyles.scaledBlock)}>
       <Link to={link}>
         <div className={sharedStyles.cardPicture}>
           <img className={twMerge(sharedStyles.cardInner, sharedStyles[(`card-${name}`) as KeysType])} src={`/img/${name}.jpeg`} alt={name} />
         </div>
       </Link>
 
-      <CardAction action={Math.floor(Math.random() * 2) - 1 ? "add" : "remove"} />
+      <CardAction action={courseData.isAdded ? "remove" : "add"} />
 
       <div className={sharedStyles.cardBlock}>
         <div className={sharedStyles.cardContent}>
@@ -40,20 +41,22 @@ export default function Card({ courseData, hasUser }: Props) {
           </div>
 
           {
-            hasUser
+            fullSize
               && (
                 <div className={sharedStyles.cardProgress}>
-                  <p className={sharedStyles.cardProgressText}>Прогресс 40%</p>
-                  <ProgressBar />
+                  <p className={sharedStyles.cardProgressText}>Прогресс {courseData.progress}%</p>
+                  <ProgressBar progress={courseData.progress} />
                 </div>
               )
           }
         </div>
 
         {
-          hasUser
+          fullSize
             && (
-              <Button additionalClasses={sharedStyles.buttonWideWithMargin} primary={true}>Продолжить</Button>
+              <Button additionalClasses={sharedStyles.buttonWideWithMargin} primary={true}>
+                {getActionFromProgress(courseData.progress)}
+              </Button>
             )
         }
       </div>
