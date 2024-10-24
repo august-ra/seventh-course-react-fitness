@@ -3,7 +3,7 @@ import { db } from "./firebaseConfig"
 
 import type { CoursesType, CourseType, WorkoutsType } from "../types/types"
 import type { UserDataType } from "../types/types"
-import { getProgressInsideUserData } from "../utils/progress"
+import { fillUserFieldsInCourse, getProgressInsideUserData } from "../utils/progress"
 
 
 export const coursesAPI = {
@@ -28,28 +28,7 @@ export const coursesAPI = {
           const userData: UserDataType = snapshot.val()
 
           data.forEach((course) => {
-            const isAdded = typeof userData[course._id] === "object"
-
-            let progress = 0
-            let max      = 0
-
-            for (const workoutId of course.workouts) {
-              for (const workout of workoutsData) {
-                if (workout._id !== workoutId)
-                  continue
-
-                if (workout.exercises)
-                  for (const exercise of workout.exercises)
-                    max += exercise.quantity
-
-                if (isAdded)
-                  progress += getProgressInsideUserData(userData, course._id, workoutId)
-              }
-            }
-
-            course.isAdded  = isAdded
-            course.progress = progress
-            course.max      = Math.max(max, 1)
+            fillUserFieldsInCourse(course, workoutsData, userData)
           })
         }
       }
@@ -61,7 +40,7 @@ export const coursesAPI = {
     }
   },
 
-  async getCourse(courseId: string): Promise<CourseType | null> {
+  async getCourse(courseId: string, userId: string): Promise<CourseType | null> {
     try {
       const path     = `courses/${courseId}`
       const snapshot = await get(ref(db, path))
@@ -69,7 +48,22 @@ export const coursesAPI = {
       if (!snapshot.exists())
         return null
 
-      return snapshot.val() as CourseType
+      const data = snapshot.val() as CourseType
+
+      if (userId) {
+        const workoutsData = await coursesAPI.getWorkouts()
+
+        const path     = `/users/${userId}/courses`
+        const snapshot = await get(ref(db, path))
+
+        if (snapshot.exists()) {
+          const userData: UserDataType = snapshot.val()
+
+          fillUserFieldsInCourse(data, workoutsData, userData)
+        }
+      }
+
+      return data
     } catch (error) {
       console.log(error)
       return null

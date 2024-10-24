@@ -7,14 +7,29 @@ import Footer from "../../components/Footer/Footer"
 import Header from "../../components/Header/Header"
 
 import { Outlet, useLoaderData } from "react-router-dom"
+import { useUserContext } from "../../context/UserContext/UserContext"
 import { CourseType } from "../../types/types"
 
 
 export default function CoursePage() {
   const courseData = useLoaderData() as CourseType
+  const userContext = useUserContext()
 
   if (!courseData)
     return "There is an error!"
+
+  function getButtonText() {
+    if (!userContext.isAuthenticated())
+      return "Войдите, чтобы добавить курс"
+    else if (!courseData.isAdded)
+      return "Добавить курс"
+    else if (courseData.progress >= 100)
+      return "Начать курс заново"
+    else if (courseData.progress > 0)
+      return "Продолжить курс"
+    else
+      return "Начать курс"
+  }
 
   return (
     <div className={sharedStyles.wrapper}>
@@ -63,7 +78,9 @@ export default function CoursePage() {
                   <li className={sharedStyles.presentationNewLifeLeftItem}>заряд бодрости</li>
                   <li className={sharedStyles.presentationNewLifeLeftItem}>помощь в противостоянии стрессам</li>
                 </ul>
-                <Button additionalClasses={sharedStyles.buttonWideWithMargin} primary={true}>Войдите, чтобы добавить курс</Button>
+                <Button additionalClasses={sharedStyles.buttonWideWithMargin} primary={true}>
+                  {getButtonText()}
+                </Button>
               </div>
 
               <div className={sharedStyles.presentationNewLifeRight}>

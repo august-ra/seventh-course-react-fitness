@@ -60,7 +60,7 @@ const router = (userContext: UserContextValue) => createBrowserRouter([
     element: <CoursePage />,
     async loader({ params }) {
       if (params.id)
-        return coursesAPI.getCourse(params.id)
+        return coursesAPI.getCourse(params.id, userContext.uid)
       else
         return null
     },
