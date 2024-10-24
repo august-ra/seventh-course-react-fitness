@@ -5,6 +5,7 @@ import ProfilePage from "./pages/ProfilePage/ProfilePage"
 import SigningModal from "./pages/SigningModal/SigningModal"
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { UserContextValue, useUserContext } from "./context/UserContext/UserContext"
 import pages from "./data/pages"
 
 import { coursesAPI } from "./api/coursesApi"
@@ -41,17 +42,17 @@ const signingRouterData = [
   },
 ]
 
-const router = createBrowserRouter([
+const router = (userContext: UserContextValue) => createBrowserRouter([
   {
     path:     pages.MAIN,
     element:  <MainPage />,
-    loader:   coursesAPI.getCourses,
+    loader:   async () => await coursesAPI.getCourses(userContext.uid),
     children: signingRouterData,
   },
   {
     path:     pages.COURSES,
     element:  <MainPage />,
-    loader:   coursesAPI.getCourses,
+    loader:   async () => await coursesAPI.getCourses(userContext.uid),
     children: signingRouterData,
   },
   {
@@ -76,7 +77,9 @@ const router = createBrowserRouter([
 ])
 
 export default function AppRoutes() {
+  const userContext = useUserContext()
+
   return (
-    <RouterProvider router={router} />
+    <RouterProvider router={router(userContext)} />
   )
 }

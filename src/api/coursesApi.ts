@@ -5,7 +5,8 @@ import type { CoursesType, CourseType } from "../types/types"
 
 
 export const coursesAPI = {
-  async getCourses(): Promise<CoursesType> {
+  async getCourses(userId: string): Promise<CoursesType> {
+    debugger
     try {
       const path     = "courses"
       const snapshot = await get(ref(db, path))
@@ -15,6 +16,20 @@ export const coursesAPI = {
 
       const data: CoursesType = Object.values(snapshot.val())
       data.sort((lhs, rhs) => lhs.order - rhs.order)
+
+      if (userId) {
+        const path     = `/users/${userId}/courses`
+        const snapshot = await get(ref(db, path))
+
+        if (snapshot.exists()) {
+          const userData = snapshot.val()
+
+          data.forEach((course) => {
+            course.isAdded  = typeof userData[course._id] === "object"
+            course.progress = 0
+          })
+        }
+      }
 
       return data
     } catch (error) {

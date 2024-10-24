@@ -5,16 +5,24 @@ export type KeysType = keyof typeof sharedStyles
 
 export type ModalKindType = "signIn" | "signUp" | "signOut" | "resetStart" | "resetEnd"
 
-export type CourseType = {
+/* back-end data's type: read */
+
+export interface CourseType {
+  /* for main page */
   _id:         string
-  description: string
-  directions:  string[]
-  difficulty:  number
-  fitting:     string[]
   name:        string
   title:       string
+  difficulty:  number
   order:       number
+  /* for course page */
+  description: string
+  directions:  string[]
+  fitting:     string[]
   workouts:    string[]
+  max:         number
+  /* for user */
+  progress:    number
+  isAdded:     boolean
 }
 
 export type CoursesType = CourseType[]

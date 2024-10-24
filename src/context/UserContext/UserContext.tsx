@@ -13,7 +13,7 @@ interface UserType {
   }
 }
 
-interface UserContextValue extends UserType {
+export interface UserContextValue extends UserType {
   isAuthenticated: () => boolean
   save:            (userInfo: User) => void
   clear:           () => void

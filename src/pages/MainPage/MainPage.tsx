@@ -11,9 +11,8 @@ import { CoursesType } from "../../types/types"
 
 
 export default function MainPage() {
-  const topRef = useRef<HTMLDivElement>(null)
   const coursesData = useLoaderData() as CoursesType
-  console.log("data", coursesData)
+  const topRef = useRef<HTMLDivElement>(null)
 
   function handleGettingTop() {
     if (topRef.current)

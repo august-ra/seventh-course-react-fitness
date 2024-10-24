@@ -93,7 +93,7 @@ export const sharedStyles = {
   presentationGoalStar: "presentationGoalStar h-13/2 w-[26px]",
   presentationNewLife: "presentationNewLife relative mb-[50px] mt-[100px] rounded-[30px] bg-white p-10",
   presentationNewLifeTitle: "presentationNewLifeTitle mb-10 text-[60px] font-medium leading-[60px]",
-  presentationNewLifeLeft: "presentationNewLifeLeft w-[448px] list-inside",
+  presentationNewLifeLeft: "presentationNewLifeLeft relative z-10 w-[448px] list-inside",
   presentationNewLifeLeftItem: "presentationNewLifeLeftItem list-disc text-2xl opacity-60",
   presentationNewLifeRight555: "presentationNewLifeRight555 absolute bottom-[-113px] right-[-16px] h-[690px] w-[739px]",
   presentationNewLifeRight: "presentationNewLifeRight absolute bottom-0 right-0 h-full w-full overflow-hidden",

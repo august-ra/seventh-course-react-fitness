@@ -82,7 +82,7 @@ function StyleClasses() {
       <presentationGoalStar className="h-13/2 w-[26px]" />
       <presentationNewLife className="relative mb-[50px] mt-[100px] rounded-[30px] bg-white p-10" />
       <presentationNewLifeTitle className="mb-10 text-[60px] font-medium leading-[60px]" />
-      <presentationNewLifeLeft className="w-[448px] list-inside" />
+      <presentationNewLifeLeft className="relative z-10 w-[448px] list-inside" />
       <presentationNewLifeLeftItem className="list-disc text-2xl opacity-60" />
       <presentationNewLifeRight555 className="absolute bottom-[-113px] right-[-16px] h-[690px] w-[739px]" />
       <presentationNewLifeRight className="absolute bottom-0 right-0 h-full w-full overflow-hidden" />
