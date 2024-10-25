@@ -69,6 +69,9 @@ const router = (userContext: UserContextValue) => createBrowserRouter([
   {
     path:    pages.PROFILE,
     element: <ProfilePage />,
+    async loader() {
+      return coursesAPI.getCourses(userContext.uid)
+    }
   },
   {
     path:    pages.NOT_FOUND,

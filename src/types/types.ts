@@ -31,7 +31,7 @@ export interface WorkoutType {
   _id:       string
   name:      string
   video:     string
-  exercises: ExerciseType[]
+  exercises: ExercisesType
 }
 
 export type WorkoutsType = WorkoutType[]

@@ -3,7 +3,7 @@ import { db } from "./firebaseConfig"
 
 import type { CoursesType, CourseType, WorkoutsType } from "../types/types"
 import type { UserDataType } from "../types/types"
-import { fillUserFieldsInCourse, getProgressInsideUserData } from "../utils/progress"
+import { fillUserFieldsInCourse } from "../utils/progress"
 
 
 export const coursesAPI = {

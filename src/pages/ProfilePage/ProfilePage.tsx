@@ -2,14 +2,17 @@ import { sharedStyles } from "../../sharedStyles"
 import { twMerge } from "tailwind-merge"
 
 import Button from "../../components/Button/Button"
+import Card from "../../components/Card/Card"
 import Footer from "../../components/Footer/Footer"
 import Header from "../../components/Header/Header"
 
-import { Outlet } from "react-router-dom"
+import { Outlet, useLoaderData } from "react-router-dom"
 import { useUserContext } from "../../context/UserContext/UserContext"
+import { CoursesType } from "../../types/types"
 
 
 export default function ProfilePage() {
+  const coursesData = useLoaderData() as CoursesType
   const userContext = useUserContext()
 
   return (
@@ -33,6 +36,18 @@ export default function ProfilePage() {
                   <Button primary={false} additionalClasses={sharedStyles.userProfileButton}>Выйти</Button>
                 </div>
               </form>
+            </div>
+          </section>
+
+          <section className={sharedStyles.userProfileSection}>
+            <h2 className={sharedStyles.captionText}>Мои курсы</h2>
+
+            <div className={sharedStyles.cards}>
+              {
+                coursesData.filter((course) => course.isAdded).map((course, index) => (
+                  <Card key={index} courseData={course} fullSize={true} />
+                ))
+              }
             </div>
           </section>
         </main>
