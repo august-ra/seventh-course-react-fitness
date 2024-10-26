@@ -94,8 +94,9 @@ export const coursesAPI = {
         return []
 
       const workoutsData = await coursesAPI.getWorkouts()
+      const courseData = snapshot.val() as CourseType
 
-      const data: WorkoutsType = (snapshot.val() as CourseType).workouts.map((workoutId) => (
+      const data: WorkoutsType = courseData.workouts.map((workoutId) => (
         workoutsData.reduce((acc, workout) => workout._id === workoutId ? workout : acc, {})
       ))
 
@@ -121,8 +122,9 @@ export const coursesAPI = {
               progress += getProgressInsideUserData(userData, courseId, workoutData._id)
             }
 
-            workoutData.progress = progress
-            workoutData.max      = Math.max(max, 1)
+            workoutData.progress   = progress
+            workoutData.max        = Math.max(max, 1)
+            workoutData.courseName = courseData.title
           }
         }
       }

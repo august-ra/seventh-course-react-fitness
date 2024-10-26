@@ -143,6 +143,7 @@ export const sharedStyles = {
 
   modalFormCompact: "modalFormCompact w-auto gap-[34px]",
   modalScrollingList: "modalScrollingList max-h-[364px] w-full overflow-y-scroll",
+  modalScrollingListGapped: "modalScrollingListGapped pr-[26px]",
   modalList: "modalList w-full",
   modalListItem: "modalListItem flex items-center gap-[10px] border-b border-b-delimiter pb-2.5 [&:not(:first-child)]:pt-2.5",
   modalListMark: "modalListMark h-6 w-6",

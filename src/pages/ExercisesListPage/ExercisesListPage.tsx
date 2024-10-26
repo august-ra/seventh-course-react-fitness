@@ -27,13 +27,13 @@ export default function ExercisesListPage() {
       <form className={twMerge(sharedStyles.modalForm, sharedStyles.modalFormCompact)}>
         <p className={sharedStyles.modalFormCaption}>Выберите тренировку</p>
 
-        <div className={twMerge(sharedStyles.modalScrollingList, workoutsData.length > 5 && "pr-[26px]")}>
+        <div className={twMerge(sharedStyles.modalScrollingList, workoutsData.length > 5 && sharedStyles.modalScrollingListGapped)}>
           <ul className={sharedStyles.modalList}>
             {
               workoutsData.map((workout, index) => (
                 <li className={sharedStyles.modalListItem}>
                   {
-                    workout.progress // === workout.max
+                    workout.progress === workout.max
                       ? (
                         <img className={sharedStyles.modalListMark} src="/img/mark.svg" alt="mark" />
                       )
@@ -42,8 +42,8 @@ export default function ExercisesListPage() {
                       )
                   }
                   <div className={sharedStyles.modalListItemContent}>
-                    <p className={sharedStyles.modalListItemExercise}>Утренняя практика</p>
-                    <p className={sharedStyles.modalListItemCourse}>Йога на каждый день / {index + 1} день </p>
+                    <p className={sharedStyles.modalListItemExercise}>{workout.name}</p>
+                    <p className={sharedStyles.modalListItemCourse}>{workout.courseName} на каждый день / {index + 1} день </p>
                   </div>
                 </li>
               ))

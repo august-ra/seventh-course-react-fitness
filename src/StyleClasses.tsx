@@ -120,6 +120,7 @@ function StyleClasses() {
       {/* modal: exercises' list */}
       <modalFormCompact className="w-auto gap-[34px]" />
       <modalScrollingList className="max-h-[364px] w-full overflow-y-scroll" />
+      <modalScrollingListGapped className="pr-[26px]" />
       <modalList className="w-full" />
       <modalListItem className="flex items-center gap-[10px] border-b border-b-delimiter pb-2.5 [&:not(:first-child)]:pt-2.5" />
       <modalListMark className="h-6 w-6" />
