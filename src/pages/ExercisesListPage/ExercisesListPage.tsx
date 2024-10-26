@@ -3,12 +3,14 @@ import { twMerge } from "tailwind-merge"
 
 import Button from "../../components/Button/Button"
 
-import React from "react"
+import React, { useState } from "react"
 import { useLoaderData, useNavigate } from "react-router-dom"
 import { WorkoutsType } from "../../types/types"
 
 
 export default function ExercisesListPage() {
+  const [workoutId, setWorkoutId] = useState("")
+  const [showError, setShowError] = useState(false)
   const workoutsData = useLoaderData() as WorkoutsType
   const navigate = useNavigate()
 
@@ -20,20 +22,36 @@ export default function ExercisesListPage() {
       navigate(-1)
   }
 
-  debugger
+  function handleSelectWorkout(e: React.MouseEvent<HTMLLIElement>) {
+    let target = e.target as HTMLLIElement
+
+    while (target.nodeName !== "LI")
+      target = target.parentElement as HTMLLIElement
+
+    setWorkoutId(target.dataset.id || "")
+  }
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+
+    if (!workoutId)
+      return setShowError(true)
+
+    navigate(`/workout/${workoutId}/`, { replace: true })
+  }
 
   return (
     <div className={sharedStyles.modalWrapper} data-id="modal-outside" onClick={handleClose}>
-      <form className={twMerge(sharedStyles.modalForm, sharedStyles.modalFormCompact)}>
+      <form className={twMerge(sharedStyles.modalForm, sharedStyles.modalFormCompact)} onSubmit={handleSubmit}>
         <p className={sharedStyles.modalFormCaption}>Выберите тренировку</p>
 
         <div className={twMerge(sharedStyles.modalScrollingList, workoutsData.length > 5 && sharedStyles.modalScrollingListGapped)}>
           <ul className={sharedStyles.modalList}>
             {
               workoutsData.map((workout, index) => (
-                <li className={sharedStyles.modalListItem}>
+                <li key={workout._id} className={sharedStyles.modalListItem} onClick={handleSelectWorkout} data-id={workout._id}>
                   {
-                    workout.progress === workout.max
+                    workout._id === workoutId
                       ? (
                         <img className={sharedStyles.modalListMark} src="/img/mark.svg" alt="mark" />
                       )
@@ -50,6 +68,13 @@ export default function ExercisesListPage() {
             }
           </ul>
         </div>
+
+        {
+          showError
+            && (
+              <p className={sharedStyles.modalFormError}>Необходимо выбрать тренировку</p>
+            )
+        }
 
         <Button primary={true} type="submit" additionalClasses={sharedStyles.buttonWide}>Начать</Button>
       </form>
