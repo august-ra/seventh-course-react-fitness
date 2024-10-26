@@ -1,10 +1,11 @@
 import CoursePage from "./pages/CoursePage/CoursePage"
+import ExercisesListPage from "./pages/ExercisesListPage/ExercisesListPage"
 import MainPage from "./pages/MainPage/MainPage"
 import Page404 from "./pages/Page404/Page404"
 import ProfilePage from "./pages/ProfilePage/ProfilePage"
 import SigningModal from "./pages/SigningModal/SigningModal"
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { createBrowserRouter, NonIndexRouteObject, RouterProvider } from "react-router-dom"
 import { UserContextValue, useUserContext } from "./context/UserContext/UserContext"
 import pages from "./data/pages"
 
@@ -42,18 +43,29 @@ const signingRouterData = [
   },
 ]
 
+const choosingTrainRouterData = (userContext: UserContextValue): NonIndexRouteObject => ({
+  path:    pages.CHOOSE,
+  element: <ExercisesListPage />,
+  async loader({ params }) {
+    if (params.id)
+      return coursesAPI.getWorkoutsIntoCourse(params.id, userContext.uid)
+    else
+      return []
+  },
+})
+
 const router = (userContext: UserContextValue) => createBrowserRouter([
   {
     path:     pages.MAIN,
     element:  <MainPage />,
     loader:   async () => await coursesAPI.getCourses(userContext.uid),
-    children: signingRouterData,
+    children: [...signingRouterData, choosingTrainRouterData(userContext)],
   },
   {
     path:     pages.COURSES,
     element:  <MainPage />,
     loader:   async () => await coursesAPI.getCourses(userContext.uid),
-    children: signingRouterData,
+    children: [...signingRouterData, choosingTrainRouterData(userContext)],
   },
   {
     path:    pages.COURSE,
@@ -64,14 +76,15 @@ const router = (userContext: UserContextValue) => createBrowserRouter([
       else
         return null
     },
-    children: signingRouterData,
+    children: [...signingRouterData, choosingTrainRouterData(userContext)],
   },
   {
     path:    pages.PROFILE,
     element: <ProfilePage />,
     async loader() {
       return coursesAPI.getCourses(userContext.uid)
-    }
+    },
+    children: [choosingTrainRouterData(userContext)],
   },
   {
     path:    pages.NOT_FOUND,

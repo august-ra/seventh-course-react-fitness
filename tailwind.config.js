@@ -18,6 +18,7 @@ export default {
       "dark":     "#e9eced",
       "light-tx": "#999999",
       "black":    "#000000",
+      "delimiter":  "#c4c4c4",
       "yoga":       "#ffc700",
       "stretching": "#2491d2",
       "zumba":      "#f7a012",

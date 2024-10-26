@@ -4,6 +4,7 @@ const pages = {
   COURSES:   "/courses/",
   COURSE:    "/courses/:id/",
   PROFILE:   "/profile/",
+  CHOOSE:    "choose/:id",
   SIGNING:   "signing/",
   SIGN_IN:   "signing/in/",
   SIGN_UP:   "signing/up/",

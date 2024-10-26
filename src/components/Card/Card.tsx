@@ -7,8 +7,9 @@ import ProgressBar from "../ProgressBar/ProgressBar"
 import Tablet from "../Tablet/Tablet"
 
 import { Link } from "react-router-dom"
-import type { CourseType, KeysType } from "../../types/types"
+import { useNavigateFaraway } from "../../hooks/useNavigateFaraway"
 import { getActionFromProgress } from "../../utils/progress"
+import type { CourseType, KeysType } from "../../types/types"
 
 
 interface Props {
@@ -19,6 +20,11 @@ interface Props {
 export default function Card({ courseData, fullSize }: Props) {
   const name = courseData.name
   const link = `/courses/${courseData._id}`
+  const navigate = useNavigateFaraway()
+
+  function handleSubmit() {
+    navigate(`choose/${courseData._id}`)
+  }
 
   return (
     <div className={twMerge(sharedStyles.card, sharedStyles.shadowedBlock, sharedStyles.scaledBlock)}>
@@ -54,7 +60,7 @@ export default function Card({ courseData, fullSize }: Props) {
         {
           fullSize
             && (
-              <Button additionalClasses={sharedStyles.buttonWideWithMargin} primary={true}>
+              <Button additionalClasses={sharedStyles.buttonWideWithMargin} primary={true} onClick={handleSubmit}>
                 {getActionFromProgress(courseData.progress)}
               </Button>
             )

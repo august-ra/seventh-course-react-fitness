@@ -28,10 +28,14 @@ export interface CourseType {
 export type CoursesType = CourseType[]
 
 export interface WorkoutType {
+  /* for training page */
   _id:       string
   name:      string
   video:     string
   exercises: ExercisesType
+  max:       number
+  /* for user */
+  progress:  number
 }
 
 export type WorkoutsType = WorkoutType[]

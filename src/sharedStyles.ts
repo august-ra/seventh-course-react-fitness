@@ -127,16 +127,29 @@ export const sharedStyles = {
   climber: "climber mt-[34px] flex justify-center",
   footer: "footer flex flex-none justify-center pb-[60px] pt-[50px] text-[18px]",
 
-  /* signing */
+  /* modal: signing */
 
   modalWrapper: "modalWrapper fixed left-0 top-0 z-10 flex h-screen w-screen items-center justify-center bg-blocked",
   modalForm: "modalForm m-auto flex w-[360px] flex-col items-center gap-12 rounded-[30px] bg-white p-10",
+  modalFormCaption: "modalFormCaption mb-[14px] text-[32px] leading-9",
   modalFormInner: "modalFormInner flex w-full flex-col items-center gap-[34px]",
   modalFormSubgroup: "modalFormSubgroup flex w-full flex-col items-center gap-[10px]",
   modalFormInput: "modalFormInput h-13 w-full rounded-[8px] border border-neutral bg-white px-4.5 py-4",
   modalFormError: "modalFormError text-center text-sm text-bad",
   modalFormSuggestionLink: "modalFormSuggestionLink text-center text-sm font-medium text-404 underline",
   modalFormErrorLink: "modalFormErrorLink text-center text-sm font-medium text-bad underline",
+
+  /* modal: exercises' list */
+
+  modalFormCompact: "modalFormCompact w-auto gap-[34px]",
+  modalScrollingList: "modalScrollingList max-h-[364px] w-full overflow-y-scroll",
+  modalList: "modalList w-full",
+  modalListItem: "modalListItem flex items-center gap-[10px] border-b border-b-delimiter pb-2.5 [&:not(:first-child)]:pt-2.5",
+  modalListMark: "modalListMark h-6 w-6",
+  modalListEmptyMark: "modalListEmptyMark m-0.5 h-[20px] w-[20px] rounded-[10px] border-2 border-light-tx",
+  modalListItemContent: "modalListItemContent flex flex-col gap-[10px]",
+  modalListItemExercise: "modalListItemExercise text-[24px] leading-[26px]",
+  modalListItemCourse: "modalListItemCourse text-[16px] leading-[18px]",
 
   /* page 404 */
 

@@ -107,15 +107,26 @@ function StyleClasses() {
       {/* footer */}
       <climber className="mt-[34px] flex justify-center" />
       <footer className="flex flex-none justify-center pb-[60px] pt-[50px] text-[18px]" />
-      {/* signing */}
+      {/* modal: signing */}
       <modalWrapper className="fixed left-0 top-0 z-10 flex h-screen w-screen items-center justify-center bg-blocked" />
       <modalForm className="m-auto flex w-[360px] flex-col items-center gap-12 rounded-[30px] bg-white p-10" />
+      <modalFormCaption className="mb-[14px] text-[32px] leading-9" />
       <modalFormInner className="flex w-full flex-col items-center gap-[34px]" />
       <modalFormSubgroup className="flex w-full flex-col items-center gap-[10px]" />
       <modalFormInput className="h-13 w-full rounded-[8px] border border-neutral bg-white px-4.5 py-4" />
       <modalFormError className="text-center text-sm text-bad" />
       <modalFormSuggestionLink className="text-center text-sm font-medium text-404 underline" />
       <modalFormErrorLink className="text-center text-sm font-medium text-bad underline" />
+      {/* modal: exercises' list */}
+      <modalFormCompact className="w-auto gap-[34px]" />
+      <modalScrollingList className="max-h-[364px] w-full overflow-y-scroll" />
+      <modalList className="w-full" />
+      <modalListItem className="flex items-center gap-[10px] border-b border-b-delimiter pb-2.5 [&:not(:first-child)]:pt-2.5" />
+      <modalListMark className="h-6 w-6" />
+      <modalListEmptyMark className="m-0.5 h-[20px] w-[20px] rounded-[10px] border-2 border-light-tx" />
+      <modalListItemContent className="flex flex-col gap-[10px]" />
+      <modalListItemExercise className="text-[24px] leading-[26px]" />
+      <modalListItemCourse className="text-[16px] leading-[18px]" />
       {/* page 404 */}
       <page404Container className="relative flex h-screen justify-center bg-white" />
       <page404Image className="h-[800px] w-[1200px]" />
