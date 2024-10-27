@@ -40,7 +40,7 @@ export default function MainPage() {
             <div className={sharedStyles.cards}>
               {
                 coursesData.map((course, index) => (
-                  <Card key={index} courseData={course} fullSize={userContext.isAuthenticated()} />
+                  <Card key={index} courseData={course} userId={userContext.uid} />
                 ))
               }
             </div>

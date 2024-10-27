@@ -45,7 +45,7 @@ export default function ProfilePage() {
             <div className={sharedStyles.cards}>
               {
                 coursesData.filter((course) => course.isAdded).map((course, index) => (
-                  <Card key={index} courseData={course} fullSize={true} />
+                  <Card key={index} courseData={course} userId={userContext.uid} />
                 ))
               }
             </div>

@@ -8,21 +8,26 @@ import Tablet from "../Tablet/Tablet"
 
 import { Link } from "react-router-dom"
 import { useNavigateFaraway } from "../../hooks/useNavigateFaraway"
-import { getActionFromProgress, getRate } from "../../utils/progress"
+import { getActionTextFromProgress, getRate } from "../../utils/progress"
 import type { CourseType, KeysType } from "../../types/types"
+
+import { coursesAPI } from "../../api/coursesApi"
 
 
 interface Props {
   courseData: CourseType
-  fullSize:   boolean
+  userId:     string
 }
 
-export default function Card({ courseData, fullSize }: Props) {
+export default function Card({ courseData, userId }: Props) {
   const name = courseData.name
   const link = `/courses/${courseData._id}`
   const navigate = useNavigateFaraway()
 
-  function handleSubmit() {
+  async function handleSubmit() {
+    if (courseData.progress >= 100)
+      coursesAPI.repeatFromBeginUserCourse(userId, courseData._id)
+
     navigate(`choose/${courseData._id}`)
   }
 
@@ -47,7 +52,7 @@ export default function Card({ courseData, fullSize }: Props) {
           </div>
 
           {
-            fullSize
+            userId && courseData.isAdded
               && (
                 <Progress title="" progress={getRate(courseData.progress, courseData.max)} />
               )
@@ -55,10 +60,10 @@ export default function Card({ courseData, fullSize }: Props) {
         </div>
 
         {
-          fullSize
+          userId && courseData.isAdded
             && (
-              <Button additionalClasses={sharedStyles.buttonWideWithMargin} primary={true} onClick={handleSubmit}>
-                {getActionFromProgress(courseData.progress)}
+              <Button additionalClasses={sharedStyles.buttonWideWithFields} primary={true} onClick={handleSubmit}>
+                {getActionTextFromProgress(false, courseData.progress)}
               </Button>
             )
         }

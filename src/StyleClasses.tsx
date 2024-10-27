@@ -51,7 +51,7 @@ function StyleClasses() {
       <banner-body-flex className="right-[-200px] top-[-155px] w-[70%]" />
       {/* card */}
       <cards className="mt-[50px] flex w-full flex-wrap justify-start gap-10" />
-      <card className="relative w-[360px] rounded-[30px] bg-white hover:z-50" />
+      <card className="relative w-[360px] rounded-[30px] bg-white hover:z-40" />
       <cardPicture className="relative h-[325px] w-[360px] overflow-hidden rounded-[30px]" />
       <cardInner className="absolute" />
       <card-yoga className="right-[-232px] top-[-119px] min-h-[557px] min-w-[834px]" />
