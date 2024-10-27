@@ -1,6 +1,11 @@
 import { CourseType, UserDataType, WorkoutsType } from "../types/types"
 
 
+export function getRate(progress: number, max: number) {
+  return Math.ceil(100 * progress / max)
+}
+
+
 export function getActionFromProgress(progress: number): string {
   if (progress >= 100)
     return "Начать заново"

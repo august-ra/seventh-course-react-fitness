@@ -8,7 +8,7 @@ import Tablet from "../Tablet/Tablet"
 
 import { Link } from "react-router-dom"
 import { useNavigateFaraway } from "../../hooks/useNavigateFaraway"
-import { getActionFromProgress } from "../../utils/progress"
+import { getActionFromProgress, getRate } from "../../utils/progress"
 import type { CourseType, KeysType } from "../../types/types"
 
 
@@ -49,7 +49,7 @@ export default function Card({ courseData, fullSize }: Props) {
           {
             fullSize
               && (
-                <Progress title="" progress={Math.ceil(100 * courseData.progress / courseData.max)} />
+                <Progress title="" progress={getRate(courseData.progress, courseData.max)} />
               )
           }
         </div>
