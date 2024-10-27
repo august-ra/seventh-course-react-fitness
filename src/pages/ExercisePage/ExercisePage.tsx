@@ -6,17 +6,34 @@ import Footer from "../../components/Footer/Footer"
 import Header from "../../components/Header/Header"
 import Progress from "../../components/Progress/Progress"
 
-import { Link, Outlet, useLoaderData, useParams } from "react-router-dom"
+import { Link, Outlet, useLoaderData, useNavigate, useParams } from "react-router-dom"
+import { useNavigateFaraway } from "../../hooks/useNavigateFaraway"
+import { useUserContext } from "../../context/UserContext/UserContext"
 import { WorkoutType } from "../../types/types"
+import pages from "../../data/pages"
 import { getRate } from "../../utils/progress"
+
+import { coursesAPI } from "../../api/coursesApi"
 
 
 export default function ExercisePage() {
   const { courseId, workoutId } = useParams()
   const workoutData = useLoaderData() as WorkoutType
+  const userContext = useUserContext()
+  const navigate = useNavigate()
+  const navigateFaraway = useNavigateFaraway()
 
   if (!workoutData)
     return "There is an error!"
+
+  async function handleSubmit() {
+    if (workoutData.exercises)
+      return navigateFaraway(pages.WRITE)
+
+    coursesAPI.writeProgressToUserCourse(userContext.uid, courseId, workoutId, 1)
+
+    navigate(pages.PROFILE)
+  }
 
   return (
     <div className={sharedStyles.wrapper}>
@@ -26,12 +43,13 @@ export default function ExercisePage() {
         <main className="">
           <section className="">
             <h1 className={sharedStyles.bannerText}>{workoutData.courseName}</h1>
+
             <div className={sharedStyles.breadcrumbsLine}>
               <Link className={sharedStyles.breadcrumb} to="/">Красота и здоровье</Link>
               &nbsp;/&nbsp;
-              <Link className={sharedStyles.breadcrumb} to={`/courses/${courseId}/`}>Йога на каждый день</Link>
+              <Link className={sharedStyles.breadcrumb} to={`/courses/${courseId}/`}>{workoutData.courseName} на каждый день</Link>
               &nbsp;/&nbsp;
-              <span className={sharedStyles.breadcrumbLast}>2 день</span>
+              <span className={sharedStyles.breadcrumbLast}>{workoutData.day} день</span>
             </div>
 
             <div className={sharedStyles.videoBlock}>
@@ -81,7 +99,7 @@ export default function ExercisePage() {
               }
             </div>
 
-            <Button additionalClasses={sharedStyles.buttonProgress} primary={true}>
+            <Button additionalClasses={sharedStyles.buttonProgress} primary={true} onClick={handleSubmit}>
               { workoutData.exercises ? "Заполнить свой прогресс" : "Завершить занятие" }
             </Button>
           </section>
