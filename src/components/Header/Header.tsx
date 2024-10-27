@@ -27,7 +27,7 @@ export default function Header() {
     <header className={sharedStyles.header}>
       <div className={sharedStyles.headerContainer}>
         <img className={sharedStyles.headerLogo} src="/img/logo.svg" alt="logo" />
-        <p className={sharedStyles.headerSlogan}>Онлайн-тренировки для занятий дома</p>
+        <p className={sharedStyles.text_18_20}>Онлайн-тренировки для занятий дома</p>
       </div>
 
       {

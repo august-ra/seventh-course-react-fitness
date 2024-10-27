@@ -118,6 +118,8 @@ export const coursesAPI = {
               if (workout.exercises)
                 for (const exercise of workout.exercises)
                   max += exercise.quantity
+              else
+                max += 1
 
               progress += getProgressInsideUserData(userData, courseId, workoutData._id)
             }

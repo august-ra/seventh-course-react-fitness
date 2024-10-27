@@ -4,6 +4,7 @@ const pages = {
   COURSES:   "/courses/",
   COURSE:    "/courses/:id/",
   WORKOUT:   "/workout/:courseId/:workoutId/",
+  WRITE:     "write/",
   PROFILE:   "/profile/",
   CHOOSE:    "choose/:id",
   SIGNING:   "signing/",

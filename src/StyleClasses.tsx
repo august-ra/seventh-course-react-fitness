@@ -10,10 +10,11 @@ function StyleClasses() {
       {/* common */}
       <shadowedBlock className="shadow-3xl" />
       <scaledBlock className="duration-300 hover:scale-102" />
+      <text_18_20 className="text-[18px] leading-[20px]" />
       {/* courses */}
       <colors className="bg-aerobics bg-body-flex bg-stretching bg-yoga bg-zumba" />
       {/* button */}
-      <buttonCommon className="h-13 w-[103px] rounded-[46px] text-[18px] duration-300" />
+      <buttonCommon className="h-13 w-[103px] rounded-[46px] duration-300" />
       <buttonPrimary className="bg-good hover:bg-well active:bg-black active:text-white disabled:bg-light-bg disabled:text-light-tx" />
       <buttonSecondary className="border border-black bg-white hover:bg-light-bg active:bg-dark disabled:text-light-tx" />
       <buttonWide className="w-full" />
@@ -26,7 +27,7 @@ function StyleClasses() {
       <header className="flex w-full justify-between pb-[60px] pt-[50px]" />
       <headerContainer className="flex w-1/2 flex-col justify-start gap-[15px] text-left" />
       <headerLogo className="h-[35px] w-[220px]" />
-      <headerSlogan className="text-[18px]" />
+      <headerSlogan className="" />
       <headerUserGroup className="relative flex h-[50px] items-center gap-4" />
       <headerProfileBlock className="group/profile flex items-center gap-3" />
       <headerProfileLogo className="h-[50px] w-[50px]" />
@@ -38,7 +39,7 @@ function StyleClasses() {
       <captionText className="max-w-[864px] text-[60px] font-medium leading-none" />
       <captionBalloon className="relative" />
       <captionBalloonTail className="absolute right-[140px] top-[85px] h-[36px] w-[30px]" />
-      <captionBalloonFace className="relative z-10 h-[102px] w-[288px] rounded-[5px] bg-good px-[20px] py-[16px] text-[32px] leading-9" />
+      <captionBalloonFace className="relative z-10 h-[102px] w-[288px] rounded-[5px] bg-good px-5 py-4 text-[32px] leading-9" />
       {/* banner */}
       <banner className="relative mb-[60px] h-[310px] max-h-[310px] min-h-[310px] w-[1160px] overflow-hidden rounded-[30px] p-10 text-white" />
       <bannerText className="relative z-10 mb-[18px] h-[66px] text-[60px] font-medium leading-[66px]" />
@@ -103,18 +104,23 @@ function StyleClasses() {
       <breadcrumb className="underline hover:text-404" />
       <breadcrumbLast className="underline" />
       <videoBlock className="h-[639px] overflow-hidden rounded-[30px]" />
-      <workoutProgresses className="grid-cols-3-auto grid w-full gap-x-[60px] gap-y-[20px]" />
+      <workoutProgresses className="grid w-full grid-cols-3 gap-x-[60px] gap-y-5" />
       <workoutDayCaption className="mb-5 text-[32px] leading-[36px]" />
       <buttonProgress className="mt-10 w-[320px]" />
+      <writeProgressScrollingList className="max-h-[346px] w-[346px] overflow-y-scroll" />
+      <writeProgressScrollingListGapped className="pr-[26px]" />
+      <writeProgressList className="flex w-full flex-col gap-5 overflow-y-scroll" />
+      <writeProgressItem className="flex flex-col gap-[10px]" />
+      <writeProgressInput className="h-[52px] rounded-[8px] border border-neutral bg-white px-[18px] py-4" />
       {/* progress */}
       <progress className="flex flex-col gap-[10px]" />
-      <progressText className="text-[18px] leading-[20px]" />
+      <progressText className="" />
       <progressBar className="relative" />
       <progressBarBack className="absolute h-[6px] w-full rounded-[50px] bg-light-bg" />
       <progressBarFront className="absolute h-[6px] w-[120px] rounded-[50px] bg-work" />
       {/* footer */}
       <climber className="mt-[34px] flex justify-center" />
-      <footer className="flex flex-none justify-center pb-[60px] pt-[50px] text-[18px]" />
+      <footer className="flex flex-none justify-center pb-[60px] pt-[50px]" />
       {/* modal: signing */}
       <modalWrapper className="fixed left-0 top-0 z-10 flex h-screen w-screen items-center justify-center bg-blocked" />
       <modalForm className="m-auto flex w-[360px] flex-col items-center gap-12 rounded-[30px] bg-white p-10" />

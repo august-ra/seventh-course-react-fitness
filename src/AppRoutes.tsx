@@ -5,6 +5,7 @@ import MainPage from "./pages/MainPage/MainPage"
 import Page404 from "./pages/Page404/Page404"
 import ProfilePage from "./pages/ProfilePage/ProfilePage"
 import SigningModal from "./pages/SigningModal/SigningModal"
+import WriteProgressPage from "./pages/WriteProgressPage/WriteProgressPage"
 
 import { createBrowserRouter, NonIndexRouteObject, RouterProvider } from "react-router-dom"
 import { UserContextValue, useUserContext } from "./context/UserContext/UserContext"
@@ -88,6 +89,16 @@ const router = (userContext: UserContextValue) => createBrowserRouter([
       else
         return []
     },
+    children: [{
+      path:    pages.WRITE,
+      element: <WriteProgressPage />,
+      async loader({ params }) {
+        if (params.courseId && params.workoutId)
+          return coursesAPI.getWorkout(params.courseId, params.workoutId, userContext.uid)
+        else
+          return []
+      },
+    }],
   },
   {
     path:    pages.PROFILE,

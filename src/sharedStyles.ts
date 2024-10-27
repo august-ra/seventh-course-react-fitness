@@ -5,6 +5,7 @@ export const sharedStyles = {
 
   shadowedBlock: "shadowedBlock shadow-3xl",
   scaledBlock: "scaledBlock duration-300 hover:scale-102",
+  text_18_20: "text_18_20 text-[18px] leading-[20px]",
 
   /* courses */
 
@@ -12,7 +13,7 @@ export const sharedStyles = {
 
   /* button */
 
-  buttonCommon: "buttonCommon h-13 w-[103px] rounded-[46px] text-[18px] duration-300",
+  buttonCommon: "buttonCommon h-13 w-[103px] rounded-[46px] duration-300",
   buttonPrimary: "buttonPrimary bg-good hover:bg-well active:bg-black active:text-white disabled:bg-light-bg disabled:text-light-tx",
   buttonSecondary: "buttonSecondary border border-black bg-white hover:bg-light-bg active:bg-dark disabled:text-light-tx",
   buttonWide: "buttonWide w-full",
@@ -29,7 +30,7 @@ export const sharedStyles = {
   header: "header flex w-full justify-between pb-[60px] pt-[50px]",
   headerContainer: "headerContainer flex w-1/2 flex-col justify-start gap-[15px] text-left",
   headerLogo: "headerLogo h-[35px] w-[220px]",
-  headerSlogan: "headerSlogan text-[18px]",
+  headerSlogan: "headerSlogan",
   headerUserGroup: "headerUserGroup relative flex h-[50px] items-center gap-4",
   headerProfileBlock: "headerProfileBlock group/profile flex items-center gap-3",
   headerProfileLogo: "headerProfileLogo h-[50px] w-[50px]",
@@ -43,7 +44,7 @@ export const sharedStyles = {
   captionText: "captionText max-w-[864px] text-[60px] font-medium leading-none",
   captionBalloon: "captionBalloon relative",
   captionBalloonTail: "captionBalloonTail absolute right-[140px] top-[85px] h-[36px] w-[30px]",
-  captionBalloonFace: "captionBalloonFace relative z-10 h-[102px] w-[288px] rounded-[5px] bg-good px-[20px] py-[16px] text-[32px] leading-9",
+  captionBalloonFace: "captionBalloonFace relative z-10 h-[102px] w-[288px] rounded-[5px] bg-good px-5 py-4 text-[32px] leading-9",
 
   /* banner */
 
@@ -120,14 +121,19 @@ export const sharedStyles = {
   breadcrumb: "breadcrumb underline hover:text-404",
   breadcrumbLast: "breadcrumbLast underline",
   videoBlock: "videoBlock h-[639px] overflow-hidden rounded-[30px]",
-  workoutProgresses: "workoutProgresses grid-cols-3-auto grid w-full gap-x-[60px] gap-y-[20px]",
+  workoutProgresses: "workoutProgresses grid w-full grid-cols-3 gap-x-[60px] gap-y-5",
   workoutDayCaption: "workoutDayCaption mb-5 text-[32px] leading-[36px]",
   buttonProgress: "buttonProgress mt-10 w-[320px]",
+  writeProgressScrollingList: "writeProgressScrollingList max-h-[346px] w-[346px] overflow-y-scroll",
+  writeProgressScrollingListGapped: "writeProgressScrollingListGapped pr-[26px]",
+  writeProgressList: "writeProgressList flex w-full flex-col gap-5 overflow-y-scroll",
+  writeProgressItem: "writeProgressItem flex flex-col gap-[10px]",
+  writeProgressInput: "writeProgressInput h-[52px] rounded-[8px] border border-neutral bg-white px-[18px] py-4",
 
   /* progress */
 
   progress: "progress flex flex-col gap-[10px]",
-  progressText: "progressText text-[18px] leading-[20px]",
+  progressText: "progressText",
   progressBar: "progressBar relative",
   progressBarBack: "progressBarBack absolute h-[6px] w-full rounded-[50px] bg-light-bg",
   progressBarFront: "progressBarFront absolute h-[6px] w-[120px] rounded-[50px] bg-work",
@@ -135,7 +141,7 @@ export const sharedStyles = {
   /* footer */
 
   climber: "climber mt-[34px] flex justify-center",
-  footer: "footer flex flex-none justify-center pb-[60px] pt-[50px] text-[18px]",
+  footer: "footer flex flex-none justify-center pb-[60px] pt-[50px]",
 
   /* modal: signing */
 

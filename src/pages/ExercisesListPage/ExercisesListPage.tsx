@@ -62,7 +62,7 @@ export default function ExercisesListPage() {
                   }
                   <div className={sharedStyles.modalListItemContent}>
                     <p className={sharedStyles.modalListItemExercise}>{workout.name}</p>
-                    <p className={sharedStyles.modalListItemCourse}>{workout.courseName} на каждый день / {workout.day} день </p>
+                    <p className={sharedStyles.modalListItemCourse}>{workout.courseName} на каждый день / {workout.day} день</p>
                   </div>
                 </li>
               ))

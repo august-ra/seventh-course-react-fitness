@@ -918,6 +918,10 @@ img{
   height: 50px;
 }
 
+.h-\[52px\]{
+  height: 52px;
+}
+
 .h-\[530px\]{
   height: 530px;
 }
@@ -956,6 +960,10 @@ img{
 
 .max-h-\[310px\]{
   max-height: 310px;
+}
+
+.max-h-\[346px\]{
+  max-height: 346px;
 }
 
 .max-h-\[364px\]{
@@ -1060,6 +1068,10 @@ img{
 
 .w-\[32px\]{
   width: 32px;
+}
+
+.w-\[346px\]{
+  width: 346px;
 }
 
 .w-\[360px\]{
@@ -1275,8 +1287,8 @@ img{
        column-gap: 60px;
 }
 
-.gap-y-\[20px\]{
-  row-gap: 20px;
+.gap-y-5{
+  row-gap: 1.25rem;
 }
 
 .gap-y-\[34px\]{
@@ -1452,9 +1464,9 @@ img{
   padding-right: 1.25rem;
 }
 
-.px-\[20px\]{
-  padding-left: 20px;
-  padding-right: 20px;
+.px-\[18px\]{
+  padding-left: 18px;
+  padding-right: 18px;
 }
 
 .px-\[30px\]{
@@ -1465,11 +1477,6 @@ img{
 .py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.py-\[16px\]{
-  padding-top: 16px;
-  padding-bottom: 16px;
 }
 
 .pb-2\.5{
