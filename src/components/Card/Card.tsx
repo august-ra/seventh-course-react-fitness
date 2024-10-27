@@ -25,7 +25,7 @@ export default function Card({ courseData, userId }: Props) {
   const navigate = useNavigateFaraway()
 
   async function handleSubmit() {
-    if (courseData.progress >= 100)
+    if (courseData.progress >= courseData.max)
       coursesAPI.repeatFromBeginUserCourse(userId, courseData._id)
 
     navigate(`choose/${courseData._id}`)
@@ -63,7 +63,7 @@ export default function Card({ courseData, userId }: Props) {
           userId && courseData.isAdded
             && (
               <Button additionalClasses={sharedStyles.buttonWideWithFields} primary={true} onClick={handleSubmit}>
-                {getActionTextFromProgress(false, courseData.progress)}
+                {getActionTextFromProgress(false, courseData.progress, courseData.max)}
               </Button>
             )
         }

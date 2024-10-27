@@ -11,10 +11,10 @@ export function getRate(progress: number, max: number) {
 }
 
 
-export function getActionTextFromProgress(needToAdd: boolean, progress: number): string {
+export function getActionTextFromProgress(needToAdd: boolean, progress: number, max: number): string {
   if (needToAdd)
     return "Добавить курс"
-  if (progress >= 100)
+  if (progress >= max)
     return "Начать заново"
   else if (progress > 0)
     return "Продолжить"
