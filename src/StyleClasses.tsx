@@ -122,7 +122,7 @@ function StyleClasses() {
       <climber className="mt-[34px] flex justify-center" />
       <footer className="flex flex-none justify-center pb-[60px] pt-[50px]" />
       {/* modal: signing */}
-      <modalWrapper className="fixed left-0 top-0 z-10 flex h-screen w-screen items-center justify-center bg-blocked" />
+      <modalWrapper className="fixed left-0 top-0 z-50 flex h-screen w-screen items-center justify-center bg-blocked" />
       <modalForm className="m-auto flex w-[360px] flex-col items-center gap-12 rounded-[30px] bg-white p-10" />
       <modalFormCaption className="mb-[14px] text-[32px] leading-9" />
       <modalFormInner className="flex w-full flex-col items-center gap-[34px]" />

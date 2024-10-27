@@ -145,7 +145,7 @@ export const sharedStyles = {
 
   /* modal: signing */
 
-  modalWrapper: "modalWrapper fixed left-0 top-0 z-10 flex h-screen w-screen items-center justify-center bg-blocked",
+  modalWrapper: "modalWrapper fixed left-0 top-0 z-50 flex h-screen w-screen items-center justify-center bg-blocked",
   modalForm: "modalForm m-auto flex w-[360px] flex-col items-center gap-12 rounded-[30px] bg-white p-10",
   modalFormCaption: "modalFormCaption mb-[14px] text-[32px] leading-9",
   modalFormInner: "modalFormInner flex w-full flex-col items-center gap-[34px]",

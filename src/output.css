@@ -777,6 +777,10 @@ img{
   z-index: 20;
 }
 
+.z-50{
+  z-index: 50;
+}
+
 .m-0\.5{
   margin: 0.125rem;
 }

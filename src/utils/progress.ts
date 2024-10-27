@@ -53,7 +53,7 @@ export function getProgressInsideUserData(userData: UserDataType, courseId: stri
 
   const dataCourse = userData[courseId]
 
-  if (!dataCourse)
+  if (!dataCourse || !dataCourse.workouts)
     return progress
 
   const dataWorkout = dataCourse.workouts[workoutId]
