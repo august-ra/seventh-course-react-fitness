@@ -3,6 +3,7 @@ import ExercisePage from "./pages/ExercisePage/ExercisePage"
 import ExercisesListPage from "./pages/ExercisesListPage/ExercisesListPage"
 import MainPage from "./pages/MainPage/MainPage"
 import Page404 from "./pages/Page404/Page404"
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute"
 import ProfilePage from "./pages/ProfilePage/ProfilePage"
 import SigningModal from "./pages/SigningModal/SigningModal"
 import WriteProgressPage from "./pages/WriteProgressPage/WriteProgressPage"
@@ -81,24 +82,29 @@ const router = (userContext: UserContextValue) => createBrowserRouter([
     children: [...signingRouterData, choosingTrainRouterData(userContext)],
   },
   {
-    path:    pages.WORKOUT,
-    element: <ExercisePage />,
-    async loader({ params }) {
-      if (params.courseId && params.workoutId)
-        return coursesAPI.getWorkout(params.courseId, params.workoutId, userContext.uid)
-      else
-        return []
-    },
-    children: [{
-      path:    pages.WRITE,
-      element: <WriteProgressPage />,
-      async loader({ params }) {
-        if (params.courseId && params.workoutId)
-          return coursesAPI.getWorkout(params.courseId, params.workoutId, userContext.uid)
-        else
-          return []
+    element:  <PrivateRoute />,
+    children: [
+      {
+        path:    pages.WORKOUT,
+        element: <ExercisePage />,
+        async loader({ params }) {
+          if (params.courseId && params.workoutId)
+            return coursesAPI.getWorkout(params.courseId, params.workoutId, userContext.uid)
+          else
+            return []
+        },
+        children: [{
+          path:    pages.WRITE,
+          element: <WriteProgressPage />,
+          async loader({ params }) {
+            if (params.courseId && params.workoutId)
+              return coursesAPI.getWorkout(params.courseId, params.workoutId, userContext.uid)
+            else
+              return []
+          },
+        }],
       },
-    }],
+    ],
   },
   {
     path:    pages.PROFILE,
