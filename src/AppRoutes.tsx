@@ -1,4 +1,5 @@
 import CoursePage from "./pages/CoursePage/CoursePage"
+import ExercisePage from "./pages/ExercisePage/ExercisePage"
 import ExercisesListPage from "./pages/ExercisesListPage/ExercisesListPage"
 import MainPage from "./pages/MainPage/MainPage"
 import Page404 from "./pages/Page404/Page404"
@@ -77,6 +78,16 @@ const router = (userContext: UserContextValue) => createBrowserRouter([
         return null
     },
     children: [...signingRouterData, choosingTrainRouterData(userContext)],
+  },
+  {
+    path:    pages.WORKOUT,
+    element: <ExercisePage />,
+    async loader({ params }) {
+      if (params.courseId && params.workoutId)
+        return coursesAPI.getWorkout(params.courseId, params.workoutId, userContext.uid)
+      else
+        return []
+    },
   },
   {
     path:    pages.PROFILE,

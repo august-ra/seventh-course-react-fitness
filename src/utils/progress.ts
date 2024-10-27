@@ -2,7 +2,12 @@ import { CourseType, UserDataType, WorkoutsType } from "../types/types"
 
 
 export function getRate(progress: number, max: number) {
-  return Math.ceil(100 * progress / max)
+  if (!max && progress)
+    return 100
+  else if (!max || !progress)
+    return 0
+  else
+    return Math.ceil(100 * progress / max)
 }
 
 
@@ -30,6 +35,8 @@ export function fillUserFieldsInCourse(course: CourseType, workoutsData: Workout
       if (workout.exercises)
         for (const exercise of workout.exercises)
           max += exercise.quantity
+      else
+        max += 1
 
       if (isAdded)
         progress += getProgressInsideUserData(userData, course._id, workoutId)
@@ -52,6 +59,11 @@ export function getProgressInsideUserData(userData: UserDataType, courseId: stri
   const dataWorkout = dataCourse.workouts[workoutId]
 
   if (!dataWorkout)
+    return progress
+
+  if (dataWorkout.progress)
+    return dataWorkout.progress
+  else if (!dataWorkout.exercises)
     return progress
 
   for (const exercise of dataWorkout.exercises)

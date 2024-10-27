@@ -1,8 +1,8 @@
 import { get, ref } from "firebase/database"
 import { db } from "./firebaseConfig"
 
-import type { CoursesType, CourseType, WorkoutsType } from "../types/types"
-import type { UserDataType } from "../types/types"
+import type { CoursesType, CourseType, WorkoutsType, WorkoutType } from "../types/types"
+import type { UserDataType, UserWorkoutDataType } from "../types/types"
 import { fillUserFieldsInCourse, getProgressInsideUserData } from "../utils/progress"
 
 
@@ -125,6 +125,7 @@ export const coursesAPI = {
             workoutData.progress   = progress
             workoutData.max        = Math.max(max, 1)
             workoutData.courseName = courseData.title
+            workoutData.day        = courseData.workouts.indexOf(workoutData._id) + 1
           }
         }
       }
@@ -133,6 +134,58 @@ export const coursesAPI = {
     } catch (error) {
       console.log(error)
       return []
+    }
+  },
+
+  async getWorkout(courseId: string, workoutId: string, userId: string): Promise<WorkoutType | null> {
+    try {
+      const path     = `workouts/${workoutId}`
+      const snapshot = await get(ref(db, path))
+
+      if (!snapshot.exists())
+        return null
+
+      const workoutData = snapshot.val() as WorkoutType
+      const courseData = await coursesAPI.getCourse(courseId, "")
+
+      if (!courseData)
+        return workoutData
+
+      if (userId) {
+        const path     = `/users/${userId}/courses/${courseId}/workouts/${workoutId}`
+        const snapshot = await get(ref(db, path))
+
+        if (snapshot.exists()) {
+          const userData: UserWorkoutDataType = snapshot.val()
+
+          let progress = 0
+          let max      = 0
+
+          if (workoutData.exercises) {
+            if (userData.exercises)
+              for (const exercise of userData.exercises)
+                workoutData.exercises[exercise.index].progress = exercise.progress || 0
+
+            for (const exercise of workoutData.exercises) {
+              max      += exercise.quantity
+              progress += exercise.progress || 0
+            }
+          } else {
+            max      = 1
+            progress = userData.progress || 0
+          }
+
+          workoutData.progress   = progress
+          workoutData.max        = Math.max(max, 1)
+          workoutData.courseName = courseData.title
+          workoutData.day        = courseData.workouts.indexOf(workoutData._id) + 1
+        }
+      }
+
+      return workoutData
+    } catch (error) {
+      console.log(error)
+      return null
     }
   },
 }

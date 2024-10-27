@@ -48,7 +48,7 @@ export const sharedStyles = {
   /* banner */
 
   banner: "banner relative mb-[60px] h-[310px] max-h-[310px] min-h-[310px] w-[1160px] overflow-hidden rounded-[30px] p-10 text-white",
-  bannerText: "bannerText relative z-10 h-[66px] text-[60px] font-medium leading-[66px]",
+  bannerText: "bannerText relative z-10 mb-[18px] h-[66px] text-[60px] font-medium leading-[66px]",
   bannerPicture: "bannerPicture absolute",
   "banner-yoga": "banner-yoga right-[-295px] top-[-175px] w-[80%]",
   "banner-stretching": "banner-stretching right-[-10px] top-0 w-[30%]",
@@ -114,7 +114,15 @@ export const sharedStyles = {
   userProfileButtons: "userProfileButtons flex w-full gap-2.5",
   userProfileButton: "userProfileButton w-[192px]",
 
-  /* progress bar */
+  /* workout */
+
+  breadcrumbsLine: "breadcrumbsLine mb-10 text-[32px] leading-[36px]",
+  breadcrumb: "breadcrumb underline hover:text-404",
+  breadcrumbLast: "breadcrumbLast underline",
+  videoBlock: "videoBlock h-[639px] overflow-hidden rounded-[30px]",
+  workoutProgresses: "workoutProgresses grid-cols-3-auto grid w-full gap-x-[60px] gap-y-[20px]",
+  workoutDayCaption: "workoutDayCaption mb-5 text-[32px] leading-[36px]",
+  buttonProgress: "buttonProgress mt-10 w-[320px]",
 
   /* progress */
 

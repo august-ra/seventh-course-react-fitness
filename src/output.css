@@ -794,8 +794,16 @@ img{
   margin-bottom: 2.5rem;
 }
 
+.mb-5{
+  margin-bottom: 1.25rem;
+}
+
 .mb-\[14px\]{
   margin-bottom: 14px;
+}
+
+.mb-\[18px\]{
+  margin-bottom: 18px;
 }
 
 .mb-\[50px\]{
@@ -832,6 +840,10 @@ img{
 
 .flex{
   display: flex;
+}
+
+.grid{
+  display: grid;
 }
 
 .hidden{
@@ -912,6 +924,10 @@ img{
 
 .h-\[570px\]{
   height: 570px;
+}
+
+.h-\[639px\]{
+  height: 639px;
 }
 
 .h-\[66px\]{
@@ -1038,6 +1054,10 @@ img{
   width: 30px;
 }
 
+.w-\[320px\]{
+  width: 320px;
+}
+
 .w-\[32px\]{
   width: 32px;
 }
@@ -1157,6 +1177,10 @@ img{
   list-style-type: disc;
 }
 
+.grid-cols-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .flex-col{
   flex-direction: column;
 }
@@ -1244,6 +1268,15 @@ img{
 .gap-x-\[124px\]{
   -moz-column-gap: 124px;
        column-gap: 124px;
+}
+
+.gap-x-\[60px\]{
+  -moz-column-gap: 60px;
+       column-gap: 60px;
+}
+
+.gap-y-\[20px\]{
+  row-gap: 20px;
 }
 
 .gap-y-\[34px\]{
@@ -1636,6 +1669,11 @@ img{
 .hover\:bg-well:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(198 255 0 / var(--tw-bg-opacity));
+}
+
+.hover\:text-404:hover{
+  --tw-text-opacity: 1;
+  color: rgb(23 90 178 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover{

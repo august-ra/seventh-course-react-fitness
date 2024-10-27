@@ -32,8 +32,9 @@ export interface WorkoutType {
   _id:        string
   name:       string
   video:      string
-  exercises:  ExercisesType
+  exercises?: ExercisesType
   courseName: string
+  day:        number
   max:        number
   /* for user */
   progress:   number
@@ -42,8 +43,11 @@ export interface WorkoutType {
 export type WorkoutsType = WorkoutType[]
 
 export interface ExerciseType {
+  /* for training page */
   name:     string
   quantity: number
+  /* for user */
+  progress: number
 }
 
 export type ExercisesType = ExerciseType[]
@@ -51,17 +55,24 @@ export type ExercisesType = ExerciseType[]
 /* back-end data's type: write */
 
 export interface UserDataType {
-  [key: string]: {
-    _id: string
-    workouts: {
-      [key: string]: {
-        _id: string
-        exercises: {
-          index: number
-          quantity: number
-          progress: number
-        }[]
-      }
-    }
+  [key: string]: UserCourseDataType
+}
+
+export interface UserCourseDataType {
+  _id: string
+  workouts: {
+    [key: string]: UserWorkoutDataType
   }
+}
+
+export interface UserWorkoutDataType {
+  _id:        string
+  progress?:  number
+  exercises?: UserExerciseDataType[]
+}
+
+export interface UserExerciseDataType {
+  index:    number
+  quantity: number
+  progress: number
 }

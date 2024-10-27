@@ -41,7 +41,7 @@ function StyleClasses() {
       <captionBalloonFace className="relative z-10 h-[102px] w-[288px] rounded-[5px] bg-good px-[20px] py-[16px] text-[32px] leading-9" />
       {/* banner */}
       <banner className="relative mb-[60px] h-[310px] max-h-[310px] min-h-[310px] w-[1160px] overflow-hidden rounded-[30px] p-10 text-white" />
-      <bannerText className="relative z-10 h-[66px] text-[60px] font-medium leading-[66px]" />
+      <bannerText className="relative z-10 mb-[18px] h-[66px] text-[60px] font-medium leading-[66px]" />
       <bannerPicture className="absolute" />
       <banner-yoga className="right-[-295px] top-[-175px] w-[80%]" />
       <banner-stretching className="right-[-10px] top-0 w-[30%]" />
@@ -98,6 +98,14 @@ function StyleClasses() {
       <userProfileEmail className="text-lg [&>span]:font-medium" />
       <userProfileButtons className="flex w-full gap-2.5" />
       <userProfileButton className="w-[192px]" />
+      {/* workout */}
+      <breadcrumbsLine className="mb-10 text-[32px] leading-[36px]" />
+      <breadcrumb className="underline hover:text-404" />
+      <breadcrumbLast className="underline" />
+      <videoBlock className="h-[639px] overflow-hidden rounded-[30px]" />
+      <workoutProgresses className="grid-cols-3-auto grid w-full gap-x-[60px] gap-y-[20px]" />
+      <workoutDayCaption className="mb-5 text-[32px] leading-[36px]" />
+      <buttonProgress className="mt-10 w-[320px]" />
       {/* progress */}
       <progress className="flex flex-col gap-[10px]" />
       <progressText className="text-[18px] leading-[20px]" />

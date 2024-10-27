@@ -49,7 +49,7 @@ export default function ExercisesListPage() {
         <div className={twMerge(sharedStyles.modalScrollingList, workoutsData.length > 5 && sharedStyles.modalScrollingListGapped)}>
           <ul className={sharedStyles.modalList}>
             {
-              workoutsData.map((workout, index) => (
+              workoutsData.map((workout) => (
                 <li key={workout._id} className={sharedStyles.modalListItem} onClick={handleSelectWorkout} data-id={workout._id}>
                   {
                     workout._id === workoutId
@@ -62,7 +62,7 @@ export default function ExercisesListPage() {
                   }
                   <div className={sharedStyles.modalListItemContent}>
                     <p className={sharedStyles.modalListItemExercise}>{workout.name}</p>
-                    <p className={sharedStyles.modalListItemCourse}>{workout.courseName} на каждый день / {index + 1} день </p>
+                    <p className={sharedStyles.modalListItemCourse}>{workout.courseName} на каждый день / {workout.day} день </p>
                   </div>
                 </li>
               ))
