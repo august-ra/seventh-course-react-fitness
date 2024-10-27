@@ -68,7 +68,7 @@ export interface UserCourseDataType {
 export interface UserWorkoutDataType {
   _id:        string
   progress?:  number
-  exercises?: UserExerciseDataType[]
+  exercises?: UserExercisesDataType
 }
 
 export interface UserExerciseDataType {
@@ -76,3 +76,5 @@ export interface UserExerciseDataType {
   quantity: number
   progress: number
 }
+
+export type UserExercisesDataType = UserExerciseDataType[]

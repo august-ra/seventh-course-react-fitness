@@ -1,12 +1,14 @@
-import { get, ref } from "firebase/database"
+import { get, ref, set } from "firebase/database"
 import { db } from "./firebaseConfig"
 
 import type { CoursesType, CourseType, WorkoutsType, WorkoutType } from "../types/types"
-import type { UserDataType, UserWorkoutDataType } from "../types/types"
+import type { UserExercisesDataType, UserDataType, UserWorkoutDataType } from "../types/types"
 import { fillUserFieldsInCourse, getProgressInsideUserData } from "../utils/progress"
 
 
 export const coursesAPI = {
+  // reading methods
+
   async getCourses(userId: string): Promise<CoursesType> {
     try {
       const path     = "courses"
@@ -153,6 +155,9 @@ export const coursesAPI = {
       if (!courseData)
         return workoutData
 
+      workoutData.courseName = courseData.title
+      workoutData.day        = courseData.workouts.indexOf(workoutData._id) + 1
+
       if (userId) {
         const path     = `/users/${userId}/courses/${courseId}/workouts/${workoutId}`
         const snapshot = await get(ref(db, path))
@@ -189,5 +194,31 @@ export const coursesAPI = {
       console.log(error)
       return null
     }
+  },
+
+  // writing methods
+
+  async addUserCourse(userId: string, courseId: string) {
+    const path = `users/${userId}/courses/${courseId}`
+
+    await set(ref(db, path), { _id: courseId })
+  },
+
+  async repeatFromBeginUserCourse(userId: string, courseId: string) {
+    const path = `users/${userId}/courses/${courseId}`
+
+    await set(ref(db, path), { _id: courseId })
+  },
+
+  async writeProgressToUserCourse(userId: string, courseId: string, workoutId: string, progress: number) {
+    const path = `users/${userId}/courses/${courseId}/workouts/${workoutId}`
+
+    await set(ref(db, path), { _id: workoutId, progress })
+  },
+
+  async writeProgressWithExercisesToUserCourse(userId: string, courseId: string, workoutId: string, exercisesData: UserExercisesDataType) {
+    const path = `users/${userId}/courses/${courseId}/workouts/${workoutId}/exercises`
+
+    await set(ref(db, path), exercisesData)
   },
 }
