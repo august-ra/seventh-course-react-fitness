@@ -76,8 +76,6 @@ export const sharedStyles = {
   cardTablets: "cardTablets flex flex-wrap gap-[6px]",
   cardTablet: "cardTablet flex h-[38px] gap-[6px] rounded-[50px] bg-light-bg p-[10px]",
   cardTabletText: "cardTabletText text-nowrap text-[16px] leading-[18px]",
-  cardProgress: "cardProgress flex flex-col gap-[10px]",
-  cardProgressText: "cardProgressText text-[18px] leading-[20px]",
 
   /* presentation */
 
@@ -118,6 +116,10 @@ export const sharedStyles = {
 
   /* progress bar */
 
+  /* progress */
+
+  progress: "progress flex flex-col gap-[10px]",
+  progressText: "progressText text-[18px] leading-[20px]",
   progressBar: "progressBar relative",
   progressBarBack: "progressBarBack absolute h-[6px] w-full rounded-[50px] bg-light-bg",
   progressBarFront: "progressBarFront absolute h-[6px] w-[120px] rounded-[50px] bg-work",

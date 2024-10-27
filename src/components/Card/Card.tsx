@@ -3,7 +3,7 @@ import { twMerge } from "tailwind-merge"
 
 import Button from "../Button/Button"
 import CardAction from "../CardAction/CardAction"
-import ProgressBar from "../ProgressBar/ProgressBar"
+import Progress from "../Progress/Progress"
 import Tablet from "../Tablet/Tablet"
 
 import { Link } from "react-router-dom"
@@ -49,10 +49,7 @@ export default function Card({ courseData, fullSize }: Props) {
           {
             fullSize
               && (
-                <div className={sharedStyles.cardProgress}>
-                  <p className={sharedStyles.cardProgressText}>Прогресс {courseData.progress}%</p>
-                  <ProgressBar progress={Math.max(1, Math.ceil(100 * courseData.progress / courseData.max))} />
-                </div>
+                <Progress title="" progress={Math.ceil(100 * courseData.progress / courseData.max)} />
               )
           }
         </div>

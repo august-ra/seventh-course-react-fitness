@@ -67,8 +67,6 @@ function StyleClasses() {
       <cardTablets className="flex flex-wrap gap-[6px]" />
       <cardTablet className="flex h-[38px] gap-[6px] rounded-[50px] bg-light-bg p-[10px]" />
       <cardTabletText className="text-nowrap text-[16px] leading-[18px]" />
-      <cardProgress className="flex flex-col gap-[10px]" />
-      <cardProgressText className="text-[18px] leading-[20px]" />
       {/* presentation */}
       <presentation className="my-[60px]" />
       <presentationTitle className="mb-10 text-[40px] font-medium leading-[44px]" />
@@ -100,7 +98,9 @@ function StyleClasses() {
       <userProfileEmail className="text-lg [&>span]:font-medium" />
       <userProfileButtons className="flex w-full gap-2.5" />
       <userProfileButton className="w-[192px]" />
-      {/* progress bar */}
+      {/* progress */}
+      <progress className="flex flex-col gap-[10px]" />
+      <progressText className="text-[18px] leading-[20px]" />
       <progressBar className="relative" />
       <progressBarBack className="absolute h-[6px] w-full rounded-[50px] bg-light-bg" />
       <progressBarFront className="absolute h-[6px] w-[120px] rounded-[50px] bg-work" />
