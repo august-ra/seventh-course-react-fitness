@@ -39,7 +39,7 @@ export default function Card({ courseData, userId }: Props) {
         </div>
       </Link>
 
-      <CardAction action={courseData.isAdded ? "remove" : "add"} />
+      <CardAction courseId={courseData._id} userId={userId} action={courseData.isAdded ? "remove" : "add"} />
 
       <div className={sharedStyles.cardBlock}>
         <div className={sharedStyles.cardContent}>

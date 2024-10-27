@@ -204,6 +204,12 @@ export const coursesAPI = {
     await set(ref(db, path), { _id: courseId })
   },
 
+  async removeUserCourse(userId: string, courseId: string) {
+    const path = `users/${userId}/courses/${courseId}`
+
+    await set(ref(db, path), { })
+  },
+
   async repeatFromBeginUserCourse(userId: string, courseId: string) {
     const path = `users/${userId}/courses/${courseId}`
 
