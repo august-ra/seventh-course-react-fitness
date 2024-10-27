@@ -4,11 +4,12 @@ import { twMerge } from "tailwind-merge"
 import Button from "../../components/Button/Button"
 
 import React, { useState } from "react"
-import { useLoaderData, useNavigate } from "react-router-dom"
+import { useLoaderData, useNavigate, useParams } from "react-router-dom"
 import { WorkoutsType } from "../../types/types"
 
 
 export default function ExercisesListPage() {
+  const { id } = useParams()
   const [workoutId, setWorkoutId] = useState("")
   const [showError, setShowError] = useState(false)
   const workoutsData = useLoaderData() as WorkoutsType
@@ -37,7 +38,7 @@ export default function ExercisesListPage() {
     if (!workoutId)
       return setShowError(true)
 
-    navigate(`/workout/${workoutId}/`, { replace: true })
+    navigate(`/workout/${id}/${workoutId}/`, { replace: true })
   }
 
   return (
