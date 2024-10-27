@@ -6,17 +6,39 @@ import Button from "../../components/Button/Button"
 import Footer from "../../components/Footer/Footer"
 import Header from "../../components/Header/Header"
 
-import { Outlet, useLoaderData } from "react-router-dom"
+import { Outlet, useLoaderData, useParams } from "react-router-dom"
+import { useNavigateFaraway } from "../../hooks/useNavigateFaraway"
 import { useUserContext } from "../../context/UserContext/UserContext"
 import { CourseType } from "../../types/types"
+import pages from "../../data/pages"
+
+import { coursesAPI } from "../../api/coursesApi"
 
 
 export default function CoursePage() {
+  const { id } = useParams()
   const courseData = useLoaderData() as CourseType
   const userContext = useUserContext()
+  const navigate = useNavigateFaraway()
 
   if (!courseData)
     return "There is an error!"
+
+  function doExercises() {
+    if (courseData.progress >= 100)
+      coursesAPI.repeatFromBeginUserCourse(userContext.uid, courseData._id)
+
+    navigate(`choose/${courseData._id}`)
+  }
+
+  async function handleSubmit() {
+    if (!userContext.isAuthenticated())
+      navigate(pages.SIGN_IN)
+    else if (!courseData.isAdded)
+      await coursesAPI.addUserCourse(userContext.uid, id, courseData)
+    else
+      doExercises()
+  }
 
   function getButtonText() {
     if (!userContext.isAuthenticated())
@@ -78,7 +100,8 @@ export default function CoursePage() {
                   <li className={sharedStyles.presentationNewLifeLeftItem}>заряд бодрости</li>
                   <li className={sharedStyles.presentationNewLifeLeftItem}>помощь в противостоянии стрессам</li>
                 </ul>
-                <Button additionalClasses={sharedStyles.buttonWideWithMargin} primary={true}>
+
+                <Button additionalClasses={sharedStyles.buttonWideWithMargin} primary={true} onClick={handleSubmit}>
                   {getButtonText()}
                 </Button>
               </div>
