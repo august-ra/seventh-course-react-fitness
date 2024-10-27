@@ -104,15 +104,15 @@ const router = (userContext: UserContextValue) => createBrowserRouter([
           },
         }],
       },
+      {
+        path:    pages.PROFILE,
+        element: <ProfilePage />,
+        async loader() {
+          return coursesAPI.getCourses(userContext.uid)
+        },
+        children: [choosingTrainRouterData(userContext)],
+      },
     ],
-  },
-  {
-    path:    pages.PROFILE,
-    element: <ProfilePage />,
-    async loader() {
-      return coursesAPI.getCourses(userContext.uid)
-    },
-    children: [choosingTrainRouterData(userContext)],
   },
   {
     path:    pages.NOT_FOUND,
