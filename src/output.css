@@ -864,6 +864,10 @@ img{
   height: 1.5rem;
 }
 
+.h-9{
+  height: 2.25rem;
+}
+
 .h-\[100vh\]{
   height: 100vh;
 }
@@ -1004,10 +1008,6 @@ img{
   width: 1.5rem;
 }
 
-.w-\[103px\]{
-  width: 103px;
-}
-
 .w-\[1160px\]{
   width: 1160px;
 }
@@ -1114,6 +1114,10 @@ img{
 
 .w-\[80\%\]{
   width: 80%;
+}
+
+.w-\[83px\]{
+  width: 83px;
 }
 
 .w-auto{
@@ -1735,6 +1739,14 @@ img{
 
   .main\:hidden{
     display: none;
+  }
+
+  .main\:h-13{
+    height: 52px;
+  }
+
+  .main\:w-\[103px\]{
+    width: 103px;
   }
 
   .main\:w-\[127px\]{

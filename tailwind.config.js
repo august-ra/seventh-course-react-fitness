@@ -5,7 +5,9 @@ export default {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    screens: {},
+    screens: {
+      main: "1200px",
+    },
     colors: {
       "good":     "#bcec30",
       "well":     "#c6ff00",

@@ -14,7 +14,7 @@ function StyleClasses() {
       {/* courses */}
       <colors className="bg-aerobics bg-body-flex bg-stretching bg-yoga bg-zumba" />
       {/* button */}
-      <buttonCommon className="h-13 w-[103px] rounded-[46px] duration-300" />
+      <buttonCommon className="h-9 w-[83px] rounded-[46px] duration-300 main:h-13 main:w-[103px]" />
       <buttonPrimary className="bg-good hover:bg-well active:bg-black active:text-white disabled:bg-light-bg disabled:text-light-tx" />
       <buttonSecondary className="border border-black bg-white hover:bg-light-bg active:bg-dark disabled:text-light-tx" />
       <buttonWide className="w-full" />
