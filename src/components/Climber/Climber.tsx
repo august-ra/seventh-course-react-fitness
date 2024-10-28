@@ -12,7 +12,9 @@ interface Props {
 export default function Climber({ onGettingTop }: Props) {
   return (
     <div className={sharedStyles.climber}>
-      <Button primary={true} additionalClasses="w-[127px]" onClick={onGettingTop}>Наверх &#8593;</Button>
+      <Button primary={true} additionalClasses={sharedStyles.climberBtn} onClick={onGettingTop}>
+        Наверх &#8593;
+      </Button>
     </div>
   )
 }

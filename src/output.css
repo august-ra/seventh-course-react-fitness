@@ -601,6 +601,12 @@ img{
   width: 100%;
 }
 
+@media (min-width: 1200px){
+  .container{
+    max-width: 1200px;
+  }
+}
+
 .static{
   position: static;
 }
@@ -625,10 +631,6 @@ img{
   bottom: -113px;
 }
 
-.bottom-\[-142px\]{
-  bottom: -142px;
-}
-
 .bottom-\[-58px\]{
   bottom: -58px;
 }
@@ -649,10 +651,6 @@ img{
   left: 352px;
 }
 
-.left-\[368px\]{
-  left: 368px;
-}
-
 .right-0{
   right: 0px;
 }
@@ -671,10 +669,6 @@ img{
 
 .right-\[-200px\]{
   right: -200px;
-}
-
-.right-\[-231px\]{
-  right: -231px;
 }
 
 .right-\[-232px\]{
@@ -727,10 +721,6 @@ img{
 
 .top-\[-175px\]{
   top: -175px;
-}
-
-.top-\[-231px\]{
-  top: -231px;
 }
 
 .top-\[-262px\]{
@@ -840,6 +830,10 @@ img{
 
 .mt-\[60px\]{
   margin-top: 60px;
+}
+
+.block{
+  display: block;
 }
 
 .flex{
@@ -1211,6 +1205,10 @@ img{
 
 .justify-start{
   justify-content: flex-start;
+}
+
+.justify-end{
+  justify-content: flex-end;
 }
 
 .justify-center{
@@ -1728,6 +1726,24 @@ img{
 .group\/profile:hover .group-hover\/profile\:text-404{
   --tw-text-opacity: 1;
   color: rgb(23 90 178 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1200px){
+  .main\:block{
+    display: block;
+  }
+
+  .main\:hidden{
+    display: none;
+  }
+
+  .main\:w-\[127px\]{
+    width: 127px;
+  }
+
+  .main\:justify-center{
+    justify-content: center;
+  }
 }
 
 .\[\&\:not\(\:first-child\)\]\:pt-2\.5:not(:first-child){

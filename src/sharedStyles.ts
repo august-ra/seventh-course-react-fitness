@@ -140,8 +140,11 @@ export const sharedStyles = {
 
   /* footer */
 
-  climber: "climber mt-[34px] flex justify-center",
+  climber: "climber mt-[34px] flex justify-end main:justify-center",
+  climberBtn: "climberBtn h-13 w-[127px] main:w-[127px]",
   footer: "footer flex flex-none justify-center pb-[60px] pt-[50px]",
+  footerWideText: "footerWideText hidden main:block",
+  footerThinText: "footerThinText block main:hidden",
 
   /* modal: signing */
 

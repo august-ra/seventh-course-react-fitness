@@ -119,8 +119,11 @@ function StyleClasses() {
       <progressBarBack className="absolute h-[6px] w-full rounded-[50px] bg-light-bg" />
       <progressBarFront className="absolute h-[6px] w-[120px] rounded-[50px] bg-work" />
       {/* footer */}
-      <climber className="mt-[34px] flex justify-center" />
+      <climber className="mt-[34px] flex justify-end main:justify-center" />
+      <climberBtn className="h-13 w-[127px] main:w-[127px]" />
       <footer className="flex flex-none justify-center pb-[60px] pt-[50px]" />
+      <footerWideText className="hidden main:block" />
+      <footerThinText className="block main:hidden" />
       {/* modal: signing */}
       <modalWrapper className="fixed left-0 top-0 z-50 flex h-screen w-screen items-center justify-center bg-blocked" />
       <modalForm className="m-auto flex w-[360px] flex-col items-center gap-12 rounded-[30px] bg-white p-10" />
