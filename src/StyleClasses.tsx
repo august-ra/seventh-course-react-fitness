@@ -22,12 +22,12 @@ function StyleClasses() {
       <buttonWideWithMargin className="mt-10 w-full" />
       {/* main */}
       <wrapper className="flex h-[100vh] flex-col justify-between" />
-      <container className="m-auto w-[1160px] flex-1" />
+      <container className="m-auto w-[343px] flex-1 main:w-[1160px]" />
       {/* header */}
-      <header className="flex w-full justify-between pb-[60px] pt-[50px]" />
+      <header className="flex w-full justify-between py-10 main:pb-[60px] main:pt-[50px]" />
       <headerContainer className="flex w-1/2 flex-col justify-start gap-[15px] text-left" />
       <headerLogo className="h-[35px] w-[220px]" />
-      <headerSlogan className="" />
+      <headerSlogan className="hidden main:block" />
       <headerUserGroup className="relative flex h-[50px] items-center gap-4" />
       <headerProfileBlock className="group/profile flex items-center gap-3" />
       <headerProfileLogo className="h-[50px] w-[50px]" />
@@ -36,8 +36,8 @@ function StyleClasses() {
       <headerProfileNameBtnReversed className="rotate-225" />
       {/* caption */}
       <caption className="flex justify-between text-left" />
-      <captionText className="max-w-[864px] text-[60px] font-medium leading-none" />
-      <captionBalloon className="relative" />
+      <captionText className="max-w-[864px] text-[32px] font-medium leading-9 main:text-[60px] main:leading-none" />
+      <captionBalloon className="relative hidden main:block" />
       <captionBalloonTail className="absolute right-[140px] top-[85px] h-[36px] w-[30px]" />
       <captionBalloonFace className="relative z-10 h-[102px] w-[288px] rounded-[5px] bg-good px-5 py-4 text-[32px] leading-9" />
       {/* banner */}
@@ -50,9 +50,9 @@ function StyleClasses() {
       <banner-aerobics className="right-0 top-[-315px] w-[40%]" />
       <banner-body-flex className="right-[-200px] top-[-155px] w-[70%]" />
       {/* card */}
-      <cards className="mt-[50px] flex w-full flex-wrap justify-start gap-10" />
-      <card className="relative w-[360px] rounded-[30px] bg-white hover:z-40" />
-      <cardPicture className="relative h-[325px] w-[360px] overflow-hidden rounded-[30px]" />
+      <cards className="mt-[34px] flex w-full flex-wrap justify-start gap-6 main:mt-[50px] main:gap-10" />
+      <card className="relative w-[343px] rounded-[30px] bg-white hover:z-40 main:w-[360px]" />
+      <cardPicture className="relative h-[325px] w-[343px] overflow-hidden rounded-[30px] main:w-[360px]" />
       <cardInner className="absolute" />
       <card-yoga className="right-[-232px] top-[-119px] min-h-[557px] min-w-[834px]" />
       <card-stretching className="right-0 top-0 min-h-[540px] min-w-[360px]" />
@@ -60,11 +60,11 @@ function StyleClasses() {
       <card-aerobics className="right-[-82px] top-[-715px] min-h-[1081px] min-w-[721px]" />
       <card-body-flex className="right-[-182px] top-[-168px] min-h-[514px] min-w-[771px]" />
       <cardAction className="group/card absolute h-[32px] w-[32px]" />
-      <cardAddBtn className="absolute left-[308px] top-[-305px] h-[32px] w-[32px] cursor-arrow duration-300 hover:scale-110" />
-      <cardActionTooltip className="absolute left-[352px] top-[-262px] hidden h-[27px] w-max items-center justify-center rounded-[5px] border border-black bg-white p-1.5 text-sm group-hover/card:flex" />
-      <cardBlock className="px-[30px] pb-[15px] pt-6" />
+      <cardAddBtn className="absolute left-[291px] top-[-305px] h-[32px] w-[32px] cursor-arrow duration-300 hover:scale-110 main:left-[308px]" />
+      <cardActionTooltip className="absolute left-[352px] top-[-262px] hidden h-[27px] w-max items-center justify-center rounded-[5px] border border-black bg-white p-1.5 text-sm main:group-hover/card:flex" />
+      <cardBlock className="mx-auto flex w-[300px] flex-col gap-10 pb-[15px] pt-6" />
       <cardContent className="flex flex-col gap-5" />
-      <cardTitle className="text-[32px] font-medium leading-9" />
+      <cardTitle className="text-[24px] font-medium leading-[26px] main:text-[32px] main:leading-9" />
       <cardTablets className="flex flex-wrap gap-[6px]" />
       <cardTablet className="flex h-[38px] gap-[6px] rounded-[50px] bg-light-bg p-[10px]" />
       <cardTabletText className="text-nowrap text-[16px] leading-[18px]" />

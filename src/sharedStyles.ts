@@ -23,14 +23,14 @@ export const sharedStyles = {
   /* main */
 
   wrapper: "wrapper flex h-[100vh] flex-col justify-between",
-  container: "container m-auto w-[1160px] flex-1",
+  container: "container m-auto w-[343px] flex-1 main:w-[1160px]",
 
   /* header */
 
-  header: "header flex w-full justify-between pb-[60px] pt-[50px]",
+  header: "header flex w-full justify-between py-10 main:pb-[60px] main:pt-[50px]",
   headerContainer: "headerContainer flex w-1/2 flex-col justify-start gap-[15px] text-left",
   headerLogo: "headerLogo h-[35px] w-[220px]",
-  headerSlogan: "headerSlogan",
+  headerSlogan: "headerSlogan hidden main:block",
   headerUserGroup: "headerUserGroup relative flex h-[50px] items-center gap-4",
   headerProfileBlock: "headerProfileBlock group/profile flex items-center gap-3",
   headerProfileLogo: "headerProfileLogo h-[50px] w-[50px]",
@@ -41,8 +41,8 @@ export const sharedStyles = {
   /* caption */
 
   caption: "caption flex justify-between text-left",
-  captionText: "captionText max-w-[864px] text-[60px] font-medium leading-none",
-  captionBalloon: "captionBalloon relative",
+  captionText: "captionText max-w-[864px] text-[32px] font-medium leading-9 main:text-[60px] main:leading-none",
+  captionBalloon: "captionBalloon relative hidden main:block",
   captionBalloonTail: "captionBalloonTail absolute right-[140px] top-[85px] h-[36px] w-[30px]",
   captionBalloonFace: "captionBalloonFace relative z-10 h-[102px] w-[288px] rounded-[5px] bg-good px-5 py-4 text-[32px] leading-9",
 
@@ -59,9 +59,9 @@ export const sharedStyles = {
 
   /* card */
 
-  cards: "cards mt-[50px] flex w-full flex-wrap justify-start gap-10",
-  card: "card relative w-[360px] rounded-[30px] bg-white hover:z-40",
-  cardPicture: "cardPicture relative h-[325px] w-[360px] overflow-hidden rounded-[30px]",
+  cards: "cards mt-[34px] flex w-full flex-wrap justify-start gap-6 main:mt-[50px] main:gap-10",
+  card: "card relative w-[343px] rounded-[30px] bg-white hover:z-40 main:w-[360px]",
+  cardPicture: "cardPicture relative h-[325px] w-[343px] overflow-hidden rounded-[30px] main:w-[360px]",
   cardInner: "cardInner absolute",
   "card-yoga": "card-yoga right-[-232px] top-[-119px] min-h-[557px] min-w-[834px]",
   "card-stretching": "card-stretching right-0 top-0 min-h-[540px] min-w-[360px]",
@@ -69,11 +69,11 @@ export const sharedStyles = {
   "card-aerobics": "card-aerobics right-[-82px] top-[-715px] min-h-[1081px] min-w-[721px]",
   "card-body-flex": "card-body-flex right-[-182px] top-[-168px] min-h-[514px] min-w-[771px]",
   cardAction: "cardAction group/card absolute h-[32px] w-[32px]",
-  cardAddBtn: "cardAddBtn absolute left-[308px] top-[-305px] h-[32px] w-[32px] cursor-arrow duration-300 hover:scale-110",
-  cardActionTooltip: "cardActionTooltip absolute left-[352px] top-[-262px] hidden h-[27px] w-max items-center justify-center rounded-[5px] border border-black bg-white p-1.5 text-sm group-hover/card:flex",
-  cardBlock: "cardBlock px-[30px] pb-[15px] pt-6",
+  cardAddBtn: "cardAddBtn absolute left-[291px] top-[-305px] h-[32px] w-[32px] cursor-arrow duration-300 hover:scale-110 main:left-[308px]",
+  cardActionTooltip: "cardActionTooltip absolute left-[352px] top-[-262px] hidden h-[27px] w-max items-center justify-center rounded-[5px] border border-black bg-white p-1.5 text-sm main:group-hover/card:flex",
+  cardBlock: "cardBlock mx-auto flex w-[300px] flex-col gap-10 pb-[15px] pt-6",
   cardContent: "cardContent flex flex-col gap-5",
-  cardTitle: "cardTitle text-[32px] font-medium leading-9",
+  cardTitle: "cardTitle text-[24px] font-medium leading-[26px] main:text-[32px] main:leading-9",
   cardTablets: "cardTablets flex flex-wrap gap-[6px]",
   cardTablet: "cardTablet flex h-[38px] gap-[6px] rounded-[50px] bg-light-bg p-[10px]",
   cardTabletText: "cardTabletText text-nowrap text-[16px] leading-[18px]",
