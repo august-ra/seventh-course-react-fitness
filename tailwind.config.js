@@ -18,6 +18,7 @@ export default {
       "dark":     "#e9eced",
       "light-tx": "#999999",
       "black":    "#000000",
+      "delimiter":  "#c4c4c4",
       "yoga":       "#ffc700",
       "stretching": "#2491d2",
       "zumba":      "#f7a012",
@@ -38,13 +39,19 @@ export default {
       },
       height: {
         "13/2": "26px",
-        "13": "52px",
+        "13":   "52px",
       },
       padding: {
         "4.5": "18px",
       },
+      rotate: {
+        '225': '225deg',
+      },
       scale: {
         "102": "1.02",
+      },
+      spacing: {
+        "31": "124px",
       },
     },
   },

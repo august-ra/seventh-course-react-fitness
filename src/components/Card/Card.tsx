@@ -3,52 +3,68 @@ import { twMerge } from "tailwind-merge"
 
 import Button from "../Button/Button"
 import CardAction from "../CardAction/CardAction"
-import ProgressBar from "../ProgressBar/ProgressBar"
+import Progress from "../Progress/Progress"
 import Tablet from "../Tablet/Tablet"
 
-import type { KeysType } from "../../types/types"
+import { Link } from "react-router-dom"
+import { useNavigateFaraway } from "../../hooks/useNavigateFaraway"
+import { getActionTextFromProgress, getRate } from "../../utils/progress"
+import type { CourseType, KeysType } from "../../types/types"
+
+import { coursesAPI } from "../../api/coursesApi"
 
 
 interface Props {
-  name:       string
-  hasUser:    boolean
-  difficulty: number
+  courseData: CourseType
+  userId:     string
 }
 
-export default function Card({ name, hasUser, difficulty }: Props) {
-  return (
-    <div className={twMerge(sharedStyles.card, sharedStyles.shadowedBlock, hasUser && sharedStyles.cardFull)}>
-      <div className={sharedStyles.cardPicture}>
-        <img className={twMerge(sharedStyles.cardInner, sharedStyles[(`card-${name}`) as KeysType])} src={`/img/${name}.jpeg`} alt={name} />
-      </div>
+export default function Card({ courseData, userId }: Props) {
+  const name = courseData.name
+  const link = `/courses/${courseData._id}`
+  const navigate = useNavigateFaraway()
 
-      <CardAction action={Math.floor(Math.random() * 2) - 1 ? "add" : "remove"} />
+  async function handleSubmit() {
+    if (courseData.progress >= courseData.max)
+      coursesAPI.repeatFromBeginUserCourse(userId, courseData._id)
+
+    navigate(`choose/${courseData._id}`)
+  }
+
+  return (
+    <div className={twMerge(sharedStyles.card, sharedStyles.shadowedBlock, sharedStyles.scaledBlock)}>
+      <Link to={link}>
+        <div className={sharedStyles.cardPicture}>
+          <img className={twMerge(sharedStyles.cardInner, sharedStyles[(`card-${name}`) as KeysType])} src={`/img/${name}.jpeg`} alt={name} />
+        </div>
+      </Link>
+
+      <CardAction courseId={courseData._id} userId={userId} action={courseData.isAdded ? "remove" : "add"} />
 
       <div className={sharedStyles.cardBlock}>
         <div className={sharedStyles.cardContent}>
-          <p className={sharedStyles.cardTitle}>Йога</p>
+          <Link className={sharedStyles.cardTitle} to={link}>{courseData.title}</Link>
 
           <div className={sharedStyles.cardTablets}>
             <Tablet imgName="calendar">25 дней</Tablet>
             <Tablet imgName="time">20-50 мин/день</Tablet>
-            <Tablet imgName="difficulty" difficulty={difficulty} />
+            <Tablet imgName="difficulty" difficulty={courseData.difficulty} />
           </div>
 
           {
-            hasUser
+            userId && courseData.isAdded
               && (
-                <div className={sharedStyles.cardProgress}>
-                  <p className={sharedStyles.cardProgressText}>Прогресс 40%</p>
-                  <ProgressBar />
-                </div>
+                <Progress title="" progress={getRate(courseData.progress, courseData.max)} />
               )
           }
         </div>
 
         {
-          hasUser
+          userId && courseData.isAdded
             && (
-              <Button additionalClasses={sharedStyles.buttonWideWithMargin} primary={true}>Продолжить</Button>
+              <Button additionalClasses={sharedStyles.buttonWideWithFields} primary={true} onClick={handleSubmit}>
+                {getActionTextFromProgress(false, courseData.progress, courseData.max)}
+              </Button>
             )
         }
       </div>

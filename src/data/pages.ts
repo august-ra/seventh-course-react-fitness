@@ -1,8 +1,12 @@
 
-const Pages = {
+const pages = {
   MAIN:      "/",
   COURSES:   "/courses/",
   COURSE:    "/courses/:id/",
+  WORKOUT:   "/workout/:courseId/:workoutId/",
+  WRITE:     "write/",
+  PROFILE:   "/profile/",
+  CHOOSE:    "choose/:id",
   SIGNING:   "signing/",
   SIGN_IN:   "signing/in/",
   SIGN_UP:   "signing/up/",
@@ -10,4 +14,4 @@ const Pages = {
   NOT_FOUND: "/*",
 }
 
-export default Pages
+export default pages

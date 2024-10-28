@@ -12,6 +12,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 export default function Button({ primary, additionalClasses, ...props }: Props) {
   const classNames = twMerge(
     sharedStyles.buttonCommon,
+    sharedStyles.text_18_20,
     primary
       ? sharedStyles.buttonPrimary
       : sharedStyles.buttonSecondary,
