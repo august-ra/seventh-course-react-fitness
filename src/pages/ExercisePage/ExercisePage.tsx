@@ -11,6 +11,7 @@ import { useNavigateFaraway } from "../../hooks/useNavigateFaraway"
 import { useUserContext } from "../../context/UserContext/UserContext"
 import { WorkoutType } from "../../types/types"
 import pages from "../../data/pages"
+import { getOrderList } from "../../utils/order"
 import { getRate } from "../../utils/progress"
 
 import { coursesAPI } from "../../api/coursesApi"
@@ -68,28 +69,16 @@ export default function ExercisePage() {
                   ? (
                     <>
                       {
-                        workoutData.exercises.map((exercise, index) => (
-                          index % 3 === 0
-                            && (
-                              <Progress key={index} title={exercise.name} progress={getRate(exercise.progress, exercise.quantity)} />
-                            )
-                        ))
-                      }
-                      {
-                        workoutData.exercises.map((exercise, index) => (
-                          index % 3 === 1
-                            && (
-                              <Progress key={index} title={exercise.name} progress={getRate(exercise.progress, exercise.quantity)} />
-                            )
-                        ))
-                      }
-                      {
-                        workoutData.exercises.map((exercise, index) => (
-                          index % 3 === 2
-                            && (
-                              <Progress key={index} title={exercise.name} progress={getRate(exercise.progress, exercise.quantity)} />
-                            )
-                        ))
+                        getOrderList(workoutData.exercises.length).map((index) => {
+                          const exercise = workoutData.exercises[index]
+
+                          if (!exercise)
+                            return null
+
+                          return (
+                            <Progress key={index} title={`${index + 1}) ${exercise.name}`} progress={getRate(exercise.progress, exercise.quantity)} />
+                          )
+                        })
                       }
                     </>
                   )
