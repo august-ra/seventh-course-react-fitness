@@ -38,7 +38,6 @@ export default function WriteProgressPage() {
     coursesAPI.writeProgressWithExercisesToUserCourse(userContext.uid, courseId, workoutId, exercises.map((exercise, index) => ({
       index:    index,
       progress: exercise.progress || 0,
-      quantity: exercise.quantity || 0,
     })))
 
     navigate(pages.PROFILE)

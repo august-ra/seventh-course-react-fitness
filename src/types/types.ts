@@ -73,7 +73,6 @@ export interface UserWorkoutDataType {
 
 export interface UserExerciseDataType {
   index:    number
-  quantity: number
   progress: number
 }
 
