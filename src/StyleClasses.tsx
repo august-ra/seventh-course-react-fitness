@@ -17,9 +17,9 @@ function StyleClasses() {
       <buttonCommon className="h-9 w-[83px] rounded-[46px] duration-300 main:h-13 main:w-[103px]" />
       <buttonPrimary className="bg-good hover:bg-well active:bg-black active:text-white disabled:bg-light-bg disabled:text-light-tx" />
       <buttonSecondary className="border border-black bg-white hover:bg-light-bg active:bg-dark disabled:text-light-tx" />
-      <buttonWide className="w-full" />
-      <buttonWideWithFields className="w-full text-nowrap px-11" />
-      <buttonWideWithMargin className="mt-10 w-full" />
+      <buttonWide className="w-full main:w-full" />
+      <buttonWideWithFields className="w-full text-nowrap px-11 main:w-full" />
+      <buttonWideWithMargin className="mt-7 h-[50px] w-full main:mt-10 main:h-[52px] main:w-full" />
       {/* main */}
       <wrapper className="flex h-[100vh] flex-col justify-between" />
       <container className="m-auto w-[343px] flex-1 main:w-[1160px]" />
@@ -28,9 +28,10 @@ function StyleClasses() {
       <headerContainer className="flex w-1/2 flex-col justify-start gap-[15px] text-left" />
       <headerLogo className="h-[35px] w-[220px]" />
       <headerSlogan className="hidden main:block" />
-      <headerUserGroup className="relative flex h-[50px] items-center gap-4" />
-      <headerProfileBlock className="group/profile flex items-center gap-3" />
-      <headerProfileLogo className="h-[50px] w-[50px]" />
+      <headerUserGroup className="relative flex h-9 items-center gap-4 main:h-[50px]" />
+      <headerProfileBlock className="group/profile hidden items-center gap-3 main:flex" />
+      <headerProfileBlockSmall className="group/profile flex items-center gap-3 main:hidden" />
+      <headerProfileLogo className="h-9 w-9 main:h-[50px] main:w-[50px]" />
       <headerProfileName className="text-[24px] leading-[26px] hover:underline group-hover/profile:text-404" />
       <headerProfileNameBtn className="mr-px h-2 w-2 rotate-45 border-b-2 border-r-2 group-hover/profile:border-404" />
       <headerProfileNameBtnReversed className="rotate-225" />
@@ -41,14 +42,14 @@ function StyleClasses() {
       <captionBalloonTail className="absolute right-[140px] top-[85px] h-[36px] w-[30px]" />
       <captionBalloonFace className="relative z-10 h-[102px] w-[288px] rounded-[5px] bg-good px-5 py-4 text-[32px] leading-9" />
       {/* banner */}
-      <banner className="relative mb-[60px] h-[310px] max-h-[310px] min-h-[310px] w-[1160px] overflow-hidden rounded-[30px] p-10 text-white" />
-      <bannerText className="relative z-10 mb-[18px] h-[66px] text-[60px] font-medium leading-[66px]" />
+      <banner className="relative mb-[40px] h-[389px] w-[343px] overflow-hidden rounded-[30px] p-10 text-white main:mb-[60px] main:h-[310px] main:w-[1160px]" />
+      <bannerText className="relative z-10 mb-[18px] hidden h-[66px] text-[60px] font-medium leading-[66px] main:block" />
       <bannerPicture className="absolute" />
-      <banner-yoga className="right-[-295px] top-[-175px] w-[80%]" />
-      <banner-stretching className="right-[-10px] top-0 w-[30%]" />
-      <banner-zumba className="right-[-271px] top-[-37px] w-[78%]" />
-      <banner-aerobics className="right-0 top-[-315px] w-[40%]" />
-      <banner-body-flex className="right-[-200px] top-[-155px] w-[70%]" />
+      <banner-yoga className="top-[-55px] main:right-[-295px] main:top-[-175px] main:w-[80%]" />
+      <banner-stretching className="main:right-[-10px] main:top-0 main:w-[30%]" />
+      <banner-zumba className="main:right-[-271px] main:top-[-37px] main:w-[78%]" />
+      <banner-aerobics className="top-[-651px] main:right-0 main:top-[-315px] main:w-[40%]" />
+      <banner-body-flex className="top-[-113px] main:right-[-200px] main:top-[-155px] main:w-[70%]" />
       {/* card */}
       <cards className="mt-[34px] flex w-full flex-wrap justify-start gap-6 main:mt-[50px] main:gap-10" />
       <card className="relative w-[343px] rounded-[30px] bg-white hover:z-40 main:w-[360px]" />
@@ -69,19 +70,19 @@ function StyleClasses() {
       <cardTablet className="flex h-[38px] gap-[6px] rounded-[50px] bg-light-bg p-[10px]" />
       <cardTabletText className="text-nowrap text-[16px] leading-[18px]" />
       {/* presentation */}
-      <presentation className="my-[60px]" />
-      <presentationTitle className="mb-10 text-[40px] font-medium leading-[44px]" />
-      <presentationContent className="flex justify-between gap-[17px] text-left" />
+      <presentation className="my-[40px] main:my-[60px]" />
+      <presentationTitle className="mb-6 text-[24px] font-medium leading-[26px] main:mb-10 main:text-[40px] main:leading-[44px]" />
+      <presentationContent className="flex flex-col justify-between gap-[17px] text-left main:flex-row" />
       <presentationBlock className="flex h-[141px] items-center gap-[25px] rounded-[28px] bg-black px-5" />
       <presentationNumber className="text-[75px] font-medium leading-[102px] text-good" />
-      <presentationText className="text-[24px] leading-[30px] text-white" />
-      <presentationGoals className="flex flex-wrap gap-x-[124px] gap-y-[34px] rounded-[28px] bg-good p-[30px] text-[24px] leading-[26px]" />
+      <presentationText className="text-[18px] leading-5 text-white main:text-[24px] main:leading-[30px]" />
+      <presentationGoals className="flex flex-wrap gap-x-[124px] gap-y-[24px] rounded-[28px] bg-good p-[30px] text-[18px] leading-5 main:gap-y-[34px] main:text-[24px] main:leading-[26px]" />
       <presentationGoal className="flex h-13/2 w-[284px] items-center gap-2" />
       <presentationGoalStar className="h-13/2 w-[26px]" />
-      <presentationNewLife className="relative mb-[50px] mt-[100px] rounded-[30px] bg-white p-10" />
-      <presentationNewLifeTitle className="mb-10 text-[60px] font-medium leading-[60px]" />
-      <presentationNewLifeLeft className="relative z-10 w-[448px] list-inside" />
-      <presentationNewLifeLeftItem className="list-disc text-2xl opacity-60" />
+      <presentationNewLife className="relative mb-[50px] mt-[156px] rounded-[30px] bg-white p-[30px] main:mt-[100px] main:p-10" />
+      <presentationNewLifeTitle className="mb-9 text-[32px] font-medium leading-9 main:mb-10 main:text-[60px] main:leading-[60px]" />
+      <presentationNewLifeLeft className="relative z-10 list-inside main:w-[448px]" />
+      <presentationNewLifeLeftItem className="list-disc text-lg opacity-60 main:text-2xl" />
       <presentationNewLifeRight555 className="absolute bottom-[-113px] right-[-16px] h-[690px] w-[739px]" />
       <presentationNewLifeRight className="absolute bottom-0 right-0 h-full w-full overflow-hidden" />
       <presentationNewLifeLines className="absolute bottom-[-58px] right-[30px] h-[530px] w-[635px]" />
@@ -98,7 +99,7 @@ function StyleClasses() {
       <userProfileName className="text-[32px] leading-[36px]" />
       <userProfileEmail className="text-lg [&>span]:font-medium" />
       <userProfileButtons className="flex w-full gap-2.5" />
-      <userProfileButton className="w-[192px]" />
+      <userProfileButton className="w-[283px] main:w-[192px]" />
       {/* workout */}
       <breadcrumbsLine className="mb-10 text-[32px] leading-[36px]" />
       <breadcrumb className="underline hover:text-404" />

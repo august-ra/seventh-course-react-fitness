@@ -663,10 +663,6 @@ img{
   right: 0px;
 }
 
-.right-\[-10px\]{
-  right: -10px;
-}
-
 .right-\[-16px\]{
   right: -16px;
 }
@@ -675,24 +671,12 @@ img{
   right: -182px;
 }
 
-.right-\[-200px\]{
-  right: -200px;
-}
-
 .right-\[-231px\]{
   right: -231px;
 }
 
 .right-\[-232px\]{
   right: -232px;
-}
-
-.right-\[-271px\]{
-  right: -271px;
-}
-
-.right-\[-295px\]{
-  right: -295px;
 }
 
 .right-\[-398px\]{
@@ -719,20 +703,16 @@ img{
   top: 0px;
 }
 
+.top-\[-113px\]{
+  top: -113px;
+}
+
 .top-\[-119px\]{
   top: -119px;
 }
 
-.top-\[-155px\]{
-  top: -155px;
-}
-
 .top-\[-168px\]{
   top: -168px;
-}
-
-.top-\[-175px\]{
-  top: -175px;
 }
 
 .top-\[-231px\]{
@@ -747,16 +727,16 @@ img{
   top: -305px;
 }
 
-.top-\[-315px\]{
-  top: -315px;
-}
-
 .top-\[-32px\]{
   top: -32px;
 }
 
-.top-\[-37px\]{
-  top: -37px;
+.top-\[-55px\]{
+  top: -55px;
+}
+
+.top-\[-651px\]{
+  top: -651px;
 }
 
 .top-\[-715px\]{
@@ -800,9 +780,9 @@ img{
   margin-right: auto;
 }
 
-.my-\[60px\]{
-  margin-top: 60px;
-  margin-bottom: 60px;
+.my-\[40px\]{
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .mb-10{
@@ -813,6 +793,14 @@ img{
   margin-bottom: 1.25rem;
 }
 
+.mb-6{
+  margin-bottom: 1.5rem;
+}
+
+.mb-9{
+  margin-bottom: 2.25rem;
+}
+
 .mb-\[14px\]{
   margin-bottom: 14px;
 }
@@ -821,12 +809,12 @@ img{
   margin-bottom: 18px;
 }
 
-.mb-\[50px\]{
-  margin-bottom: 50px;
+.mb-\[40px\]{
+  margin-bottom: 40px;
 }
 
-.mb-\[60px\]{
-  margin-bottom: 60px;
+.mb-\[50px\]{
+  margin-bottom: 50px;
 }
 
 .mr-px{
@@ -837,8 +825,12 @@ img{
   margin-top: 2.5rem;
 }
 
-.mt-\[100px\]{
-  margin-top: 100px;
+.mt-7{
+  margin-top: 1.75rem;
+}
+
+.mt-\[156px\]{
+  margin-top: 156px;
 }
 
 .mt-\[34px\]{
@@ -909,10 +901,6 @@ img{
   height: 27px;
 }
 
-.h-\[310px\]{
-  height: 310px;
-}
-
 .h-\[325px\]{
   height: 325px;
 }
@@ -927,6 +915,10 @@ img{
 
 .h-\[36px\]{
   height: 36px;
+}
+
+.h-\[389px\]{
+  height: 389px;
 }
 
 .h-\[38px\]{
@@ -977,10 +969,6 @@ img{
   height: 100vh;
 }
 
-.max-h-\[310px\]{
-  max-height: 310px;
-}
-
 .max-h-\[346px\]{
   max-height: 346px;
 }
@@ -991,10 +979,6 @@ img{
 
 .min-h-\[1081px\]{
   min-height: 1081px;
-}
-
-.min-h-\[310px\]{
-  min-height: 310px;
 }
 
 .min-h-\[514px\]{
@@ -1025,8 +1009,8 @@ img{
   width: 1.5rem;
 }
 
-.w-\[1160px\]{
-  width: 1160px;
+.w-9{
+  width: 2.25rem;
 }
 
 .w-\[1200px\]{
@@ -1039,10 +1023,6 @@ img{
 
 .w-\[127px\]{
   width: 127px;
-}
-
-.w-\[192px\]{
-  width: 192px;
 }
 
 .w-\[197px\]{
@@ -1061,16 +1041,16 @@ img{
   width: 26px;
 }
 
+.w-\[283px\]{
+  width: 283px;
+}
+
 .w-\[284px\]{
   width: 284px;
 }
 
 .w-\[288px\]{
   width: 288px;
-}
-
-.w-\[30\%\]{
-  width: 30%;
 }
 
 .w-\[300px\]{
@@ -1101,18 +1081,6 @@ img{
   width: 360px;
 }
 
-.w-\[40\%\]{
-  width: 40%;
-}
-
-.w-\[448px\]{
-  width: 448px;
-}
-
-.w-\[50px\]{
-  width: 50px;
-}
-
 .w-\[550px\]{
   width: 550px;
 }
@@ -1121,24 +1089,12 @@ img{
   width: 635px;
 }
 
-.w-\[70\%\]{
-  width: 70%;
-}
-
 .w-\[700px\]{
   width: 700px;
 }
 
 .w-\[739px\]{
   width: 739px;
-}
-
-.w-\[78\%\]{
-  width: 78%;
-}
-
-.w-\[80\%\]{
-  width: 80%;
 }
 
 .w-\[83px\]{
@@ -1326,8 +1282,8 @@ img{
   row-gap: 1.25rem;
 }
 
-.gap-y-\[34px\]{
-  row-gap: 34px;
+.gap-y-\[24px\]{
+  row-gap: 24px;
 }
 
 .overflow-hidden{
@@ -1546,11 +1502,6 @@ img{
   text-align: center;
 }
 
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .text-\[16px\]{
   font-size: 16px;
 }
@@ -1569,10 +1520,6 @@ img{
 
 .text-\[32px\]{
   font-size: 32px;
-}
-
-.text-\[40px\]{
-  font-size: 40px;
 }
 
 .text-\[60px\]{
@@ -1595,6 +1542,10 @@ img{
 
 .font-medium{
   font-weight: 500;
+}
+
+.leading-5{
+  line-height: 1.25rem;
 }
 
 .leading-6{
@@ -1621,20 +1572,8 @@ img{
   line-height: 26px;
 }
 
-.leading-\[30px\]{
-  line-height: 30px;
-}
-
 .leading-\[36px\]{
   line-height: 36px;
-}
-
-.leading-\[44px\]{
-  line-height: 44px;
-}
-
-.leading-\[60px\]{
-  line-height: 60px;
 }
 
 .leading-\[66px\]{
@@ -1758,6 +1697,67 @@ img{
     left: 308px;
   }
 
+  .main\:right-0{
+    right: 0px;
+  }
+
+  .main\:right-\[-10px\]{
+    right: -10px;
+  }
+
+  .main\:right-\[-200px\]{
+    right: -200px;
+  }
+
+  .main\:right-\[-271px\]{
+    right: -271px;
+  }
+
+  .main\:right-\[-295px\]{
+    right: -295px;
+  }
+
+  .main\:top-0{
+    top: 0px;
+  }
+
+  .main\:top-\[-155px\]{
+    top: -155px;
+  }
+
+  .main\:top-\[-175px\]{
+    top: -175px;
+  }
+
+  .main\:top-\[-315px\]{
+    top: -315px;
+  }
+
+  .main\:top-\[-37px\]{
+    top: -37px;
+  }
+
+  .main\:my-\[60px\]{
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .main\:mb-10{
+    margin-bottom: 2.5rem;
+  }
+
+  .main\:mb-\[60px\]{
+    margin-bottom: 60px;
+  }
+
+  .main\:mt-10{
+    margin-top: 2.5rem;
+  }
+
+  .main\:mt-\[100px\]{
+    margin-top: 100px;
+  }
+
   .main\:mt-\[50px\]{
     margin-top: 50px;
   }
@@ -1766,11 +1766,27 @@ img{
     display: block;
   }
 
+  .main\:flex{
+    display: flex;
+  }
+
   .main\:hidden{
     display: none;
   }
 
   .main\:h-13{
+    height: 52px;
+  }
+
+  .main\:h-\[310px\]{
+    height: 310px;
+  }
+
+  .main\:h-\[50px\]{
+    height: 50px;
+  }
+
+  .main\:h-\[52px\]{
     height: 52px;
   }
 
@@ -1786,8 +1802,48 @@ img{
     width: 127px;
   }
 
+  .main\:w-\[192px\]{
+    width: 192px;
+  }
+
+  .main\:w-\[30\%\]{
+    width: 30%;
+  }
+
   .main\:w-\[360px\]{
     width: 360px;
+  }
+
+  .main\:w-\[40\%\]{
+    width: 40%;
+  }
+
+  .main\:w-\[448px\]{
+    width: 448px;
+  }
+
+  .main\:w-\[50px\]{
+    width: 50px;
+  }
+
+  .main\:w-\[70\%\]{
+    width: 70%;
+  }
+
+  .main\:w-\[78\%\]{
+    width: 78%;
+  }
+
+  .main\:w-\[80\%\]{
+    width: 80%;
+  }
+
+  .main\:w-full{
+    width: 100%;
+  }
+
+  .main\:flex-row{
+    flex-direction: row;
   }
 
   .main\:justify-center{
@@ -1798,6 +1854,14 @@ img{
     gap: 2.5rem;
   }
 
+  .main\:gap-y-\[34px\]{
+    row-gap: 34px;
+  }
+
+  .main\:p-10{
+    padding: 2.5rem;
+  }
+
   .main\:pb-\[60px\]{
     padding-bottom: 60px;
   }
@@ -1806,8 +1870,21 @@ img{
     padding-top: 50px;
   }
 
+  .main\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .main\:text-\[24px\]{
+    font-size: 24px;
+  }
+
   .main\:text-\[32px\]{
     font-size: 32px;
+  }
+
+  .main\:text-\[40px\]{
+    font-size: 40px;
   }
 
   .main\:text-\[60px\]{
@@ -1816,6 +1893,22 @@ img{
 
   .main\:leading-9{
     line-height: 2.25rem;
+  }
+
+  .main\:leading-\[26px\]{
+    line-height: 26px;
+  }
+
+  .main\:leading-\[30px\]{
+    line-height: 30px;
+  }
+
+  .main\:leading-\[44px\]{
+    line-height: 44px;
+  }
+
+  .main\:leading-\[60px\]{
+    line-height: 60px;
   }
 
   .main\:leading-none{
