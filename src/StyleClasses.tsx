@@ -10,7 +10,7 @@ function StyleClasses() {
       {/* common */}
       <shadowedBlock className="shadow-3xl" />
       <scaledBlock className="duration-300 hover:scale-102" />
-      <text_18_20 className="text-[18px] leading-[20px]" />
+      <text_18_20 className="text-[18px] leading-5" />
       {/* courses */}
       <colors className="bg-aerobics bg-body-flex bg-stretching bg-yoga bg-zumba" />
       {/* button */}
@@ -18,8 +18,8 @@ function StyleClasses() {
       <buttonPrimary className="bg-good hover:bg-well active:bg-black active:text-white disabled:bg-light-bg disabled:text-light-tx" />
       <buttonSecondary className="border border-black bg-white hover:bg-light-bg active:bg-dark disabled:text-light-tx" />
       <buttonWide className="w-full main:w-full" />
-      <buttonWideWithFields className="w-full text-nowrap px-11 main:w-full" />
-      <buttonWideWithMargin className="mt-7 h-[50px] w-full main:mt-10 main:h-[52px] main:w-full" />
+      <buttonWideWithFields className="h-[50px] w-full text-nowrap px-11 main:h-13 main:w-full" />
+      <buttonWideWithMargin className="mt-7 h-[50px] w-full main:mt-10 main:h-13 main:w-full" />
       {/* main */}
       <wrapper className="flex h-[100vh] flex-col justify-between" />
       <container className="m-auto w-[343px] flex-1 main:w-[1160px]" />
@@ -37,9 +37,9 @@ function StyleClasses() {
       <headerProfileNameBtnReversed className="rotate-225" />
       {/* caption */}
       <caption className="flex justify-between text-left" />
-      <captionText className="max-w-[864px] text-[32px] font-medium leading-9 main:text-[60px] main:leading-none" />
+      <captionText className="mb-[34px] max-w-[864px] text-[32px] font-medium leading-9 main:mb-[50px] main:text-[60px] main:leading-none" />
       <captionBalloon className="relative hidden main:block" />
-      <captionBalloonTail className="absolute right-[140px] top-[85px] h-[36px] w-[30px]" />
+      <captionBalloonTail className="absolute right-[140px] top-[85px] h-9 w-[30px]" />
       <captionBalloonFace className="relative z-10 h-[102px] w-[288px] rounded-[5px] bg-good px-5 py-4 text-[32px] leading-9" />
       {/* banner */}
       <banner className="relative mb-[40px] h-[389px] w-[343px] overflow-hidden rounded-[30px] p-10 text-white main:mb-[60px] main:h-[310px] main:w-[1160px]" />
@@ -51,17 +51,17 @@ function StyleClasses() {
       <banner-aerobics className="top-[-651px] main:right-0 main:top-[-315px] main:w-[40%]" />
       <banner-body-flex className="top-[-113px] main:right-[-200px] main:top-[-155px] main:w-[70%]" />
       {/* card */}
-      <cards className="mt-[34px] flex w-full flex-wrap justify-start gap-6 main:mt-[50px] main:gap-10" />
+      <cards className="flex w-full flex-wrap justify-start gap-6 main:gap-10" />
       <card className="relative w-[343px] rounded-[30px] bg-white hover:z-40 main:w-[360px]" />
       <cardPicture className="relative h-[325px] w-[343px] overflow-hidden rounded-[30px] main:w-[360px]" />
       <cardInner className="absolute" />
       <card-yoga className="right-[-232px] top-[-119px] min-h-[557px] min-w-[834px]" />
       <card-stretching className="right-0 top-0 min-h-[540px] min-w-[360px]" />
-      <card-zumba className="right-[-398px] top-[-32px] min-h-[767px] min-w-[1150px]" />
+      <card-zumba className="-top-8 right-[-398px] min-h-[767px] min-w-[1150px]" />
       <card-aerobics className="right-[-82px] top-[-715px] min-h-[1081px] min-w-[721px]" />
       <card-body-flex className="right-[-182px] top-[-168px] min-h-[514px] min-w-[771px]" />
-      <cardAction className="group/card absolute h-[32px] w-[32px]" />
-      <cardAddBtn className="absolute left-[291px] top-[-305px] h-[32px] w-[32px] cursor-arrow duration-300 hover:scale-110 main:left-[308px]" />
+      <cardAction className="group/card absolute h-8 w-8" />
+      <cardAddBtn className="absolute left-[291px] top-[-305px] h-8 w-8 cursor-arrow duration-300 hover:scale-110 main:left-[308px]" />
       <cardActionTooltip className="absolute left-[352px] top-[-262px] hidden h-[27px] w-max items-center justify-center rounded-[5px] border border-black bg-white p-1.5 text-sm main:group-hover/card:flex" />
       <cardBlock className="mx-auto flex w-[300px] flex-col gap-10 pb-[15px] pt-6" />
       <cardContent className="flex flex-col gap-5" />
@@ -76,7 +76,7 @@ function StyleClasses() {
       <presentationBlock className="flex h-[141px] items-center gap-[25px] rounded-[28px] bg-black px-5" />
       <presentationNumber className="text-[75px] font-medium leading-[102px] text-good" />
       <presentationText className="text-[18px] leading-5 text-white main:text-[24px] main:leading-[30px]" />
-      <presentationGoals className="flex flex-wrap gap-x-[124px] gap-y-[24px] rounded-[28px] bg-good p-[30px] text-[18px] leading-5 main:gap-y-[34px] main:text-[24px] main:leading-[26px]" />
+      <presentationGoals className="flex flex-wrap gap-x-31 gap-y-6 rounded-[28px] bg-good p-[30px] text-[18px] leading-5 main:gap-y-[34px] main:text-[24px] main:leading-[26px]" />
       <presentationGoal className="flex h-13/2 w-[284px] items-center gap-2" />
       <presentationGoalStar className="h-13/2 w-[26px]" />
       <presentationNewLife className="relative mb-[50px] mt-[156px] rounded-[30px] bg-white p-[30px] main:mt-[100px] main:p-10" />
@@ -92,14 +92,15 @@ function StyleClasses() {
       <userMenuEmail className="text-center text-lg" />
       <userMenuButtons className="flex w-full flex-col gap-2.5" />
       {/* user profile */}
-      <userProfile className="mt-10 flex gap-[33px] rounded-[30px] bg-white p-[30px]" />
-      <userProfileSection className="mt-[60px]" />
+      <userProfile className="mt-10 flex flex-col items-center gap-[33px] rounded-[30px] bg-white p-[30px] main:flex-row main:items-start" />
+      <userProfileSection className="mt-6 main:mt-[60px]" />
+      <userProfileTitle className="mb-6 main:mb-[50px]" />
       <userProfileLogo className="h-[197px] w-[197px] rounded-[20px]" />
-      <userProfileRight className="flex flex-col gap-[30px]" />
-      <userProfileName className="text-[32px] leading-[36px]" />
+      <userProfileRight className="flex w-[283px] flex-col gap-[30px]" />
+      <userProfileName className="text-[24px] leading-[26px] main:text-[32px] main:leading-[36px]" />
       <userProfileEmail className="text-lg [&>span]:font-medium" />
-      <userProfileButtons className="flex w-full gap-2.5" />
-      <userProfileButton className="w-[283px] main:w-[192px]" />
+      <userProfileButtons className="flex w-full flex-col gap-2.5 main:flex-row" />
+      <userProfileButton className="h-[50px] w-full main:h-13 main:min-w-[192px]" />
       {/* workout */}
       <breadcrumbsLine className="mb-10 text-[32px] leading-[36px]" />
       <breadcrumb className="underline hover:text-404" />
@@ -112,7 +113,7 @@ function StyleClasses() {
       <writeProgressScrollingListGapped className="pr-[26px]" />
       <writeProgressList className="flex w-full flex-col gap-5 overflow-y-scroll" />
       <writeProgressItem className="flex flex-col gap-[10px]" />
-      <writeProgressInput className="h-[52px] rounded-[8px] border border-neutral bg-white px-[18px] py-4" />
+      <writeProgressInput className="h-13 rounded-lg border border-neutral bg-white px-[18px] py-4" />
       {/* progress */}
       <progress className="flex flex-col gap-[10px]" />
       <progressText className="" />
@@ -131,7 +132,7 @@ function StyleClasses() {
       <modalFormCaption className="mb-[14px] text-[32px] leading-9" />
       <modalFormInner className="flex w-full flex-col items-center gap-[34px]" />
       <modalFormSubgroup className="flex w-full flex-col items-center gap-[10px]" />
-      <modalFormInput className="h-13 w-full rounded-[8px] border border-neutral bg-white px-4.5 py-4" />
+      <modalFormInput className="h-13 w-full rounded-lg border border-neutral bg-white px-4.5 py-4" />
       <modalFormError className="text-center text-sm text-bad" />
       <modalFormSuggestionLink className="text-center text-sm font-medium text-404 underline" />
       <modalFormErrorLink className="text-center text-sm font-medium text-bad underline" />

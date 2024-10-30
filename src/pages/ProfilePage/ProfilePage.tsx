@@ -22,7 +22,7 @@ export default function ProfilePage() {
 
         <main className="">
           <section className="">
-            <h2 className={sharedStyles.captionText}>Профиль</h2>
+            <h2 className={twMerge(sharedStyles.captionText, sharedStyles.userProfileTitle)}>Профиль</h2>
 
             <div className={twMerge(sharedStyles.userProfile, sharedStyles.shadowedBlock)}>
               <img className={sharedStyles.userProfileLogo} src="/img/person-huge.svg" alt="person" />
@@ -40,7 +40,7 @@ export default function ProfilePage() {
           </section>
 
           <section className={sharedStyles.userProfileSection}>
-            <h2 className={sharedStyles.captionText}>Мои курсы</h2>
+            <h2 className={twMerge(sharedStyles.captionText, sharedStyles.userProfileTitle)}>Мои курсы</h2>
 
             <div className={sharedStyles.cards}>
               {

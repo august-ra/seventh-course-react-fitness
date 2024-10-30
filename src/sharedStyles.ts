@@ -5,7 +5,7 @@ export const sharedStyles = {
 
   shadowedBlock: "shadowedBlock shadow-3xl",
   scaledBlock: "scaledBlock duration-300 hover:scale-102",
-  text_18_20: "text_18_20 text-[18px] leading-[20px]",
+  text_18_20: "text_18_20 text-[18px] leading-5",
 
   /* courses */
 
@@ -17,8 +17,8 @@ export const sharedStyles = {
   buttonPrimary: "buttonPrimary bg-good hover:bg-well active:bg-black active:text-white disabled:bg-light-bg disabled:text-light-tx",
   buttonSecondary: "buttonSecondary border border-black bg-white hover:bg-light-bg active:bg-dark disabled:text-light-tx",
   buttonWide: "buttonWide w-full main:w-full",
-  buttonWideWithFields: "buttonWideWithFields w-full text-nowrap px-11 main:w-full",
-  buttonWideWithMargin: "buttonWideWithMargin mt-7 h-[50px] w-full main:mt-10 main:h-[52px] main:w-full",
+  buttonWideWithFields: "buttonWideWithFields h-[50px] w-full text-nowrap px-11 main:h-13 main:w-full",
+  buttonWideWithMargin: "buttonWideWithMargin mt-7 h-[50px] w-full main:mt-10 main:h-13 main:w-full",
 
   /* main */
 
@@ -42,9 +42,9 @@ export const sharedStyles = {
   /* caption */
 
   caption: "caption flex justify-between text-left",
-  captionText: "captionText max-w-[864px] text-[32px] font-medium leading-9 main:text-[60px] main:leading-none",
+  captionText: "captionText mb-[34px] max-w-[864px] text-[32px] font-medium leading-9 main:mb-[50px] main:text-[60px] main:leading-none",
   captionBalloon: "captionBalloon relative hidden main:block",
-  captionBalloonTail: "captionBalloonTail absolute right-[140px] top-[85px] h-[36px] w-[30px]",
+  captionBalloonTail: "captionBalloonTail absolute right-[140px] top-[85px] h-9 w-[30px]",
   captionBalloonFace: "captionBalloonFace relative z-10 h-[102px] w-[288px] rounded-[5px] bg-good px-5 py-4 text-[32px] leading-9",
 
   /* banner */
@@ -60,17 +60,17 @@ export const sharedStyles = {
 
   /* card */
 
-  cards: "cards mt-[34px] flex w-full flex-wrap justify-start gap-6 main:mt-[50px] main:gap-10",
+  cards: "cards flex w-full flex-wrap justify-start gap-6 main:gap-10",
   card: "card relative w-[343px] rounded-[30px] bg-white hover:z-40 main:w-[360px]",
   cardPicture: "cardPicture relative h-[325px] w-[343px] overflow-hidden rounded-[30px] main:w-[360px]",
   cardInner: "cardInner absolute",
   "card-yoga": "card-yoga right-[-232px] top-[-119px] min-h-[557px] min-w-[834px]",
   "card-stretching": "card-stretching right-0 top-0 min-h-[540px] min-w-[360px]",
-  "card-zumba": "card-zumba right-[-398px] top-[-32px] min-h-[767px] min-w-[1150px]",
+  "card-zumba": "card-zumba -top-8 right-[-398px] min-h-[767px] min-w-[1150px]",
   "card-aerobics": "card-aerobics right-[-82px] top-[-715px] min-h-[1081px] min-w-[721px]",
   "card-body-flex": "card-body-flex right-[-182px] top-[-168px] min-h-[514px] min-w-[771px]",
-  cardAction: "cardAction group/card absolute h-[32px] w-[32px]",
-  cardAddBtn: "cardAddBtn absolute left-[291px] top-[-305px] h-[32px] w-[32px] cursor-arrow duration-300 hover:scale-110 main:left-[308px]",
+  cardAction: "cardAction group/card absolute h-8 w-8",
+  cardAddBtn: "cardAddBtn absolute left-[291px] top-[-305px] h-8 w-8 cursor-arrow duration-300 hover:scale-110 main:left-[308px]",
   cardActionTooltip: "cardActionTooltip absolute left-[352px] top-[-262px] hidden h-[27px] w-max items-center justify-center rounded-[5px] border border-black bg-white p-1.5 text-sm main:group-hover/card:flex",
   cardBlock: "cardBlock mx-auto flex w-[300px] flex-col gap-10 pb-[15px] pt-6",
   cardContent: "cardContent flex flex-col gap-5",
@@ -87,7 +87,7 @@ export const sharedStyles = {
   presentationBlock: "presentationBlock flex h-[141px] items-center gap-[25px] rounded-[28px] bg-black px-5",
   presentationNumber: "presentationNumber text-[75px] font-medium leading-[102px] text-good",
   presentationText: "presentationText text-[18px] leading-5 text-white main:text-[24px] main:leading-[30px]",
-  presentationGoals: "presentationGoals flex flex-wrap gap-x-[124px] gap-y-[24px] rounded-[28px] bg-good p-[30px] text-[18px] leading-5 main:gap-y-[34px] main:text-[24px] main:leading-[26px]",
+  presentationGoals: "presentationGoals flex flex-wrap gap-x-31 gap-y-6 rounded-[28px] bg-good p-[30px] text-[18px] leading-5 main:gap-y-[34px] main:text-[24px] main:leading-[26px]",
   presentationGoal: "presentationGoal flex h-13/2 w-[284px] items-center gap-2",
   presentationGoalStar: "presentationGoalStar h-13/2 w-[26px]",
   presentationNewLife: "presentationNewLife relative mb-[50px] mt-[156px] rounded-[30px] bg-white p-[30px] main:mt-[100px] main:p-10",
@@ -107,14 +107,15 @@ export const sharedStyles = {
 
   /* user profile */
 
-  userProfile: "userProfile mt-10 flex gap-[33px] rounded-[30px] bg-white p-[30px]",
-  userProfileSection: "userProfileSection mt-[60px]",
+  userProfile: "userProfile mt-10 flex flex-col items-center gap-[33px] rounded-[30px] bg-white p-[30px] main:flex-row main:items-start",
+  userProfileSection: "userProfileSection mt-6 main:mt-[60px]",
+  userProfileTitle: "userProfileTitle mb-6 main:mb-[50px]",
   userProfileLogo: "userProfileLogo h-[197px] w-[197px] rounded-[20px]",
-  userProfileRight: "userProfileRight flex flex-col gap-[30px]",
-  userProfileName: "userProfileName text-[32px] leading-[36px]",
+  userProfileRight: "userProfileRight flex w-[283px] flex-col gap-[30px]",
+  userProfileName: "userProfileName text-[24px] leading-[26px] main:text-[32px] main:leading-[36px]",
   userProfileEmail: "userProfileEmail text-lg [&>span]:font-medium",
-  userProfileButtons: "userProfileButtons flex w-full gap-2.5",
-  userProfileButton: "userProfileButton w-[283px] main:w-[192px]",
+  userProfileButtons: "userProfileButtons flex w-full flex-col gap-2.5 main:flex-row",
+  userProfileButton: "userProfileButton h-[50px] w-full main:h-13 main:min-w-[192px]",
 
   /* workout */
 
@@ -129,7 +130,7 @@ export const sharedStyles = {
   writeProgressScrollingListGapped: "writeProgressScrollingListGapped pr-[26px]",
   writeProgressList: "writeProgressList flex w-full flex-col gap-5 overflow-y-scroll",
   writeProgressItem: "writeProgressItem flex flex-col gap-[10px]",
-  writeProgressInput: "writeProgressInput h-[52px] rounded-[8px] border border-neutral bg-white px-[18px] py-4",
+  writeProgressInput: "writeProgressInput h-13 rounded-lg border border-neutral bg-white px-[18px] py-4",
 
   /* progress */
 
@@ -154,7 +155,7 @@ export const sharedStyles = {
   modalFormCaption: "modalFormCaption mb-[14px] text-[32px] leading-9",
   modalFormInner: "modalFormInner flex w-full flex-col items-center gap-[34px]",
   modalFormSubgroup: "modalFormSubgroup flex w-full flex-col items-center gap-[10px]",
-  modalFormInput: "modalFormInput h-13 w-full rounded-[8px] border border-neutral bg-white px-4.5 py-4",
+  modalFormInput: "modalFormInput h-13 w-full rounded-lg border border-neutral bg-white px-4.5 py-4",
   modalFormError: "modalFormError text-center text-sm text-bad",
   modalFormSuggestionLink: "modalFormSuggestionLink text-center text-sm font-medium text-404 underline",
   modalFormErrorLink: "modalFormErrorLink text-center text-sm font-medium text-bad underline",
