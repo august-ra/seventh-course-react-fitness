@@ -10,7 +10,7 @@ function StyleClasses() {
       {/* common */}
       <shadowedBlock className="shadow-3xl" />
       <scaledBlock className="duration-300 hover:scale-102" />
-      <text_18_20 className="text-[18px] leading-5" />
+      <text_18_20 className="text-lg/5" />
       {/* courses */}
       <colors className="bg-aerobics bg-body-flex bg-stretching bg-yoga bg-zumba" />
       {/* button */}
@@ -32,18 +32,18 @@ function StyleClasses() {
       <headerProfileBlock className="group/profile hidden items-center gap-3 main:flex" />
       <headerProfileBlockSmall className="group/profile flex items-center gap-3 main:hidden" />
       <headerProfileLogo className="h-9 w-9 main:h-[50px] main:w-[50px]" />
-      <headerProfileName className="text-[24px] leading-[26px] hover:underline group-hover/profile:text-404" />
+      <headerProfileName className="text-2xl/[26px] hover:underline group-hover/profile:text-404" />
       <headerProfileNameBtn className="mr-px h-2 w-2 rotate-45 border-b-2 border-r-2 group-hover/profile:border-404" />
       <headerProfileNameBtnReversed className="rotate-225" />
       {/* caption */}
       <caption className="flex justify-between text-left" />
-      <captionText className="mb-[34px] max-w-[864px] text-[32px] font-medium leading-9 main:mb-[50px] main:text-[60px] main:leading-none" />
+      <captionText className="mb-[34px] max-w-[864px] text-[32px]/9 font-medium main:mb-[50px] main:text-6xl" />
       <captionBalloon className="relative hidden main:block" />
       <captionBalloonTail className="absolute right-[140px] top-[85px] h-9 w-[30px]" />
-      <captionBalloonFace className="relative z-10 h-[102px] w-[288px] rounded-[5px] bg-good px-5 py-4 text-[32px] leading-9" />
+      <captionBalloonFace className="relative z-10 h-[102px] w-[288px] rounded-[5px] bg-good px-5 py-4 text-[32px]/9" />
       {/* banner */}
       <banner className="relative mb-[40px] h-[389px] w-[343px] overflow-hidden rounded-[30px] p-10 text-white main:mb-[60px] main:h-[310px] main:w-[1160px]" />
-      <bannerText className="relative z-10 mb-[18px] hidden h-[66px] text-[60px] font-medium leading-[66px] main:block" />
+      <bannerText className="relative z-10 mb-[18px] hidden h-[66px] text-6xl/[66px] font-medium leading-[66px] main:block" />
       <bannerPicture className="absolute" />
       <banner-yoga className="top-[-55px] main:right-[-295px] main:top-[-175px] main:w-[80%]" />
       <banner-stretching className="main:right-[-10px] main:top-0 main:w-[30%]" />
@@ -65,22 +65,22 @@ function StyleClasses() {
       <cardActionTooltip className="absolute left-[352px] top-[-262px] hidden h-[27px] w-max items-center justify-center rounded-[5px] border border-black bg-white p-1.5 text-sm main:group-hover/card:flex" />
       <cardBlock className="mx-auto flex w-[300px] flex-col gap-10 pb-[15px] pt-6" />
       <cardContent className="flex flex-col gap-5" />
-      <cardTitle className="text-[24px] font-medium leading-[26px] main:text-[32px] main:leading-9" />
+      <cardTitle className="text-2xl/[26px] font-medium main:text-[32px]/9" />
       <cardTablets className="flex flex-wrap gap-[6px]" />
       <cardTablet className="flex h-[38px] gap-[6px] rounded-[50px] bg-light-bg p-[10px]" />
-      <cardTabletText className="text-nowrap text-[16px] leading-[18px]" />
+      <cardTabletText className="text-nowrap text-base/[18px]" />
       {/* presentation */}
       <presentation className="my-[40px] main:my-[60px]" />
-      <presentationTitle className="mb-6 text-[24px] font-medium leading-[26px] main:mb-10 main:text-[40px] main:leading-[44px]" />
+      <presentationTitle className="mb-6 text-2xl/[26px] font-medium main:mb-10 main:text-[40px]/[44px]" />
       <presentationContent className="flex flex-col justify-between gap-[17px] text-left main:flex-row" />
       <presentationBlock className="flex h-[141px] items-center gap-[25px] rounded-[28px] bg-black px-5" />
-      <presentationNumber className="text-[75px] font-medium leading-[102px] text-good" />
-      <presentationText className="text-[18px] leading-5 text-white main:text-[24px] main:leading-[30px]" />
-      <presentationGoals className="flex flex-wrap gap-x-31 gap-y-6 rounded-[28px] bg-good p-[30px] text-[18px] leading-5 main:gap-y-[34px] main:text-[24px] main:leading-[26px]" />
+      <presentationNumber className="text-[75px]/[102px] font-medium text-good" />
+      <presentationText className="text-lg/5 text-white main:text-2xl/[30px]" />
+      <presentationGoals className="flex flex-wrap gap-x-31 gap-y-6 rounded-[28px] bg-good p-[30px] text-lg/5 main:gap-y-[34px] main:text-2xl/[26px]" />
       <presentationGoal className="flex h-13/2 w-[284px] items-center gap-2" />
       <presentationGoalStar className="h-13/2 w-[26px]" />
       <presentationNewLife className="relative mb-[50px] mt-[156px] rounded-[30px] bg-white p-[30px] main:mt-[100px] main:p-10" />
-      <presentationNewLifeTitle className="mb-9 text-[32px] font-medium leading-9 main:mb-10 main:text-[60px] main:leading-[60px]" />
+      <presentationNewLifeTitle className="mb-9 text-[32px]/9 font-medium main:mb-10 main:text-6xl" />
       <presentationNewLifeLeft className="relative z-10 list-inside main:w-[448px]" />
       <presentationNewLifeLeftItem className="list-disc text-lg opacity-60 main:text-2xl" />
       <presentationNewLifeRight555 className="absolute bottom-[-113px] right-[-16px] h-[690px] w-[739px]" />
@@ -97,17 +97,17 @@ function StyleClasses() {
       <userProfileTitle className="mb-6 main:mb-[50px]" />
       <userProfileLogo className="h-[197px] w-[197px] rounded-[20px]" />
       <userProfileRight className="flex w-[283px] flex-col gap-[30px]" />
-      <userProfileName className="text-[24px] leading-[26px] main:text-[32px] main:leading-[36px]" />
+      <userProfileName className="text-2xl/[26px] main:text-[32px]/9" />
       <userProfileEmail className="text-lg [&>span]:font-medium" />
       <userProfileButtons className="flex w-full flex-col gap-2.5 main:flex-row" />
       <userProfileButton className="h-[50px] w-full main:h-13 main:min-w-[192px]" />
       {/* workout */}
-      <breadcrumbsLine className="mb-10 text-[32px] leading-[36px]" />
+      <breadcrumbsLine className="mb-10 text-[32px]/9" />
       <breadcrumb className="underline hover:text-404" />
       <breadcrumbLast className="underline" />
       <videoBlock className="h-[639px] overflow-hidden rounded-[30px]" />
       <workoutProgresses className="grid w-full grid-cols-3 gap-x-[60px] gap-y-5" />
-      <workoutDayCaption className="mb-5 text-[32px] leading-[36px]" />
+      <workoutDayCaption className="mb-5 text-[32px]/9" />
       <buttonProgress className="mt-10 w-[320px]" />
       <writeProgressScrollingList className="max-h-[346px] w-[346px] overflow-y-scroll" />
       <writeProgressScrollingListGapped className="pr-[26px]" />
@@ -129,7 +129,7 @@ function StyleClasses() {
       {/* modal: signing */}
       <modalWrapper className="fixed left-0 top-0 z-50 flex h-screen w-screen items-center justify-center bg-blocked" />
       <modalForm className="m-auto flex w-[360px] flex-col items-center gap-12 rounded-[30px] bg-white p-10" />
-      <modalFormCaption className="mb-[14px] text-[32px] leading-9" />
+      <modalFormCaption className="mb-[14px] text-[32px]/9" />
       <modalFormInner className="flex w-full flex-col items-center gap-[34px]" />
       <modalFormSubgroup className="flex w-full flex-col items-center gap-[10px]" />
       <modalFormInput className="h-13 w-full rounded-lg border border-neutral bg-white px-4.5 py-4" />
@@ -145,8 +145,8 @@ function StyleClasses() {
       <modalListMark className="h-6 w-6" />
       <modalListEmptyMark className="m-0.5 h-[20px] w-[20px] rounded-[10px] border-2 border-light-tx" />
       <modalListItemContent className="flex flex-col gap-[10px]" />
-      <modalListItemExercise className="text-[24px] leading-[26px]" />
-      <modalListItemCourse className="text-[16px] leading-[18px]" />
+      <modalListItemExercise className="text-2xl/[26px]" />
+      <modalListItemCourse className="text-base/[18px]" />
       {/* page 404 */}
       <page404Container className="relative flex h-screen justify-center bg-white" />
       <page404Image className="h-[800px] w-[1200px]" />

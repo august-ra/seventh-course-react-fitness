@@ -5,7 +5,7 @@ export const sharedStyles = {
 
   shadowedBlock: "shadowedBlock shadow-3xl",
   scaledBlock: "scaledBlock duration-300 hover:scale-102",
-  text_18_20: "text_18_20 text-[18px] leading-5",
+  text_18_20: "text_18_20 text-lg/5",
 
   /* courses */
 
@@ -35,22 +35,22 @@ export const sharedStyles = {
   headerProfileBlock: "headerProfileBlock group/profile hidden items-center gap-3 main:flex",
   headerProfileBlockSmall: "headerProfileBlockSmall group/profile flex items-center gap-3 main:hidden",
   headerProfileLogo: "headerProfileLogo h-9 w-9 main:h-[50px] main:w-[50px]",
-  headerProfileName: "headerProfileName text-[24px] leading-[26px] hover:underline group-hover/profile:text-404",
+  headerProfileName: "headerProfileName text-2xl/[26px] hover:underline group-hover/profile:text-404",
   headerProfileNameBtn: "headerProfileNameBtn mr-px h-2 w-2 rotate-45 border-b-2 border-r-2 group-hover/profile:border-404",
   headerProfileNameBtnReversed: "headerProfileNameBtnReversed rotate-225",
 
   /* caption */
 
   caption: "caption flex justify-between text-left",
-  captionText: "captionText mb-[34px] max-w-[864px] text-[32px] font-medium leading-9 main:mb-[50px] main:text-[60px] main:leading-none",
+  captionText: "captionText mb-[34px] max-w-[864px] text-[32px]/9 font-medium main:mb-[50px] main:text-6xl",
   captionBalloon: "captionBalloon relative hidden main:block",
   captionBalloonTail: "captionBalloonTail absolute right-[140px] top-[85px] h-9 w-[30px]",
-  captionBalloonFace: "captionBalloonFace relative z-10 h-[102px] w-[288px] rounded-[5px] bg-good px-5 py-4 text-[32px] leading-9",
+  captionBalloonFace: "captionBalloonFace relative z-10 h-[102px] w-[288px] rounded-[5px] bg-good px-5 py-4 text-[32px]/9",
 
   /* banner */
 
   banner: "banner relative mb-[40px] h-[389px] w-[343px] overflow-hidden rounded-[30px] p-10 text-white main:mb-[60px] main:h-[310px] main:w-[1160px]",
-  bannerText: "bannerText relative z-10 mb-[18px] hidden h-[66px] text-[60px] font-medium leading-[66px] main:block",
+  bannerText: "bannerText relative z-10 mb-[18px] hidden h-[66px] text-6xl/[66px] font-medium leading-[66px] main:block",
   bannerPicture: "bannerPicture absolute",
   "banner-yoga": "banner-yoga top-[-55px] main:right-[-295px] main:top-[-175px] main:w-[80%]",
   "banner-stretching": "banner-stretching main:right-[-10px] main:top-0 main:w-[30%]",
@@ -74,24 +74,24 @@ export const sharedStyles = {
   cardActionTooltip: "cardActionTooltip absolute left-[352px] top-[-262px] hidden h-[27px] w-max items-center justify-center rounded-[5px] border border-black bg-white p-1.5 text-sm main:group-hover/card:flex",
   cardBlock: "cardBlock mx-auto flex w-[300px] flex-col gap-10 pb-[15px] pt-6",
   cardContent: "cardContent flex flex-col gap-5",
-  cardTitle: "cardTitle text-[24px] font-medium leading-[26px] main:text-[32px] main:leading-9",
+  cardTitle: "cardTitle text-2xl/[26px] font-medium main:text-[32px]/9",
   cardTablets: "cardTablets flex flex-wrap gap-[6px]",
   cardTablet: "cardTablet flex h-[38px] gap-[6px] rounded-[50px] bg-light-bg p-[10px]",
-  cardTabletText: "cardTabletText text-nowrap text-[16px] leading-[18px]",
+  cardTabletText: "cardTabletText text-nowrap text-base/[18px]",
 
   /* presentation */
 
   presentation: "presentation my-[40px] main:my-[60px]",
-  presentationTitle: "presentationTitle mb-6 text-[24px] font-medium leading-[26px] main:mb-10 main:text-[40px] main:leading-[44px]",
+  presentationTitle: "presentationTitle mb-6 text-2xl/[26px] font-medium main:mb-10 main:text-[40px]/[44px]",
   presentationContent: "presentationContent flex flex-col justify-between gap-[17px] text-left main:flex-row",
   presentationBlock: "presentationBlock flex h-[141px] items-center gap-[25px] rounded-[28px] bg-black px-5",
-  presentationNumber: "presentationNumber text-[75px] font-medium leading-[102px] text-good",
-  presentationText: "presentationText text-[18px] leading-5 text-white main:text-[24px] main:leading-[30px]",
-  presentationGoals: "presentationGoals flex flex-wrap gap-x-31 gap-y-6 rounded-[28px] bg-good p-[30px] text-[18px] leading-5 main:gap-y-[34px] main:text-[24px] main:leading-[26px]",
+  presentationNumber: "presentationNumber text-[75px]/[102px] font-medium text-good",
+  presentationText: "presentationText text-lg/5 text-white main:text-2xl/[30px]",
+  presentationGoals: "presentationGoals flex flex-wrap gap-x-31 gap-y-6 rounded-[28px] bg-good p-[30px] text-lg/5 main:gap-y-[34px] main:text-2xl/[26px]",
   presentationGoal: "presentationGoal flex h-13/2 w-[284px] items-center gap-2",
   presentationGoalStar: "presentationGoalStar h-13/2 w-[26px]",
   presentationNewLife: "presentationNewLife relative mb-[50px] mt-[156px] rounded-[30px] bg-white p-[30px] main:mt-[100px] main:p-10",
-  presentationNewLifeTitle: "presentationNewLifeTitle mb-9 text-[32px] font-medium leading-9 main:mb-10 main:text-[60px] main:leading-[60px]",
+  presentationNewLifeTitle: "presentationNewLifeTitle mb-9 text-[32px]/9 font-medium main:mb-10 main:text-6xl",
   presentationNewLifeLeft: "presentationNewLifeLeft relative z-10 list-inside main:w-[448px]",
   presentationNewLifeLeftItem: "presentationNewLifeLeftItem list-disc text-lg opacity-60 main:text-2xl",
   presentationNewLifeRight555: "presentationNewLifeRight555 absolute bottom-[-113px] right-[-16px] h-[690px] w-[739px]",
@@ -112,19 +112,19 @@ export const sharedStyles = {
   userProfileTitle: "userProfileTitle mb-6 main:mb-[50px]",
   userProfileLogo: "userProfileLogo h-[197px] w-[197px] rounded-[20px]",
   userProfileRight: "userProfileRight flex w-[283px] flex-col gap-[30px]",
-  userProfileName: "userProfileName text-[24px] leading-[26px] main:text-[32px] main:leading-[36px]",
+  userProfileName: "userProfileName text-2xl/[26px] main:text-[32px]/9",
   userProfileEmail: "userProfileEmail text-lg [&>span]:font-medium",
   userProfileButtons: "userProfileButtons flex w-full flex-col gap-2.5 main:flex-row",
   userProfileButton: "userProfileButton h-[50px] w-full main:h-13 main:min-w-[192px]",
 
   /* workout */
 
-  breadcrumbsLine: "breadcrumbsLine mb-10 text-[32px] leading-[36px]",
+  breadcrumbsLine: "breadcrumbsLine mb-10 text-[32px]/9",
   breadcrumb: "breadcrumb underline hover:text-404",
   breadcrumbLast: "breadcrumbLast underline",
   videoBlock: "videoBlock h-[639px] overflow-hidden rounded-[30px]",
   workoutProgresses: "workoutProgresses grid w-full grid-cols-3 gap-x-[60px] gap-y-5",
-  workoutDayCaption: "workoutDayCaption mb-5 text-[32px] leading-[36px]",
+  workoutDayCaption: "workoutDayCaption mb-5 text-[32px]/9",
   buttonProgress: "buttonProgress mt-10 w-[320px]",
   writeProgressScrollingList: "writeProgressScrollingList max-h-[346px] w-[346px] overflow-y-scroll",
   writeProgressScrollingListGapped: "writeProgressScrollingListGapped pr-[26px]",
@@ -152,7 +152,7 @@ export const sharedStyles = {
 
   modalWrapper: "modalWrapper fixed left-0 top-0 z-50 flex h-screen w-screen items-center justify-center bg-blocked",
   modalForm: "modalForm m-auto flex w-[360px] flex-col items-center gap-12 rounded-[30px] bg-white p-10",
-  modalFormCaption: "modalFormCaption mb-[14px] text-[32px] leading-9",
+  modalFormCaption: "modalFormCaption mb-[14px] text-[32px]/9",
   modalFormInner: "modalFormInner flex w-full flex-col items-center gap-[34px]",
   modalFormSubgroup: "modalFormSubgroup flex w-full flex-col items-center gap-[10px]",
   modalFormInput: "modalFormInput h-13 w-full rounded-lg border border-neutral bg-white px-4.5 py-4",
@@ -170,8 +170,8 @@ export const sharedStyles = {
   modalListMark: "modalListMark h-6 w-6",
   modalListEmptyMark: "modalListEmptyMark m-0.5 h-[20px] w-[20px] rounded-[10px] border-2 border-light-tx",
   modalListItemContent: "modalListItemContent flex flex-col gap-[10px]",
-  modalListItemExercise: "modalListItemExercise text-[24px] leading-[26px]",
-  modalListItemCourse: "modalListItemCourse text-[16px] leading-[18px]",
+  modalListItemExercise: "modalListItemExercise text-2xl/[26px]",
+  modalListItemCourse: "modalListItemCourse text-base/[18px]",
 
   /* page 404 */
 
