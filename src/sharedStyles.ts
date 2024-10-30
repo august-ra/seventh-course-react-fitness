@@ -16,7 +16,7 @@ export const sharedStyles = {
   buttonCommon: "buttonCommon h-9 w-[83px] rounded-[46px] duration-300 main:h-13 main:w-[103px]",
   buttonPrimary: "buttonPrimary bg-good hover:bg-well active:bg-black active:text-white disabled:bg-light-bg disabled:text-light-tx",
   buttonSecondary: "buttonSecondary border border-black bg-white hover:bg-light-bg active:bg-dark disabled:text-light-tx",
-  buttonWide: "buttonWide w-full main:w-full",
+  buttonWide: "buttonWide h-[50px] w-full main:h-13 main:w-full",
   buttonWideWithFields: "buttonWideWithFields h-[50px] w-full text-nowrap px-11 main:h-13 main:w-full",
   buttonWideWithMargin: "buttonWideWithMargin mt-7 h-[50px] w-full main:mt-10 main:h-13 main:w-full",
 
@@ -151,8 +151,8 @@ export const sharedStyles = {
   /* modal: signing */
 
   modalWrapper: "modalWrapper fixed left-0 top-0 z-50 flex h-screen w-screen items-center justify-center bg-blocked",
-  modalForm: "modalForm m-auto flex w-[360px] flex-col items-center gap-12 rounded-[30px] bg-white p-10",
-  modalFormCaption: "modalFormCaption mb-[14px] text-[32px]/9",
+  modalForm: "modalForm m-auto flex w-[360px] flex-col items-center gap-12 rounded-[30px] bg-white p-[30px] main:p-10",
+  modalFormCaption: "modalFormCaption text-[32px]/9 main:mb-[14px]",
   modalFormInner: "modalFormInner flex w-full flex-col items-center gap-[34px]",
   modalFormSubgroup: "modalFormSubgroup flex w-full flex-col items-center gap-[10px]",
   modalFormInput: "modalFormInput h-13 w-full rounded-lg border border-neutral bg-white px-4.5 py-4",
@@ -162,16 +162,16 @@ export const sharedStyles = {
 
   /* modal: exercises' list */
 
-  modalFormCompact: "modalFormCompact w-auto gap-[34px]",
+  modalFormCompact: "modalFormCompact w-[343px] gap-[34px] main:w-auto",
   modalScrollingList: "modalScrollingList max-h-[364px] w-full overflow-y-scroll",
   modalScrollingListGapped: "modalScrollingListGapped pr-[26px]",
   modalList: "modalList w-full",
   modalListItem: "modalListItem flex items-center gap-[10px] border-b border-b-delimiter pb-2.5 [&:not(:first-child)]:pt-2.5",
   modalListMark: "modalListMark h-6 w-6",
-  modalListEmptyMark: "modalListEmptyMark m-0.5 h-[20px] w-[20px] rounded-[10px] border-2 border-light-tx",
+  modalListEmptyMark: "modalListEmptyMark m-0.5 h-[20px] min-w-[20px] rounded-[10px] border-2 border-light-tx",
   modalListItemContent: "modalListItemContent flex flex-col gap-[10px]",
-  modalListItemExercise: "modalListItemExercise text-2xl/[26px]",
-  modalListItemCourse: "modalListItemCourse text-base/[18px]",
+  modalListItemExercise: "modalListItemExercise text-lg/[20px] main:text-2xl/[26px]",
+  modalListItemCourse: "modalListItemCourse text-sm/[16px] main:text-base/[18px]",
 
   /* page 404 */
 

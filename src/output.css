@@ -1134,6 +1134,10 @@ img{
   min-width: 834px;
 }
 
+.min-w-\[20px\]{
+  min-width: 20px;
+}
+
 .max-w-\[864px\]{
   max-width: 864px;
 }
@@ -1542,6 +1546,16 @@ img{
   line-height: 1.25rem;
 }
 
+.text-lg\/\[20px\]{
+  font-size: 1.125rem;
+  line-height: 20px;
+}
+
+.text-sm\/\[16px\]{
+  font-size: 0.875rem;
+  line-height: 16px;
+}
+
 .font-medium{
   font-weight: 500;
 }
@@ -1740,6 +1754,10 @@ img{
     margin-top: 60px;
   }
 
+  .main\:mb-\[14px\]{
+    margin-bottom: 14px;
+  }
+
   .main\:block{
     display: block;
   }
@@ -1812,6 +1830,10 @@ img{
     width: 100%;
   }
 
+  .main\:w-auto{
+    width: auto;
+  }
+
   .main\:min-w-\[192px\]{
     min-width: 192px;
   }
@@ -1876,6 +1898,11 @@ img{
   .main\:text-\[40px\]\/\[44px\]{
     font-size: 40px;
     line-height: 44px;
+  }
+
+  .main\:text-base\/\[18px\]{
+    font-size: 1rem;
+    line-height: 18px;
   }
 
   .group\/card:hover .main\:group-hover\/card\:flex{

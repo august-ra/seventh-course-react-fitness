@@ -17,7 +17,7 @@ function StyleClasses() {
       <buttonCommon className="h-9 w-[83px] rounded-[46px] duration-300 main:h-13 main:w-[103px]" />
       <buttonPrimary className="bg-good hover:bg-well active:bg-black active:text-white disabled:bg-light-bg disabled:text-light-tx" />
       <buttonSecondary className="border border-black bg-white hover:bg-light-bg active:bg-dark disabled:text-light-tx" />
-      <buttonWide className="w-full main:w-full" />
+      <buttonWide className="h-[50px] w-full main:h-13 main:w-full" />
       <buttonWideWithFields className="h-[50px] w-full text-nowrap px-11 main:h-13 main:w-full" />
       <buttonWideWithMargin className="mt-7 h-[50px] w-full main:mt-10 main:h-13 main:w-full" />
       {/* main */}
@@ -128,8 +128,8 @@ function StyleClasses() {
       <footerThinText className="block main:hidden" />
       {/* modal: signing */}
       <modalWrapper className="fixed left-0 top-0 z-50 flex h-screen w-screen items-center justify-center bg-blocked" />
-      <modalForm className="m-auto flex w-[360px] flex-col items-center gap-12 rounded-[30px] bg-white p-10" />
-      <modalFormCaption className="mb-[14px] text-[32px]/9" />
+      <modalForm className="m-auto flex w-[360px] flex-col items-center gap-12 rounded-[30px] bg-white p-[30px] main:p-10" />
+      <modalFormCaption className="text-[32px]/9 main:mb-[14px]" />
       <modalFormInner className="flex w-full flex-col items-center gap-[34px]" />
       <modalFormSubgroup className="flex w-full flex-col items-center gap-[10px]" />
       <modalFormInput className="h-13 w-full rounded-lg border border-neutral bg-white px-4.5 py-4" />
@@ -137,16 +137,16 @@ function StyleClasses() {
       <modalFormSuggestionLink className="text-center text-sm font-medium text-404 underline" />
       <modalFormErrorLink className="text-center text-sm font-medium text-bad underline" />
       {/* modal: exercises' list */}
-      <modalFormCompact className="w-auto gap-[34px]" />
+      <modalFormCompact className="w-[343px] gap-[34px] main:w-auto" />
       <modalScrollingList className="max-h-[364px] w-full overflow-y-scroll" />
       <modalScrollingListGapped className="pr-[26px]" />
       <modalList className="w-full" />
       <modalListItem className="flex items-center gap-[10px] border-b border-b-delimiter pb-2.5 [&:not(:first-child)]:pt-2.5" />
       <modalListMark className="h-6 w-6" />
-      <modalListEmptyMark className="m-0.5 h-[20px] w-[20px] rounded-[10px] border-2 border-light-tx" />
+      <modalListEmptyMark className="m-0.5 h-[20px] min-w-[20px] rounded-[10px] border-2 border-light-tx" />
       <modalListItemContent className="flex flex-col gap-[10px]" />
-      <modalListItemExercise className="text-2xl/[26px]" />
-      <modalListItemCourse className="text-base/[18px]" />
+      <modalListItemExercise className="text-lg/[20px] main:text-2xl/[26px]" />
+      <modalListItemCourse className="text-sm/[16px] main:text-base/[18px]" />
       {/* page 404 */}
       <page404Container className="relative flex h-screen justify-center bg-white" />
       <page404Image className="h-[800px] w-[1200px]" />
