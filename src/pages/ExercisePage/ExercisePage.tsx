@@ -43,7 +43,7 @@ export default function ExercisePage() {
 
         <main className="">
           <section className="">
-            <h1 className={sharedStyles.bannerText}>{workoutData.courseName}</h1>
+            <h1 className={sharedStyles.videoText}>{workoutData.courseName}</h1>
 
             <div className={sharedStyles.breadcrumbsLine}>
               <Link className={sharedStyles.breadcrumb} to="/">Красота и здоровье</Link>
@@ -60,7 +60,7 @@ export default function ExercisePage() {
             </div>
           </section>
 
-          <section className={twMerge(sharedStyles.presentationNewLife, sharedStyles.shadowedBlock)}>
+          <section className={twMerge(sharedStyles.workoutProgressesBlock, sharedStyles.shadowedBlock)}>
             <p className={sharedStyles.workoutDayCaption}>Упражнения тренировки {workoutData.day}</p>
 
             <div className={sharedStyles.workoutProgresses}>
@@ -69,9 +69,7 @@ export default function ExercisePage() {
                   ? (
                     <>
                       {
-                        getOrderList(workoutData.exercises.length).map((index) => {
-                          const exercise = workoutData.exercises[index]
-
+                        workoutData.exercises.map((exercise, index) => {
                           if (!exercise)
                             return null
 
