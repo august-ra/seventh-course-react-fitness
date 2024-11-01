@@ -15,6 +15,10 @@ export default function ProfilePage() {
   const coursesData = useLoaderData() as CoursesType
   const userContext = useUserContext()
 
+  function handleSignOut() {
+    userContext.clear()
+  }
+
   return (
     <div className={sharedStyles.wrapper}>
       <div className={sharedStyles.container}>
@@ -33,7 +37,9 @@ export default function ProfilePage() {
                   <Button primary={true} type="submit" additionalClasses={sharedStyles.userProfileButton}>
                     Изменить пароль
                   </Button>
-                  <Button primary={false} additionalClasses={sharedStyles.userProfileButton}>Выйти</Button>
+                  <Button primary={false} additionalClasses={sharedStyles.userProfileButton} onClick={handleSignOut}>
+                    Выйти
+                  </Button>
                 </div>
               </form>
             </div>
