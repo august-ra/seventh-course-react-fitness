@@ -45,23 +45,26 @@ export default function ExercisesListPage() {
         <div className={twMerge(sharedStyles.modalScrollingList, workoutsData.length > 5 && sharedStyles.modalScrollingListGapped)}>
           <ul className={sharedStyles.modalList}>
             {
-              workoutsData.map((workout) => (
-                <li key={workout._id} className={sharedStyles.modalListItem}>
-                  {
-                    workout.progress === workout.max
-                      ? (
-                        <img className={sharedStyles.modalListMark} src="/img/mark.svg" alt="mark" />
-                      )
-                      : (
-                        <div className={sharedStyles.modalListEmptyMark} />
-                      )
-                  }
-                  <div className={sharedStyles.modalListItemContent}>
-                    <p className={sharedStyles.modalListItemExercise}>{workout.name}</p>
-                    <p className={sharedStyles.modalListItemCourse}>{workout.courseName} на каждый день / {workout.day} день</p>
-                  </div>
-                </li>
-              ))
+              workoutsData.map((workout) => {
+                const handleClick = () => navigate(`/workout/${id}/${workout._id}/`, { replace: true })
+                return (
+                  <li key={workout._id} className={sharedStyles.modalListItem} onClick={handleClick}>
+                    {
+                      workout.progress === workout.max
+                        ? (
+                          <img className={sharedStyles.modalListMark} src="/img/mark.svg" alt="mark" />
+                        )
+                        : (
+                          <div className={sharedStyles.modalListEmptyMark} />
+                        )
+                    }
+                    <div className={sharedStyles.modalListItemContent}>
+                      <p className={sharedStyles.modalListItemExercise}>{workout.name}</p>
+                      <p className={sharedStyles.modalListItemCourse}>{workout.courseName} на каждый день / {workout.day} день</p>
+                    </div>
+                  </li>
+                )
+              })
             }
           </ul>
         </div>
