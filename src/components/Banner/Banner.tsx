@@ -13,6 +13,7 @@ export default function Banner({ courseData }: Props) {
 
   const classNames = twMerge(
     sharedStyles.bannerPicture,
+    sharedStyles[(`card-${name}`) as KeysType],
     sharedStyles[(`banner-${name}`) as KeysType],
   )
 

@@ -5,7 +5,7 @@ export const sharedStyles = {
 
   shadowedBlock: "shadowedBlock shadow-3xl",
   scaledBlock: "scaledBlock duration-300 hover:scale-102",
-  text_18_20: "text_18_20 text-[18px] leading-[20px]",
+  text_18_20: "text_18_20 text-lg/5",
 
   /* courses */
 
@@ -13,86 +13,87 @@ export const sharedStyles = {
 
   /* button */
 
-  buttonCommon: "buttonCommon h-13 w-[103px] rounded-[46px] duration-300",
+  buttonCommon: "buttonCommon h-9 w-[83px] rounded-[46px] duration-300 main:h-13 main:w-[103px]",
   buttonPrimary: "buttonPrimary bg-good hover:bg-well active:bg-black active:text-white disabled:bg-light-bg disabled:text-light-tx",
   buttonSecondary: "buttonSecondary border border-black bg-white hover:bg-light-bg active:bg-dark disabled:text-light-tx",
-  buttonWide: "buttonWide w-full",
-  buttonWideWithFields: "buttonWideWithFields w-full text-nowrap px-11",
-  buttonWideWithMargin: "buttonWideWithMargin mt-10 w-full",
+  buttonWide: "buttonWide h-[50px] w-full main:h-13 main:w-full",
+  buttonWideWithFields: "buttonWideWithFields h-[50px] w-full text-nowrap px-11 main:h-13 main:w-full",
+  buttonWideWithMargin: "buttonWideWithMargin mt-7 h-[50px] w-full main:mt-10 main:h-13 main:w-full",
 
   /* main */
 
   wrapper: "wrapper flex h-[100vh] flex-col justify-between",
-  container: "container m-auto w-[1160px] flex-1",
+  container: "container m-auto w-[343px] flex-1 main:w-[1160px]",
 
   /* header */
 
-  header: "header flex w-full justify-between pb-[60px] pt-[50px]",
+  header: "header flex w-full justify-between py-10 main:pb-[60px] main:pt-[50px]",
   headerContainer: "headerContainer flex w-1/2 flex-col justify-start gap-[15px] text-left",
   headerLogo: "headerLogo h-[35px] w-[220px]",
-  headerSlogan: "headerSlogan",
-  headerUserGroup: "headerUserGroup relative flex h-[50px] items-center gap-4",
-  headerProfileBlock: "headerProfileBlock group/profile flex items-center gap-3",
-  headerProfileLogo: "headerProfileLogo h-[50px] w-[50px]",
-  headerProfileName: "headerProfileName text-[24px] leading-[26px] hover:underline group-hover/profile:text-404",
+  headerSlogan: "headerSlogan hidden main:block",
+  headerUserGroup: "headerUserGroup relative flex h-9 items-center gap-4 main:h-[50px]",
+  headerProfileBlock: "headerProfileBlock group/profile hidden items-center gap-3 main:flex",
+  headerProfileBlockSmall: "headerProfileBlockSmall group/profile flex items-center gap-3 main:hidden",
+  headerProfileLogo: "headerProfileLogo h-9 w-9 main:h-[50px] main:w-[50px]",
+  headerProfileName: "headerProfileName text-2xl/[26px] hover:underline group-hover/profile:text-404",
   headerProfileNameBtn: "headerProfileNameBtn mr-px h-2 w-2 rotate-45 border-b-2 border-r-2 group-hover/profile:border-404",
   headerProfileNameBtnReversed: "headerProfileNameBtnReversed rotate-225",
 
   /* caption */
 
   caption: "caption flex justify-between text-left",
-  captionText: "captionText max-w-[864px] text-[60px] font-medium leading-none",
-  captionBalloon: "captionBalloon relative",
-  captionBalloonTail: "captionBalloonTail absolute right-[140px] top-[85px] h-[36px] w-[30px]",
-  captionBalloonFace: "captionBalloonFace relative z-10 h-[102px] w-[288px] rounded-[5px] bg-good px-5 py-4 text-[32px] leading-9",
+  captionText: "captionText mb-[34px] max-w-[864px] text-[32px]/9 font-medium main:mb-[50px] main:text-6xl",
+  captionBalloon: "captionBalloon relative hidden main:block",
+  captionBalloonTail: "captionBalloonTail absolute right-[140px] top-[85px] h-9 w-[30px]",
+  captionBalloonFace: "captionBalloonFace relative z-10 h-[102px] w-[288px] rounded-[5px] bg-good px-5 py-4 text-[32px]/9",
 
   /* banner */
 
-  banner: "banner relative mb-[60px] h-[310px] max-h-[310px] min-h-[310px] w-[1160px] overflow-hidden rounded-[30px] p-10 text-white",
-  bannerText: "bannerText relative z-10 mb-[18px] h-[66px] text-[60px] font-medium leading-[66px]",
+  banner: "banner relative mb-[40px] h-[389px] w-[343px] overflow-hidden rounded-[30px] p-10 text-white main:mb-[60px] main:h-[310px] main:w-[1160px]",
+  bannerText: "bannerText relative z-10 mb-[18px] hidden h-[66px] text-6xl/[66px] font-medium leading-[66px] main:block",
   bannerPicture: "bannerPicture absolute",
-  "banner-yoga": "banner-yoga right-[-295px] top-[-175px] w-[80%]",
-  "banner-stretching": "banner-stretching right-[-10px] top-0 w-[30%]",
-  "banner-zumba": "banner-zumba right-[-271px] top-[-37px] w-[78%]",
-  "banner-aerobics": "banner-aerobics right-0 top-[-315px] w-[40%]",
-  "banner-body-flex": "banner-body-flex right-[-200px] top-[-155px] w-[70%]",
+  "banner-yoga": "banner-yoga top-[-55px] main:right-[-295px] main:top-[-175px] main:w-[80%]",
+  "banner-stretching": "banner-stretching main:right-[-10px] main:top-0 main:w-[30%]",
+  "banner-zumba": "banner-zumba main:right-[-271px] main:top-[-37px] main:w-[78%]",
+  "banner-aerobics": "banner-aerobics top-[-651px] main:right-0 main:top-[-315px] main:w-[40%]",
+  "banner-body-flex": "banner-body-flex top-[-113px] main:right-[-200px] main:top-[-155px] main:w-[70%]",
 
   /* card */
 
-  cards: "cards mt-[50px] flex w-full flex-wrap justify-start gap-10",
-  card: "card relative w-[360px] rounded-[30px] bg-white hover:z-40",
-  cardPicture: "cardPicture relative h-[325px] w-[360px] overflow-hidden rounded-[30px]",
+  cards: "cards flex w-full flex-wrap justify-start gap-6 main:gap-10",
+  card: "card relative w-[343px] rounded-[30px] bg-white hover:z-40 main:w-[360px]",
+  cardPicture: "cardPicture relative h-[325px] w-[343px] overflow-hidden rounded-[30px] main:w-[360px]",
   cardInner: "cardInner absolute",
   "card-yoga": "card-yoga right-[-232px] top-[-119px] min-h-[557px] min-w-[834px]",
   "card-stretching": "card-stretching right-0 top-0 min-h-[540px] min-w-[360px]",
-  "card-zumba": "card-zumba right-[-398px] top-[-32px] min-h-[767px] min-w-[1150px]",
+  "card-zumba": "card-zumba -top-8 right-[-398px] min-h-[767px] min-w-[1150px]",
   "card-aerobics": "card-aerobics right-[-82px] top-[-715px] min-h-[1081px] min-w-[721px]",
   "card-body-flex": "card-body-flex right-[-182px] top-[-168px] min-h-[514px] min-w-[771px]",
-  cardAction: "cardAction group/card absolute h-[32px] w-[32px]",
-  cardAddBtn: "cardAddBtn absolute left-[308px] top-[-305px] h-[32px] w-[32px] cursor-arrow duration-300 hover:scale-110",
-  cardActionTooltip: "cardActionTooltip absolute left-[352px] top-[-262px] hidden h-[27px] w-max items-center justify-center rounded-[5px] border border-black bg-white p-1.5 text-sm group-hover/card:flex",
-  cardBlock: "cardBlock px-[30px] pb-[15px] pt-6",
+  cardAction: "cardAction group/card absolute h-8 w-8",
+  cardAddBtn: "cardAddBtn absolute left-[291px] top-[-305px] h-8 w-8 cursor-arrow duration-300 hover:scale-110 main:left-[308px]",
+  cardActionTooltip: "cardActionTooltip absolute left-[352px] top-[-262px] hidden h-[27px] w-max items-center justify-center rounded-[5px] border border-black bg-white p-1.5 text-sm main:group-hover/card:flex",
+  cardBlock: "cardBlock mx-auto flex w-[300px] flex-col gap-10 pb-[15px] pt-6",
   cardContent: "cardContent flex flex-col gap-5",
-  cardTitle: "cardTitle text-[32px] font-medium leading-9",
+  cardTitle: "cardTitle text-2xl/[26px] font-medium main:text-[32px]/9",
   cardTablets: "cardTablets flex flex-wrap gap-[6px]",
   cardTablet: "cardTablet flex h-[38px] gap-[6px] rounded-[50px] bg-light-bg p-[10px]",
-  cardTabletText: "cardTabletText text-nowrap text-[16px] leading-[18px]",
+  cardTabletText: "cardTabletText text-nowrap text-base/[18px]",
 
   /* presentation */
 
-  presentation: "presentation my-[60px]",
-  presentationTitle: "presentationTitle mb-10 text-[40px] font-medium leading-[44px]",
-  presentationContent: "presentationContent flex justify-between gap-[17px] text-left",
+  presentation: "presentation my-[40px] main:my-[60px]",
+  presentationTitle: "presentationTitle mb-6 text-2xl/[26px] font-medium main:mb-10 main:text-[40px]/[44px]",
+  presentationContent: "presentationContent flex flex-col justify-between gap-[17px] text-left main:flex-row",
   presentationBlock: "presentationBlock flex h-[141px] items-center gap-[25px] rounded-[28px] bg-black px-5",
-  presentationNumber: "presentationNumber text-[75px] font-medium leading-[102px] text-good",
-  presentationText: "presentationText text-[24px] leading-[30px] text-white",
-  presentationGoals: "presentationGoals flex flex-wrap gap-x-[124px] gap-y-[34px] rounded-[28px] bg-good p-[30px] text-[24px] leading-[26px]",
+  presentationNumber: "presentationNumber text-[75px]/[102px] font-medium text-good",
+  presentationText: "presentationText text-lg/5 text-white main:text-2xl/[30px]",
+  presentationGoals: "presentationGoals flex flex-wrap gap-x-31 gap-y-6 rounded-[28px] bg-good p-[30px] text-lg/5 main:gap-y-[34px] main:text-2xl/[26px]",
   presentationGoal: "presentationGoal flex h-13/2 w-[284px] items-center gap-2",
   presentationGoalStar: "presentationGoalStar h-13/2 w-[26px]",
-  presentationNewLife: "presentationNewLife relative mb-[50px] mt-[100px] rounded-[30px] bg-white p-10",
-  presentationNewLifeTitle: "presentationNewLifeTitle mb-10 text-[60px] font-medium leading-[60px]",
-  presentationNewLifeLeft: "presentationNewLifeLeft relative z-10 w-[448px] list-inside",
-  presentationNewLifeLeftItem: "presentationNewLifeLeftItem list-disc text-2xl opacity-60",
+  presentationNewLife: "presentationNewLife relative mb-[50px] mt-[156px] rounded-[30px] bg-white p-[30px] main:mt-[100px] main:p-10",
+  presentationNewLifeTitle: "presentationNewLifeTitle mb-9 text-[32px]/9 font-medium main:mb-10 main:text-6xl",
+  presentationNewLifeLeft: "presentationNewLifeLeft relative z-10 list-inside main:w-[448px]",
+  presentationNewLifeLeftItem: "presentationNewLifeLeftItem list-disc text-lg opacity-60 main:text-2xl",
   presentationNewLifeRight555: "presentationNewLifeRight555 absolute bottom-[-113px] right-[-16px] h-[690px] w-[739px]",
   presentationNewLifeRight: "presentationNewLifeRight absolute bottom-0 right-0 h-full w-full overflow-hidden",
   presentationNewLifeLines: "presentationNewLifeLines absolute bottom-[-58px] right-[30px] h-[530px] w-[635px]",
@@ -106,29 +107,30 @@ export const sharedStyles = {
 
   /* user profile */
 
-  userProfile: "userProfile mt-10 flex gap-[33px] rounded-[30px] bg-white p-[30px]",
-  userProfileSection: "userProfileSection mt-[60px]",
+  userProfile: "userProfile mt-10 flex flex-col items-center gap-[33px] rounded-[30px] bg-white p-[30px] main:flex-row main:items-start",
+  userProfileSection: "userProfileSection mt-6 main:mt-[60px]",
+  userProfileTitle: "userProfileTitle mb-6 main:mb-[50px]",
   userProfileLogo: "userProfileLogo h-[197px] w-[197px] rounded-[20px]",
-  userProfileRight: "userProfileRight flex flex-col gap-[30px]",
-  userProfileName: "userProfileName text-[32px] leading-[36px]",
+  userProfileRight: "userProfileRight flex w-[283px] flex-col gap-[30px]",
+  userProfileName: "userProfileName text-2xl/[26px] main:text-[32px]/9",
   userProfileEmail: "userProfileEmail text-lg [&>span]:font-medium",
-  userProfileButtons: "userProfileButtons flex w-full gap-2.5",
-  userProfileButton: "userProfileButton w-[192px]",
+  userProfileButtons: "userProfileButtons flex w-full flex-col gap-2.5 main:flex-row",
+  userProfileButton: "userProfileButton h-[50px] w-full main:h-13 main:min-w-[192px]",
 
   /* workout */
 
-  breadcrumbsLine: "breadcrumbsLine mb-10 text-[32px] leading-[36px]",
+  breadcrumbsLine: "breadcrumbsLine mb-10 text-[32px]/9",
   breadcrumb: "breadcrumb underline hover:text-404",
   breadcrumbLast: "breadcrumbLast underline",
   videoBlock: "videoBlock h-[639px] overflow-hidden rounded-[30px]",
   workoutProgresses: "workoutProgresses grid w-full grid-cols-3 gap-x-[60px] gap-y-5",
-  workoutDayCaption: "workoutDayCaption mb-5 text-[32px] leading-[36px]",
+  workoutDayCaption: "workoutDayCaption mb-5 text-[32px]/9",
   buttonProgress: "buttonProgress mt-10 w-[320px]",
   writeProgressScrollingList: "writeProgressScrollingList max-h-[346px] w-[346px] overflow-y-scroll",
   writeProgressScrollingListGapped: "writeProgressScrollingListGapped pr-[26px]",
   writeProgressList: "writeProgressList flex w-full flex-col gap-5 overflow-y-scroll",
   writeProgressItem: "writeProgressItem flex flex-col gap-[10px]",
-  writeProgressInput: "writeProgressInput h-[52px] rounded-[8px] border border-neutral bg-white px-[18px] py-4",
+  writeProgressInput: "writeProgressInput h-13 rounded-lg border border-neutral bg-white px-[18px] py-4",
 
   /* progress */
 
@@ -140,33 +142,36 @@ export const sharedStyles = {
 
   /* footer */
 
-  climber: "climber mt-[34px] flex justify-center",
+  climber: "climber mt-[34px] flex justify-end main:justify-center",
+  climberBtn: "climberBtn h-13 w-[127px] main:w-[127px]",
   footer: "footer flex flex-none justify-center pb-[60px] pt-[50px]",
+  footerWideText: "footerWideText hidden main:block",
+  footerThinText: "footerThinText block main:hidden",
 
   /* modal: signing */
 
   modalWrapper: "modalWrapper fixed left-0 top-0 z-50 flex h-screen w-screen items-center justify-center bg-blocked",
-  modalForm: "modalForm m-auto flex w-[360px] flex-col items-center gap-12 rounded-[30px] bg-white p-10",
-  modalFormCaption: "modalFormCaption mb-[14px] text-[32px] leading-9",
+  modalForm: "modalForm m-auto flex w-[360px] flex-col items-center gap-12 rounded-[30px] bg-white p-[30px] main:p-10",
+  modalFormCaption: "modalFormCaption text-[32px]/9 main:mb-[14px]",
   modalFormInner: "modalFormInner flex w-full flex-col items-center gap-[34px]",
   modalFormSubgroup: "modalFormSubgroup flex w-full flex-col items-center gap-[10px]",
-  modalFormInput: "modalFormInput h-13 w-full rounded-[8px] border border-neutral bg-white px-4.5 py-4",
+  modalFormInput: "modalFormInput h-13 w-full rounded-lg border border-neutral bg-white px-4.5 py-4",
   modalFormError: "modalFormError text-center text-sm text-bad",
   modalFormSuggestionLink: "modalFormSuggestionLink text-center text-sm font-medium text-404 underline",
   modalFormErrorLink: "modalFormErrorLink text-center text-sm font-medium text-bad underline",
 
   /* modal: exercises' list */
 
-  modalFormCompact: "modalFormCompact w-auto gap-[34px]",
+  modalFormCompact: "modalFormCompact w-[343px] gap-[34px] main:w-auto",
   modalScrollingList: "modalScrollingList max-h-[364px] w-full overflow-y-scroll",
   modalScrollingListGapped: "modalScrollingListGapped pr-[26px]",
   modalList: "modalList w-full",
   modalListItem: "modalListItem flex items-center gap-[10px] border-b border-b-delimiter pb-2.5 [&:not(:first-child)]:pt-2.5",
   modalListMark: "modalListMark h-6 w-6",
-  modalListEmptyMark: "modalListEmptyMark m-0.5 h-[20px] w-[20px] rounded-[10px] border-2 border-light-tx",
+  modalListEmptyMark: "modalListEmptyMark m-0.5 h-[20px] min-w-[20px] rounded-[10px] border-2 border-light-tx",
   modalListItemContent: "modalListItemContent flex flex-col gap-[10px]",
-  modalListItemExercise: "modalListItemExercise text-[24px] leading-[26px]",
-  modalListItemCourse: "modalListItemCourse text-[16px] leading-[18px]",
+  modalListItemExercise: "modalListItemExercise text-lg/[20px] main:text-2xl/[26px]",
+  modalListItemCourse: "modalListItemCourse text-sm/[16px] main:text-base/[18px]",
 
   /* page 404 */
 
