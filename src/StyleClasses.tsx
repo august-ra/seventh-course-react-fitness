@@ -10,6 +10,7 @@ function StyleClasses() {
       {/* common */}
       <shadowedBlock className="shadow-3xl" />
       <scaledBlock className="duration-300 hover:scale-102" />
+      <hiddenBlock className="main:hidden" />
       <text_18_20 className="text-lg/5" />
       {/* courses */}
       <colors className="bg-aerobics bg-body-flex bg-stretching bg-yoga bg-zumba" />
@@ -79,14 +80,15 @@ function StyleClasses() {
       <presentationGoals className="flex flex-wrap gap-x-31 gap-y-6 rounded-[28px] bg-good p-[30px] text-lg/5 main:gap-y-[34px] main:text-2xl/[26px]" />
       <presentationGoal className="flex h-13/2 w-[284px] items-center gap-2" />
       <presentationGoalStar className="h-13/2 w-[26px]" />
-      <presentationNewLife className="relative mb-[50px] mt-[286px] rounded-[30px] bg-white p-[30px] main:mt-[100px] main:p-10" />
+      <presentationNewLifeSection className="relative mx-auto mt-[116px] w-[482px] main:mt-[42px] main:w-[1160px]" />
+      <presentationNewLife className="presentationNewLife relative z-10 m-auto w-[343px] rounded-[30px] bg-white p-[30px] main:z-0 main:mt-0 main:w-[1160px] main:p-10" />
       <presentationNewLifeTitle className="mb-9 text-[32px]/9 font-medium main:mb-10 main:text-6xl" />
       <presentationNewLifeLeft className="relative z-10 list-inside main:w-[448px]" />
       <presentationNewLifeLeftItem className="list-disc text-lg opacity-60 main:text-2xl" />
-      <presentationNewLifeRight555 className="absolute bottom-[-113px] right-[-16px] h-[690px] w-[739px]" />
-      <presentationNewLifeRight className="absolute bottom-0 right-0 h-full w-full overflow-hidden" />
+      <presentationNewLifeRight className="absolute bottom-0 right-0 hidden h-full w-full overflow-hidden main:block" />
       <presentationNewLifeLines className="absolute bottom-[-58px] right-[30px] h-[530px] w-[635px]" />
-      <presentationNewLifeMan className="absolute bottom-[9px] right-[9px] h-[570px] w-[550px]" />
+      <presentationNewLifeMan className="absolute bottom-[9px] right-[9px] hidden h-[570px] w-[550px] main:block" />
+      <presentationNewLifeManSmall className="presentationNewLifeMan absolute right-[9px] top-[-265px] m-auto max-h-[456px] max-w-[482px] main:hidden" />
       {/* user menu */}
       <userMenu className="absolute right-0 top-[74px] z-20 flex flex-col justify-center gap-[34px] rounded-[30px] bg-white p-[30px]" />
       <userMenuEmail className="text-center text-lg" />
@@ -143,7 +145,7 @@ function StyleClasses() {
       <modalScrollingList className="max-h-[364px] w-full overflow-y-scroll" />
       <modalScrollingListGapped className="pr-[26px]" />
       <modalList className="w-full" />
-      <modalListItem className="flex items-center gap-[10px] border-b border-b-delimiter pb-2.5 [&:not(:first-child)]:pt-2.5" />
+      <modalListItem className="flex cursor-pointer items-center gap-[10px] border-b border-b-delimiter pb-2.5 hover:bg-light-bg [&:not(:first-child)]:pt-2.5" />
       <modalListMark className="h-6 w-6" />
       <modalListEmptyMark className="m-0.5 h-[20px] min-w-[20px] rounded-[10px] border-2 border-light-tx" />
       <modalListItemContent className="flex flex-col gap-[10px]" />
