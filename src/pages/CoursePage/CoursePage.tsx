@@ -61,59 +61,61 @@ export default function CoursePage() {
         <main className="">
           <Banner key={courseData._id} courseData={courseData} />
 
-          <section className="">
-            <div className={sharedStyles.presentation}>
-              <h3 className={sharedStyles.presentationTitle}>Подойдет для вас, если:</h3>
-              <div className={sharedStyles.presentationContent}>
-                {
-                  courseData.fitting.map((item, index) => (
-                    <div key={index} className={sharedStyles.presentationBlock}>
-                      <p className={sharedStyles.presentationNumber}>{index + 1}</p>
-                      <p className={sharedStyles.presentationText}>{item}</p>
-                    </div>
-                  ))
-                }
-              </div>
-            </div>
-
-            <div className={sharedStyles.presentation}>
-              <h3 className={sharedStyles.presentationTitle}>Направления</h3>
-              <ul className={sharedStyles.presentationGoals}>
-                {
-                  courseData.directions.map((item, index) => (
-                    <li key={index} className={sharedStyles.presentationGoal}>
-                      <img className={sharedStyles.presentationGoalStar} src="/img/star.svg" alt="star" />
-                      <p>{item}</p>
-                    </li>
-                  ))
-                }
-              </ul>
-            </div>
-
-            <div className={twMerge(sharedStyles.presentationNewLife, sharedStyles.shadowedBlock, sharedStyles.scaledBlock)}>
-              <div className={sharedStyles.presentationNewLifeLeft}>
-                <h2 className={sharedStyles.presentationNewLifeTitle}>Начните путь<br />к новому телу</h2>
-                <ul className={sharedStyles.presentationNewLifeLeft}>
-                  <li className={sharedStyles.presentationNewLifeLeftItem}>проработка всех групп мышц</li>
-                  <li className={sharedStyles.presentationNewLifeLeftItem}>тренировка суставов</li>
-                  <li className={sharedStyles.presentationNewLifeLeftItem}>улучшение циркуляции крови</li>
-                  <li className={sharedStyles.presentationNewLifeLeftItem}>заряд бодрости</li>
-                  <li className={sharedStyles.presentationNewLifeLeftItem}>помощь в противостоянии стрессам</li>
-                </ul>
-
-                <Button additionalClasses={sharedStyles.buttonWideWithMargin} primary={true} onClick={handleSubmit}>
-                  {getButtonText()}
-                </Button>
-              </div>
-
-              <div className={sharedStyles.presentationNewLifeRight}>
-                <img className={sharedStyles.presentationNewLifeLines} src="/img/curves.svg" alt="curves" />
-              </div>
-
-              <img className={sharedStyles.presentationNewLifeMan} src="/img/runner.png" alt="runner" />
+          <section className={sharedStyles.presentation}>
+            <h3 className={sharedStyles.presentationTitle}>Подойдет для вас, если:</h3>
+            <div className={sharedStyles.presentationContent}>
+              {
+                courseData.fitting.map((item, index) => (
+                  <div key={index} className={sharedStyles.presentationBlock}>
+                    <p className={sharedStyles.presentationNumber}>{index + 1}</p>
+                    <p className={sharedStyles.presentationText}>{item}</p>
+                  </div>
+                ))
+              }
             </div>
           </section>
+
+          <section className={sharedStyles.presentation}>
+            <h3 className={sharedStyles.presentationTitle}>Направления</h3>
+            <ul className={sharedStyles.presentationGoals}>
+              {
+                courseData.directions.map((item, index) => (
+                  <li key={index} className={sharedStyles.presentationGoal}>
+                    <img className={sharedStyles.presentationGoalStar} src="/img/star.svg" alt="star" />
+                    <p>{item}</p>
+                  </li>
+                ))
+              }
+            </ul>
+          </section>
         </main>
+      </div>
+
+      <div className={sharedStyles.presentationNewLifeSection}>
+        <section className={twMerge(sharedStyles.presentationNewLife, sharedStyles.shadowedBlock, sharedStyles.scaledBlock)}>
+          <div className={sharedStyles.presentationNewLifeLeft}>
+            <h2 className={sharedStyles.presentationNewLifeTitle}>Начните путь<br />к новому телу</h2>
+            <ul className={sharedStyles.presentationNewLifeLeft}>
+              <li className={sharedStyles.presentationNewLifeLeftItem}>проработка всех групп мышц</li>
+              <li className={sharedStyles.presentationNewLifeLeftItem}>тренировка суставов</li>
+              <li className={sharedStyles.presentationNewLifeLeftItem}>улучшение циркуляции крови</li>
+              <li className={sharedStyles.presentationNewLifeLeftItem}>заряд бодрости</li>
+              <li className={sharedStyles.presentationNewLifeLeftItem}>помощь в противостоянии стрессам</li>
+            </ul>
+
+            <Button additionalClasses={sharedStyles.buttonWideWithMargin} primary={true} onClick={handleSubmit}>
+              {getButtonText()}
+            </Button>
+          </div>
+
+          <div className={sharedStyles.presentationNewLifeRight}>
+            <img className={sharedStyles.presentationNewLifeLines} src="/img/curves.svg" alt="curves" />
+          </div>
+
+          <img className={sharedStyles.presentationNewLifeMan} src="/img/runner.png" alt="runner" />
+        </section>
+
+        <img className={twMerge("presentationNewLifeMan max-w-[482px] max-h-[456px] absolute m-auto right-[9px] main:hidden top-[-265px]", sharedStyles.headerProfileBlockSmall)} src="/img/runner_small.svg" alt="runner" />
       </div>
 
       <Footer />

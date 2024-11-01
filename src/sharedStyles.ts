@@ -5,6 +5,7 @@ export const sharedStyles = {
 
   shadowedBlock: "shadowedBlock shadow-3xl",
   scaledBlock: "scaledBlock duration-300 hover:scale-102",
+  hiddenBlock: "hiddenBlock main:hidden",
   text_18_20: "text_18_20 text-lg/5",
 
   /* courses */
@@ -50,7 +51,7 @@ export const sharedStyles = {
   /* banner */
 
   banner: "banner relative mb-[40px] h-[389px] w-[343px] overflow-hidden rounded-[30px] p-10 text-white main:mb-[60px] main:h-[310px] main:w-[1160px]",
-  bannerText: "bannerText relative z-10 mb-[18px] hidden h-[66px] text-6xl/[66px] font-medium leading-[66px] main:block",
+  bannerText: "bannerText relative z-10 mb-[18px] hidden text-6xl/[66px] font-medium main:block",
   bannerPicture: "bannerPicture absolute",
   "banner-yoga": "banner-yoga top-[-55px] main:right-[-295px] main:top-[-175px] main:w-[80%]",
   "banner-stretching": "banner-stretching main:right-[-10px] main:top-0 main:w-[30%]",
@@ -90,14 +91,15 @@ export const sharedStyles = {
   presentationGoals: "presentationGoals flex flex-wrap gap-x-31 gap-y-6 rounded-[28px] bg-good p-[30px] text-lg/5 main:gap-y-[34px] main:text-2xl/[26px]",
   presentationGoal: "presentationGoal flex h-13/2 w-[284px] items-center gap-2",
   presentationGoalStar: "presentationGoalStar h-13/2 w-[26px]",
-  presentationNewLife: "presentationNewLife relative mb-[50px] mt-[156px] rounded-[30px] bg-white p-[30px] main:mt-[100px] main:p-10",
+  presentationNewLifeSection: "presentationNewLifeSection relative mx-auto mt-[116px] w-[482px] main:mt-[42px] main:w-[1160px]",
+  presentationNewLife: "presentationNewLife presentationNewLife relative z-10 m-auto w-[343px] rounded-[30px] bg-white p-[30px] main:z-0 main:mt-0 main:w-[1160px] main:p-10",
   presentationNewLifeTitle: "presentationNewLifeTitle mb-9 text-[32px]/9 font-medium main:mb-10 main:text-6xl",
   presentationNewLifeLeft: "presentationNewLifeLeft relative z-10 list-inside main:w-[448px]",
   presentationNewLifeLeftItem: "presentationNewLifeLeftItem list-disc text-lg opacity-60 main:text-2xl",
-  presentationNewLifeRight555: "presentationNewLifeRight555 absolute bottom-[-113px] right-[-16px] h-[690px] w-[739px]",
-  presentationNewLifeRight: "presentationNewLifeRight absolute bottom-0 right-0 h-full w-full overflow-hidden",
+  presentationNewLifeRight: "presentationNewLifeRight absolute bottom-0 right-0 hidden h-full w-full overflow-hidden main:block",
   presentationNewLifeLines: "presentationNewLifeLines absolute bottom-[-58px] right-[30px] h-[530px] w-[635px]",
-  presentationNewLifeMan: "presentationNewLifeMan absolute bottom-[9px] right-[9px] h-[570px] w-[550px]",
+  presentationNewLifeMan: "presentationNewLifeMan absolute bottom-[9px] right-[9px] hidden h-[570px] w-[550px] main:block",
+  presentationNewLifeManSmall: "presentationNewLifeManSmall presentationNewLifeMan absolute right-[9px] top-[-265px] m-auto max-h-[456px] max-w-[482px] main:hidden",
 
   /* user menu */
 
@@ -119,14 +121,16 @@ export const sharedStyles = {
 
   /* workout */
 
-  breadcrumbsLine: "breadcrumbsLine mb-10 text-[32px]/9",
+  breadcrumbsLine: "breadcrumbsLine mb-6 text-lg/[20px] main:mb-10 main:text-[32px]/9",
   breadcrumb: "breadcrumb underline hover:text-404",
   breadcrumbLast: "breadcrumbLast underline",
-  videoBlock: "videoBlock h-[639px] overflow-hidden rounded-[30px]",
-  workoutProgresses: "workoutProgresses grid w-full grid-cols-3 gap-x-[60px] gap-y-5",
-  workoutDayCaption: "workoutDayCaption mb-5 text-[32px]/9",
-  buttonProgress: "buttonProgress mt-10 w-[320px]",
-  writeProgressScrollingList: "writeProgressScrollingList max-h-[346px] w-[346px] overflow-y-scroll",
+  videoText: "videoText relative z-10 mb-[18px] text-2xl/[26px] font-medium main:text-6xl/[66px]",
+  videoBlock: "videoBlock h-[189px] overflow-hidden rounded-lg main:h-[639px] main:rounded-[30px]",
+  workoutProgressesBlock: "workoutProgressesBlock relative mb-[50px] mt-6 rounded-[30px] bg-white p-[30px] main:mt-10 main:p-10",
+  workoutProgresses: "workoutProgresses grid w-full grid-cols-1 gap-x-[60px] gap-y-5 main:grid-cols-3",
+  workoutDayCaption: "workoutDayCaption mb-5 text-2xl/[26px] main:text-[32px]/9",
+  buttonProgress: "buttonProgress mt-10 h-[50px] w-full main:h-13 main:w-[320px]",
+  writeProgressScrollingList: "writeProgressScrollingList max-h-[346px] w-full overflow-y-scroll main:w-[346px]",
   writeProgressScrollingListGapped: "writeProgressScrollingListGapped pr-[26px]",
   writeProgressList: "writeProgressList flex w-full flex-col gap-5 overflow-y-scroll",
   writeProgressItem: "writeProgressItem flex flex-col gap-[10px]",
@@ -136,7 +140,7 @@ export const sharedStyles = {
 
   progress: "progress flex flex-col gap-[10px]",
   progressText: "progressText",
-  progressBar: "progressBar relative",
+  progressBar: "progressBar relative h-[6px]",
   progressBarBack: "progressBarBack absolute h-[6px] w-full rounded-[50px] bg-light-bg",
   progressBarFront: "progressBarFront absolute h-[6px] w-[120px] rounded-[50px] bg-work",
 
@@ -166,7 +170,7 @@ export const sharedStyles = {
   modalScrollingList: "modalScrollingList max-h-[364px] w-full overflow-y-scroll",
   modalScrollingListGapped: "modalScrollingListGapped pr-[26px]",
   modalList: "modalList w-full",
-  modalListItem: "modalListItem flex items-center gap-[10px] border-b border-b-delimiter pb-2.5 [&:not(:first-child)]:pt-2.5",
+  modalListItem: "modalListItem flex cursor-pointer items-center gap-[10px] border-b border-b-delimiter pb-2.5 hover:bg-light-bg [&:not(:first-child)]:pt-2.5",
   modalListMark: "modalListMark h-6 w-6",
   modalListEmptyMark: "modalListEmptyMark m-0.5 h-[20px] min-w-[20px] rounded-[10px] border-2 border-light-tx",
   modalListItemContent: "modalListItemContent flex flex-col gap-[10px]",
