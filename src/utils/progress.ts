@@ -6,6 +6,10 @@ export function getRate(progress: number, max: number) {
     return 100
   else if (!max || !progress)
     return 0
+  else if (progress < 0)
+    return 0
+  else if (progress >= max)
+    return 100
   else
     return Math.ceil(100 * progress / max)
 }
