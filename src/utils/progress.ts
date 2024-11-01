@@ -26,10 +26,12 @@ export function getActionTextFromProgress(needToAdd: boolean, progress: number, 
 export function fillUserFieldsInCourse(course: CourseType, workoutsData: WorkoutsType, userData: UserDataType) {
   const isAdded = typeof userData[course._id] === "object"
 
-  let progress = 0
-  let max      = 0
+  let result = 0
 
   for (const workoutId of course.workouts) {
+    let progress = 0
+    let max      = 0
+
     for (const workout of workoutsData) {
       if (workout._id !== workoutId)
         continue
@@ -43,11 +45,14 @@ export function fillUserFieldsInCourse(course: CourseType, workoutsData: Workout
       if (isAdded)
         progress += getProgressInsideUserData(userData, course._id, workoutId)
     }
+
+    if (progress >= max)
+      ++result
   }
 
   course.isAdded  = isAdded
-  course.progress = progress
-  course.max      = Math.max(max, 1)
+  course.progress = result
+  course.max      = Math.max(course.workouts.length, 1)
 }
 
 export function getProgressInsideUserData(userData: UserDataType, courseId: string, workoutId: string): number {
