@@ -156,7 +156,7 @@ export const sharedStyles = {
 
   modalWrapper: "modalWrapper fixed left-0 top-0 z-50 flex h-screen w-screen items-center justify-center bg-blocked",
   modalForm: "modalForm m-auto flex w-[360px] flex-col items-center gap-12 rounded-[30px] bg-white p-[30px] main:p-10",
-  modalFormCaption: "modalFormCaption text-[32px]/9 main:mb-[14px]",
+  modalFormCaption: "modalFormCaption text-[32px]/9 main:mb-1",
   modalFormInner: "modalFormInner flex w-full flex-col items-center gap-[34px]",
   modalFormSubgroup: "modalFormSubgroup flex w-full flex-col items-center gap-[10px]",
   modalFormInput: "modalFormInput h-13 w-full rounded-lg border border-neutral bg-white px-4.5 py-4",
@@ -170,7 +170,7 @@ export const sharedStyles = {
   modalScrollingList: "modalScrollingList max-h-[364px] w-full overflow-y-scroll",
   modalScrollingListGapped: "modalScrollingListGapped pr-[26px]",
   modalList: "modalList w-full",
-  modalListItem: "modalListItem flex cursor-pointer items-center gap-[10px] border-b border-b-delimiter pb-2.5 hover:bg-light-bg [&:not(:first-child)]:pt-2.5",
+  modalListItem: "modalListItem flex cursor-pointer items-center gap-[10px] border-b border-b-delimiter pb-2.5 pt-2.5 hover:bg-light-bg",
   modalListMark: "modalListMark h-6 w-6",
   modalListEmptyMark: "modalListEmptyMark m-0.5 h-[20px] min-w-[20px] rounded-[10px] border-2 border-light-tx",
   modalListItemContent: "modalListItemContent flex flex-col gap-[10px]",

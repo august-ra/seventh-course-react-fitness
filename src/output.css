@@ -1470,6 +1470,10 @@ img{
   padding-top: 50px;
 }
 
+.pt-2\.5{
+  padding-top: 0.625rem;
+}
+
 .text-left{
   text-align: left;
 }
@@ -1704,6 +1708,10 @@ img{
   .main\:my-\[60px\]{
     margin-top: 60px;
     margin-bottom: 60px;
+  }
+
+  .main\:mb-1{
+    margin-bottom: 0.25rem;
   }
 
   .main\:mb-10{

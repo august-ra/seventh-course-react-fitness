@@ -133,7 +133,7 @@ function StyleClasses() {
       {/* modal: signing */}
       <modalWrapper className="fixed left-0 top-0 z-50 flex h-screen w-screen items-center justify-center bg-blocked" />
       <modalForm className="m-auto flex w-[360px] flex-col items-center gap-12 rounded-[30px] bg-white p-[30px] main:p-10" />
-      <modalFormCaption className="text-[32px]/9 main:mb-[14px]" />
+      <modalFormCaption className="text-[32px]/9 main:mb-1" />
       <modalFormInner className="flex w-full flex-col items-center gap-[34px]" />
       <modalFormSubgroup className="flex w-full flex-col items-center gap-[10px]" />
       <modalFormInput className="h-13 w-full rounded-lg border border-neutral bg-white px-4.5 py-4" />
@@ -145,7 +145,7 @@ function StyleClasses() {
       <modalScrollingList className="max-h-[364px] w-full overflow-y-scroll" />
       <modalScrollingListGapped className="pr-[26px]" />
       <modalList className="w-full" />
-      <modalListItem className="flex cursor-pointer items-center gap-[10px] border-b border-b-delimiter pb-2.5 hover:bg-light-bg [&:not(:first-child)]:pt-2.5" />
+      <modalListItem className="flex cursor-pointer items-center gap-[10px] border-b border-b-delimiter pb-2.5 pt-2.5 hover:bg-light-bg" />
       <modalListMark className="h-6 w-6" />
       <modalListEmptyMark className="m-0.5 h-[20px] min-w-[20px] rounded-[10px] border-2 border-light-tx" />
       <modalListItemContent className="flex flex-col gap-[10px]" />
