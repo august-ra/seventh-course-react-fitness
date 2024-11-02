@@ -1,8 +1,10 @@
 import * as M from "./progress"
 
+import { data as D } from "../data/testing"
+
 
 describe("Test progress.ts", () => {
-  describe("getRate() correctly", () => {
+  describe("do getRate() correctly", () => {
     it("from values #1", () => {
       expect(M.getRate(0, 0)).toEqual(0)
     })
@@ -29,7 +31,7 @@ describe("Test progress.ts", () => {
     })
   })
 
-  describe("getActionTextFromProgress() correctly", () => {
+  describe("do getActionTextFromProgress() correctly", () => {
     it("with adding mark #1", () => {
       expect(M.getActionTextFromProgress(true, 0, 10)).toEqual("Добавить курс")
     })
@@ -47,6 +49,106 @@ describe("Test progress.ts", () => {
     })
     it("without adding mark #3", () => {
       expect(M.getActionTextFromProgress(false, 1, 10)).toEqual("Продолжить")
+    })
+  })
+
+  describe("do fillUserFieldsInCourse() correctly", () => {
+    it("with exercises #1", () => {
+      D.init()
+
+      M.fillUserFieldsInCourse(D.courseData, D.workoutsData, D.userData)
+      expect(D.courseData.progress).toEqual(1)
+      expect(D.courseData.max).toEqual(2)
+    })
+
+    it("with exercises #2", () => {
+      D.init()
+      D.prepareTest2()
+
+      M.fillUserFieldsInCourse(D.courseData, D.workoutsData, D.userData)
+      expect(D.courseData.progress).toEqual(2)
+      expect(D.courseData.max).toEqual(2)
+    })
+
+    it("with exercises #3", () => {
+      D.init()
+      D.prepareTest3()
+
+      M.fillUserFieldsInCourse(D.courseData, D.workoutsData, D.userData)
+      expect(D.courseData.progress).toEqual(0)
+      expect(D.courseData.max).toEqual(2)
+    })
+
+    it("without exercises #1", () => {
+      D.init()
+
+      M.fillUserFieldsInCourse(D.courseData, D.workoutsData2, D.userData2)
+      expect(D.courseData.progress).toEqual(1)
+      expect(D.courseData.max).toEqual(2)
+    })
+
+    it("without exercises #2", () => {
+      D.init()
+      D.prepareTest5()
+
+      M.fillUserFieldsInCourse(D.courseData, D.workoutsData2, D.userData2)
+      expect(D.courseData.progress).toEqual(2)
+      expect(D.courseData.max).toEqual(2)
+    })
+
+    it("without exercises #3", () => {
+      D.init()
+      D.prepareTest6()
+
+      M.fillUserFieldsInCourse(D.courseData, D.workoutsData2, D.userData2)
+      expect(D.courseData.progress).toEqual(0)
+      expect(D.courseData.max).toEqual(2)
+    })
+  })
+
+  describe("do getProgressInsideUserData() correctly", () => {
+    it("with exercises #1", () => {
+      D.init()
+
+      const result = M.getProgressInsideUserData(D.userData, "course_0", "workout_1")
+      expect(result).toEqual(25)
+    })
+
+    it("with exercises #2", () => {
+      D.init()
+      D.prepareTest2()
+
+      const result = M.getProgressInsideUserData(D.userData, "course_0", "workout_1")
+      expect(result).toEqual(30)
+    })
+
+    it("with exercises #3", () => {
+      D.init()
+
+      const result = M.getProgressInsideUserData(D.userData, "course_0", "workout_2")
+      expect(result).toEqual(30)
+    })
+
+    it("without exercises #1", () => {
+      D.init()
+
+      const result = M.getProgressInsideUserData(D.userData2, "course_0", "workout_1")
+      expect(result).toEqual(1)
+    })
+
+    it("without exercises #2", () => {
+      D.init()
+
+      const result = M.getProgressInsideUserData(D.userData2, "course_0", "workout_2")
+      expect(result).toEqual(0)
+    })
+
+    it("without exercises #3", () => {
+      D.init()
+      D.prepareTest6()
+
+      const result = M.getProgressInsideUserData(D.userData2, "course_0", "workout_1")
+      expect(result).toEqual(0)
     })
   })
 })
