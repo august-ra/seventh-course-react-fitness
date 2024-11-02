@@ -13,7 +13,7 @@ export default function Progress({ title, progress }: Props) {
     <div className={sharedStyles.progress}>
       <p className={sharedStyles.text_18_20}>{title || "Прогресс"} {progress}%</p>
 
-      <ProgressBar progress={Math.max(1, progress)} />
+      <ProgressBar progress={progress} />
     </div>
   )
 }
