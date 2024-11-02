@@ -14,6 +14,10 @@ export function getRate(progress: number, max: number) {
     return Math.ceil(100 * progress / max)
 }
 
+export function normalizeRate(value: number, min: number, max: number): number {
+  return Math.min(Math.max(value, min), max)
+}
+
 
 export function getActionTextFromProgress(needToAdd: boolean, progress: number, max: number): string {
   if (needToAdd)

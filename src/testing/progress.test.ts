@@ -1,4 +1,4 @@
-import * as M from "./progress"
+import * as M from "../utils/progress"
 
 import { data as D } from "../data/testing"
 
@@ -28,6 +28,33 @@ describe("Test progress.ts", () => {
     })
     it("from values #8", () => {
       expect(M.getRate(-10, 10)).toEqual(0)
+    })
+  })
+
+  describe("do normalizeRate() correctly", () => {
+    it("from value #1", () => {
+      expect(M.normalizeRate(-50, 0, 100)).toEqual(0)
+    })
+    it("from value #2", () => {
+      expect(M.normalizeRate(-50, 1, 100)).toEqual(1)
+    })
+    it("from value #3", () => {
+      expect(M.normalizeRate(0, 0, 100)).toEqual(0)
+    })
+    it("from value #4", () => {
+      expect(M.normalizeRate(0, 1, 100)).toEqual(1)
+    })
+    it("from value #5", () => {
+      expect(M.normalizeRate(20, 0, 100)).toEqual(20)
+    })
+    it("from value #6", () => {
+      expect(M.normalizeRate(20, 1, 100)).toEqual(20)
+    })
+    it("from value #7", () => {
+      expect(M.normalizeRate(100, 0, 100)).toEqual(100)
+    })
+    it("from value #8", () => {
+      expect(M.normalizeRate(300, 0, 100)).toEqual(100)
     })
   })
 
