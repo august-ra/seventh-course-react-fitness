@@ -1,6 +1,6 @@
 import * as M from "../utils/progress"
 
-import { data as D } from "../data/testing"
+import { data as D } from "./data"
 
 
 describe("Test progress.ts", () => {

@@ -1,7 +1,7 @@
 import SigningModal from "../pages/SigningModal/SigningModal"
 
 import "@testing-library/jest-dom"
-import { renderWithProviders } from "../utils/tests"
+import { renderWithProviders } from "./render"
 
 
 jest.mock("../api/usersApi", () => ({
