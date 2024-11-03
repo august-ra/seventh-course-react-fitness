@@ -1,11 +1,10 @@
 import { sharedStyles } from "../../sharedStyles"
-import { twMerge } from "tailwind-merge"
 
 import Button from "../../components/Button/Button"
 
-import React, { useState } from "react"
+import { ChangeEvent, ChangeEventHandler, FormEvent, MouseEvent, MouseEventHandler, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { useUserContext } from "../../context/UserContext/UserContext"
+import { ExtendedUser, normalizeUser, useUserContext } from "../../context/UserContext/UserContext"
 import { useReplacementLastPath } from "../../hooks/useReplacementLastPath"
 import pages from "../../data/pages"
 import { ModalKindType } from "../../types/types"
@@ -31,13 +30,13 @@ interface ExtendedProps extends Props {
     reset:   boolean
   }
   setErrorState: (value: ExtendedProps["errorState"]) => void
-  onSwitch:      React.MouseEventHandler<HTMLAnchorElement | HTMLButtonElement>
-  onChange:      React.ChangeEventHandler<HTMLInputElement>
+  onSwitch:      MouseEventHandler<HTMLAnchorElement | HTMLButtonElement>
+  onChange:      ChangeEventHandler<HTMLInputElement>
 }
 
 interface ErrorBlockProps {
   errorState: ExtendedProps["errorState"]
-  onSwitch:   React.MouseEventHandler<HTMLAnchorElement | HTMLButtonElement>
+  onSwitch:   MouseEventHandler<HTMLAnchorElement | HTMLButtonElement>
 }
 
 export default function SigningModal({ mode }: Props) {
@@ -59,13 +58,13 @@ export default function SigningModal({ mode }: Props) {
     repeat:   "",
   })
 
-  function handleChangeFormData(e: React.ChangeEvent<HTMLInputElement>) {
+  function handleChangeFormData(e: ChangeEvent<HTMLInputElement>) {
     const { name, value } = e.target
 
     setFormData({ ...formData, [name]: value })
   }
 
-  function handleGoAnother(e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) {
+  function handleGoAnother(e: MouseEvent<HTMLAnchorElement | HTMLButtonElement>) {
     e.preventDefault()
 
     setErrorState({ showing: false, message: "", reset: false })
@@ -81,20 +80,19 @@ export default function SigningModal({ mode }: Props) {
     }
   }
 
-  function handleClose(e: React.MouseEvent<HTMLDivElement>) {
+  function handleClose(e: MouseEvent<HTMLDivElement>) {
     if ((e.target as HTMLDivElement).dataset.id === "modal-outside")
       navigate(-1)
   }
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
 
-    debugger
     if (modalMode === "signIn") {
       try {
         const user = await usersApi.auth(formData.email, formData.password)
 
-        userContext.save(user)
+        userContext.save(normalizeUser(user as ExtendedUser))
 
         navigate(pages.MAIN)
       } catch (error) {
@@ -103,7 +101,7 @@ export default function SigningModal({ mode }: Props) {
       }
     } else if (modalMode === "signUp") {
       try {
-        const user = await usersApi.create(formData.email, formData.password, formData.email)
+        await usersApi.create(formData.email, formData.password, formData.email)
 
         navigateReplaced("in", true)
         setModalMode("signIn")
@@ -139,7 +137,7 @@ export default function SigningModal({ mode }: Props) {
   )
 }
 
-function ModalContent({ mode, formData, setFormData, errorState, setErrorState, onSwitch, onChange }: ExtendedProps) {
+function ModalContent({ mode, formData, errorState, onSwitch, onChange }: ExtendedProps) {
   return (
     <div className={sharedStyles.modalFormInner}>
       <div className={sharedStyles.modalFormSubgroup}>

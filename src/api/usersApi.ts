@@ -1,4 +1,4 @@
-import { signInWithEmailAndPassword, signOut, updateProfile, User } from "firebase/auth"
+import { signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth"
 import { createUserWithEmailAndPassword } from "firebase/auth/cordova"
 import { auth } from "./firebaseConfig"
 

@@ -35,7 +35,7 @@ export default function WriteProgressPage() {
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
 
-    coursesAPI.writeProgressWithExercisesToUserCourse(userContext.uid, courseId, workoutId, exercises.map((exercise, index) => ({
+    coursesAPI.writeProgressWithExercisesToUserCourse(userContext.uid, courseId as string, workoutId as string, exercises.map((exercise, index) => ({
       index:    index,
       progress: exercise.progress || 0,
     })))

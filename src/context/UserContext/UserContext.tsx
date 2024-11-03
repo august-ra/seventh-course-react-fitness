@@ -2,6 +2,8 @@ import { createContext, ReactNode, useContext, useState } from "react"
 import { User } from "firebase/auth"
 
 
+type OptionalUserType = UserType | Record<string, never>
+
 /* interfaces */
 
 interface UserType {
@@ -15,12 +17,19 @@ interface UserType {
 
 export interface UserContextValue extends UserType {
   isAuthenticated: () => boolean
-  save:            (userInfo: User) => void
+  save:            (userInfo: UserType) => void
   clear:           () => void
 }
 
 interface Props {
   children: ReactNode
+}
+
+export interface ExtendedUser extends User {
+  stsTokenManager: {
+    accessToken:  string
+    refreshToken: string
+  }
 }
 
 /* context */
@@ -29,23 +38,37 @@ const UserContext = createContext<UserContextValue | undefined>(undefined)
 
 /* static methods */
 
-function read() {
-  let data: User | string | null = localStorage.getItem("userInfo")
+export function getEmptyUser(): UserType {
+  return {
+    uid: "",
+    email: "",
+    tokens: {
+      access: "",
+      refresh: "",
+    },
+  }
+}
 
-  if (data)
-    data = JSON.parse(data)
-
-  if (!data || typeof data !== "object")
-    return {}
-
-  const userInfo: UserType = {
+export function normalizeUser(data: ExtendedUser): UserType {
+  return {
     uid:    data.uid,
     email:  data.email,
     tokens: {
       access:  data.stsTokenManager.accessToken,
       refresh: data.stsTokenManager.refreshToken,
     },
-  }
+  } as UserType
+}
+
+function read() {
+  const data:     string | null    = localStorage.getItem("userInfo")
+  let   userInfo: OptionalUserType = {}
+
+  if (data)
+    userInfo = JSON.parse(data)
+
+  if (!userInfo || typeof userInfo !== "object")
+    return {}
 
   return userInfo
 }
@@ -53,13 +76,13 @@ function read() {
 /* provider */
 
 export function UserProvider({ children }: Props) {
-  const [data, setData] = useState<UserType | {}>(read())
+  const [data, setData] = useState<OptionalUserType>(read())
 
   function isAuthenticated() {
-    return Boolean(data && data.email)
+    return Boolean(data && ("email" in data && data.email))
   }
 
-  function save(userInfo: User) {
+  function save(userInfo: UserType) {
     localStorage.setItem("userInfo", JSON.stringify(userInfo))
 
     setData(userInfo)
@@ -68,11 +91,11 @@ export function UserProvider({ children }: Props) {
   function clear() {
     localStorage.removeItem("userInfo")
 
-    setData("")
+    setData({})
   }
 
   return (
-    <UserContext.Provider value={{ ...data, isAuthenticated, save, clear }}>{children}</UserContext.Provider>
+    <UserContext.Provider value={{ ...getEmptyUser(), isAuthenticated, save, clear, ...data }}>{children}</UserContext.Provider>
   )
 }
 

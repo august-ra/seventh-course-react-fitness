@@ -35,7 +35,7 @@ export default function CoursePage() {
     if (!userContext.isAuthenticated())
       navigate(pages.SIGN_IN)
     else if (!courseData.isAdded)
-      await coursesAPI.addUserCourse(userContext.uid, id, courseData)
+      await coursesAPI.addUserCourse(userContext.uid, id as string)
     else
       doExercises()
   }
